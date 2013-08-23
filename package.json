@@ -8,6 +8,8 @@
   "dependencies": {
     "express": "3.3.4",
     "jade": "*",
-    "node-redis": "*",
+    //"node-redis": "*",
+    "redis": "*",
+    "express": "3.x"
   }
 }
