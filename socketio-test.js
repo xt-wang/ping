@@ -64,7 +64,7 @@ app.configure(function(){
 
 var socket = io;
 socket.on('connection', function(client) {
-    const subscribe = redis.createClient();
+    var subscribe = redis.createClient();
     subscribe.subscribe('pubsub'); //    listen to messages from channel pubsub
     subscribe.on("message", function(channel, message) {
         client.send(message);
