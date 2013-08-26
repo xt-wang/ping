@@ -68,7 +68,6 @@ socket.on('connection', function(client) {
     subscribe.subscribe('pubsub'); //    listen to messages from channel pubsub
     subscribe.on("message", function(channel, message) {
         client.send(message);
-    
     });
     client.on('message', function(msg) {
     
