@@ -1,2 +1,4 @@
 tmp
-node_modulessea-modules
+node_modules
+sea-modules
+.build

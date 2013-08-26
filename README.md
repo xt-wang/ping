@@ -9,3 +9,5 @@ TODO
 * modules contain show-login-push-pull four part
 * customize ui can be use
 * use saejs
+
+[http://blog.codinglabs.org/articles/modularized-javascript-with-seajs.html]
