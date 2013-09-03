@@ -1,349 +1,339 @@
-/*style 6.24 */
-/*style 6.26 */
 
-/*style 6.29 by link*/
-/*style 20130704-2 by link*/
-/*style 20130706 by link*/
-/*style 20130709-2 by link*/
-/*style 20130711 by link*/
-/*style 20130712 by link*/
-/*style 20130716 by link*/
-/*style 20130717 by link*/
-/*style 20130718 by link*/
-/*style 20130723 by link*/
-/*style 20130731 by boatgm*/
 
-	 /* reset */
 html,body{_background-image:url(about:blank);_background-attachment:fixed;}
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,dl, dt, dd, ul, ol, li, fieldset, form, lengend, button, input, textarea,th, td { margin: 0; padding: 0 }
 body,button, select, textarea { font-family: "simsun","Arial",HELVETICA;   }
 h1,h2,h3,h4, h5, h6 { font-size: 100%; font-weight:normal }
 address, cite, dfn, em, var,i { font-style: normal }
 code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace }
+
 small { font-size: 12px }
 ul, ol { list-style: none }
 legend { color: #000 }
+
 fieldset, img { border: none }
+
 button, input, select, textarea { font-size: 100%; vertical-align:middle }
+
 table { border-collapse: collapse; border-spacing:0 }
 img { vertical-align:bottom }
 a:link { outline:none; color: #000; text-decoration: none }
 a:visited { color: #000; text-decoration: none }
 a:hover, a:active { color: #cd0000; text-decoration: underline }
 a:focus{ outline:0 }
-	 
-	 
-	 .upvote a,.upvote span,.upvote a:hover,.reply a,.reply span,.reply a:hover{font-size:12px;color:#808080;cursor:pointer;background:url(http://mat1.gtimg.com/www/niuping2013/plbg.png) no-repeat;}
-	 .upvote a:hover,.reply a:hover{text-decoration:none}
-	 .upvote a,.upvote span{padding:2px 0px 3px 15px;background-position:0px 0px}
-	 .upvote a:hover{background-position:0px -23px;}
-	 
-	 .upvote em{font-style:normal;font-size:12px;color:#808080}
-	 
-	 .popClick{cursor:pointer}	 
-	 
-	 .reply {margin-left:10px}
-	 
-	 .reply a,.reply span{padding:2px 0px 3px 15px;background-position:0px -69px;color:#808080}
-	 
-	 .reply a:visited{color:#808080}
-	 .reply a:hover{background-position:0px -93px;text-decoration:none}
-	 
-	 
-	 
-	 .upvote i{font-style:normal;}
-	 .upvote .hasup,.upvote .hasup:hover{color:#ccc;background-position:0px -47px}
-	 .post-list .topIco{background:url(http://mat1.gtimg.com/www/niuping2013/ding.png) right 21px no-repeat}
-	 .post-list .hide{display:none}
-	 .post-list .Occupy .upvote,.post-list .Occupy .reply{display:none}
-	 .post-list .Occupy .children .upvote,.post-list .Occupy .children .reply{display:inline}
-	 .post-list .Occupy .post-message-container .s{color:#666}
-	 .post{word-break: normal;word-wrap: break-word;}
-	 
-	 .over{overflow:hidden}
-	 /*textarea publick*/
-	 
-	 
-	 .post .children .textarea{margin-left:12px}
-	 .post .children .textarea textarea{width:100%;border:1px solid #ccc;height:90px;resize:none;padding:5px;overflow:auto;font-size:16px; line-height:24px; margin-left:-12px}
-	 
-	 .commtSub{padding:5px 0px 10px 0px;padding-bottom:8p;height:30px;line-height:26px;overflow:hidden;}
-	 .commtSub a.submit{float:right;width:80px;height:30px;line-height:30px;text-align:center;text-decoration:none;background:#3090E0;color:#fff;font-size:14px}
-	 .commtSub a.submit:visited,.commtSub a.submit:active{color:#fff}
-	 
-	 .commtSub .submitOn{float:right;width:80px;height:30px;line-height:30px;text-align:center;text-decoration:none;background:#3090E0 url(http://mat1.gtimg.com/www/niuping2013/load.gif) center no-repeat;color:#fff;font-size:14px}
-	 .commtSub .loginFlag{float:left}
-	 .commtSub .loginFlag span{float:left}
-	 .commtSub .myPic img{border-radius:3px}
-	 .commtSub .replyTop{float:left;cursor:pointer}
-	 .commtSub .replyBtn{float:right}
-	 .commtSub .replyBtn .cancel{font-size:14px;font-weight:600;color:#ccc;float:right;text-decoration:none;height:30px;line-height:30px;width:80px;text-align:center;}
-	 
-	 .commtSub .submitBtn{float:right;overflow:hidden}
-	 
-	 .tipInfo{color:#999;padding:50px;text-align:center;height:18px;}
-	 .waitting{background:url(http://mat1.gtimg.com/www/niuping2013/loadgray.gif) center no-repeat}
-	 .maskObj{width:10000px;filter:alpha(opacity =80);opacity:0.8;position:fixed;z-index:90000;top:0px;left:0px;display:none;background:#ccc}
-	 .loadMore{height:30px;line-height:30px;text-align:center;color:#fff;cursor:pointer;display:none}
-	 .loadMore span{background:#768187; display:none;}/**/
-	 .loadMore i{font-style:normal}
-	 .loadMore .loading{width:100%;height:100%;display:none;background: url(http://mat1.gtimg.com/www/niuping2013/loadgray.gif) center no-repeat;}
-	 .avatar{position:absolute;left:0px;top:20px;}
-	 .undis{display:none}
-	 .dis{display:block}
-	 .wait{font-size:12px;color:#999;padding-left:15px}
-	 
-	 #commentArea{height:72px;overflow:hidden;margin-bottom:10px;border:1px solid #d3d3d3;box-shadow: 0px 0px 0px 0px #d3d3d3}
-	 #commentArea .commtSub{height:40px;padding:5px 10px;border-top:1px solid #ebebeb;position:relative;}
-	 #commentArea .submit,#commentArea .submitOn{margin-top:5px}
-	 #commentArea .myName{font-size:14px;padding:13px 0px 0px 15px}
-	 #commentArea .change{color:#b3b3b3;padding:14px 0px 0px 22px;cursor:pointer}
-	 
-	 /*
-	 
-	 #commentArea{box-shadow: 0px 0px 3px 1px #379be9;border-color:#379be9}
-	 
-	 */
-	 
-	#commentArea{-webkit-transition-property:box-shadow,height,border-color; -webkit-transition-duration:0.6s,0.6s,0.6s;position:relative}
-    /*#commentArea{box-shadow:0px 0px 3px 1px #379be9}*/
-	#commentArea.on{box-shadow: 0px 0px 3px 1px #379be9;border-color:#379be9;height:132px;}
-	#commentArea.on .textarea textarea{color:#000;font-size:16px; line-height:24px;}
-	#commentArea .tips{top:19px;display:block;position:absolute;right:100px}
-	
-	 
-	 /* top reply area */
-	 
-	 
-	 #top_reply .commentTotleNum{float:right;width:200px;height:28px;line-height:28px;overflow:hidden}
-	 #top_reply .commentTotleNum strong{float:right;text-align:center;color:#666;font-size:14px;font-weight:normal;}
-	 #top_reply .commentTotleNum a:hover{text-decoration:none;cursor:pointer} 
-	 #top_reply .commentTotleNum a:hover strong span{color:#cc0000}
-	 
-	 #top_reply .commentTotleNum span{color:#666;font-weight:800;padding-right:5px;font-family:'Times New Roman';font-size:16px}
-	 
-	 #top_reply .globalNav{padding-bottom:0px;height:30px;line-height:30px;border-bottom:1px solid #e8e8e8;border-top:3px solid #379be9; }
-	 #top_reply .globalNav h1{float:left;color:#56abee;font-size:16px;font-family:'Microsoft YaHei';border-bottom:1px solid #56abee;font-weight:normal;padding-right:5px;}
-	 #mainCoral #top_reply .globalNav{margin-bottom: 10px;}
-	 
-	 #top_reply .textarea{margin-left:20px;}
-	 #top_reply textarea{width:100%;padding:10px;resize:none;height:60px;color:#ccc;border:0;outline:none;overflow:auto;font-size:16px; line-height:24px;margin-left:-20px}
-	 #top_reply textarea.on{color:#000}
-	 #top_reply .userTitle{display:none}
-	
-	 
-	 /*wraper*/
-	 .w1000{width:960px;margin:0 auto;}
-	 #wraper{width:960px;margin:30px auto 0px auto;position: relative;}
-	 #mainBody{width:640px;padding-bottom:30px; float:left; background:#fff;}
-	 #mainCoral{padding-bottom:30px;}
-	 #sliderBar{width:300px;float:right;overflow:hidden}
-	 #sliderBar .ad_cmt_text{ margin-top:8px;}
-	 #content{font-size:14px;font-faimly:'simsun'} 
-	 
-	 #content .main_titleTab{border-bottom:2px solid #cfcece;height:35px;line-height:35px;padding-top:5px;position:relative;font-family:"Microsoft Yahei";}/*set font*/
-	 
-	 #content .main_titleTab span.on{color:#000;border-bottom:2px solid #379be9;}
-	 #content .main_titleTab span.on a{color:#000}
-	 #content .main_titleTab span{font-size:16px;position:absolute;display:inline-block;width:82px;text-align:center;cursor:pointer;padding:0px 5px}
-	 #content .main_titleTab span a{color:#999;font-weight:800}
-	 #content .main_titleTab span a:hover{text-decoration:none}
-	 
-	 
-	 #content .main_titleTab span.tab1{left:0px;}
-	 #content .main_titleTab span.tab2{left:92px;}
-	 #content .main_titleTab span.tab2 em{position:absolute;display:block;height:20px;line-height:20px;color:#fff;background:#379be9 url(http://mat1.gtimg.com/www/niuping2013/popNum.png) no-repeat;left:83px;top:8px;padding:0px 6px 0px 10px;font-size:12px;display:none}
-	 
-	 #content .chid_titleTab{height:32px;line-height:28px;margin-top:9px;}
-	 #content .chid_titleTab span a:hover{text-decoration:none}
-	 #content .chid_titleTab span{font-size:14px;font-weight:normal;width:75px;height:31px;text-align:center;float:left;cursor:pointer}
-	 #content .chid_titleTab span a{color:#b3b3b3}
-	 #content .chid_titleTab span.on{background:url(http://mat1.gtimg.com/www/niuping2013/btn.png) no-repeat;}
-	 #content .chid_titleTab span.on a{color:#fff}
-	 
-	 
-	 #content .showNum{height:0px;line-height:30px;background:#379be9;cursor:pointer;text-align:center;color:#fff;margin:25px 0px 0px 0px;display:none}
-	 #tab1_allComments li.post{position:relative;zoom:1;_float:left;padding:10px 0px 2px 42px;border-bottom:1px solid #e6e6e6}/*change padding*/
-	 #tab1_allComments li.post .post-content .avatar img{border-radius:5px;width:40px;height:40px}
-	 #tab1_allComments li.post .children .post-content .avatar img{width:25px;height:25px;border-radius:2px;}/*make it small*/
-	 #tab1_allComments .children li.post{border:none;border-top:1px dotted #e6e6e6;overflow:hidden}
-	 #tab1_allComments .children .children .children .children .children {margin-left:-37px}
-	 #tab1_allComments .children .children .children .children .children li.post{padding-left:37px;}
-	 #tab1_allComments .children .children .children .children{margin-left:-37px}
-	 #tab1_allComments .children .post{padding-left:0px} /*delete padding-left make children in a line*/
-	 #tab1_allComments .post-body{padding-left:10px}
-	 #tab1_allComments .children .post-body{padding-left:32px}
-	 #tab1_allComments .post-header .uptime,#tab1_allComments .post-header .uptime0{color:#999;margin-left:5px;font-size:12px}
-	 /*change color and font*/
-	 #tab1_allComments .post-header .publisher{color:#56abee;font-weight:600;font-family:"Microsoft Yahei"; padding-right:8px;font-size:12px;cursor:pointer}
-	 
-	 #tab1_allComments .post-header .replywho{padding-left:19px;color:#455e85;font-size:12px;background:url(http://mat1.gtimg.com/www/niuping2013/plbg.png) 0px -71px no-repeat;}
-	 
-	 
-	 #tab1_allComments .post-footer{overflow:hidden;height:30px;line-height:30px;width:100%}
-	 #tab1_allComments .children .post-footer{display:none} /*hide children comments button*/
-	 #tab1_allComments .post-footer .newcoment{float:right;padding-left:10px;background:url(http://mat1.gtimg.com/www/niuping2013/bluepoint.png) 0px no-repeat;font-size:12px;color:#b2b2b2;cursor:pointer;display:none}
-	 #tab1_allComments .post-footer span{color:#808080;cursor:pointer;font-size:12px;}
-	 #tab1_allComments .post-content{line-height:24px;}
-	 #tab1_allComments .post-list .indicator{display:none}
-	 
-	 #tab1_allComments .post-list .blueflag .indicator{background:#2e9fff;width:5px;height:40px;position:absolute;left:0px;top:20px;border-radius:3px;display:block}
-	 #tab1_allComments .post-list .children .blueflag .indicator{height:35px}
-	 #tab1_allComments .post-list .blueflag .avatar{left:10px;}
-	 #tab1_allComments .post-list .blueflag .post-body{padding-left:20px;}
-	 
-	 #my-message .post-list .blueflag .indicator{background:#2e9fff;width:5px;height:40px;position:absolute;left:0px;top:15px;border-radius:3px;display:block}
-	 #my-message .post-list .children .blueflag .indicator{height:35px}
-	 #my-message .post-list .blueflag .avatar{left:10px;}
-	 #my-message .post-list .blueflag .post-body{padding-left:20px;}
-	 
-	 #tab1_allComments .pop_reply{margin-top:10px;padding-left:12px}
-	 #tab1_allComments .post-list .Occupy .children .post-footer,.post-list .Occupy .children .post-footer{height:30px}
-	 #tab1_allComments .post-list .Occupy .post-footer,.post-list .Occupy .post-footer{height:10px}
-	 #tab1_allComments .post .children .children .children .children .pop_reply{padding-left:49px}
-	 /* popup */
-	 
-	 .popObj{width:664px;height:80%;max-height:780px;position:fixed;_position:absolute;left:50%;top:100%;margin-left:-340px;border-radius: 7px;background:rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr = '#60000000',endColorstr = '#60000000')\9;z-index:90001;border:1px solid #a9a9a9;overflow:hidden;padding:8px;display:none}
-	 .popObj .head{background:url(http://mat1.gtimg.com/www/niuping2013/pop_bg.png) repeat-x;height:120px;color:#fff;position:relative;}
-	 .popObj .head .info{height:80px;padding:20px 0px 0px 20px;}
-	 .popObj .head .info .name{float:left;margin-left:15px;padding-top:15px}
-	 .popObj .head .info .name strong{display:block;font-size:16px;margin-bottom:10px}
-	 .popObj .userPic{float:left}
-	 .popObj .userPic img{width:80px; height:80px;}/*20130704*/
-	 .popObj .head .info img{border-radius:5px}
-     .popObj .upandnum{line-height:30px;font-size:14px}
+ 
+ 
+ .upvote a,.upvote span,.upvote a:hover,.reply a,.reply span,.reply a:hover{font-size:12px;color:#808080;cursor:pointer;background:url(http://mat1.gtimg.com/www/niuping2013/plbg.png) no-repeat;}
+ .upvote a:hover,.reply a:hover{text-decoration:none}
+ .upvote a,.upvote span{padding:2px 0px 3px 15px;background-position:0px 0px}
+ .upvote a:hover{background-position:0px -23px;}
+ 
+ .upvote em{font-style:normal;font-size:12px;color:#808080}
+ 
+ .popClick{cursor:pointer}	 
+ 
+ .reply {margin-left:10px}
+ 
+ .reply a,.reply span{padding:2px 0px 3px 15px;background-position:0px -69px;color:#808080}
+ 
+ .reply a:visited{color:#808080}
+ .reply a:hover{background-position:0px -93px;text-decoration:none}
+ 
+ 
+ 
+ .upvote i{font-style:normal;}
+ .upvote .hasup,.upvote .hasup:hover{color:#ccc;background-position:0px -47px}
+ .post-list .topIco{background:url(http://mat1.gtimg.com/www/niuping2013/ding.png) right 21px no-repeat}
+ .post-list .hide{display:none}
+ .post-list .Occupy .upvote,.post-list .Occupy .reply{display:none}
+ .post-list .Occupy .children .upvote,.post-list .Occupy .children .reply{display:inline}
+ .post-list .Occupy .post-message-container .s{color:#666}
+ .post{word-break: normal;word-wrap: break-word;}
+ 
+ .over{overflow:hidden}
+ /*textarea publick*/
+ 
+ 
+ .post .children .textarea{margin-left:12px}
+ .post .children .textarea textarea{width:100%;border:1px solid #ccc;height:90px;resize:none;padding:5px;overflow:auto;font-size:16px; line-height:24px; margin-left:-12px}
+ 
+ .commtSub{padding:5px 0px 10px 0px;padding-bottom:8p;height:30px;line-height:26px;overflow:hidden;}
+ .commtSub a.submit{float:right;width:80px;height:30px;line-height:30px;text-align:center;text-decoration:none;background:#3090E0;color:#fff;font-size:14px}
+ .commtSub a.submit:visited,.commtSub a.submit:active{color:#fff}
+ 
+ .commtSub .submitOn{float:right;width:80px;height:30px;line-height:30px;text-align:center;text-decoration:none;background:#3090E0 url(http://mat1.gtimg.com/www/niuping2013/load.gif) center no-repeat;color:#fff;font-size:14px}
+ .commtSub .loginFlag{float:left}
+ .commtSub .loginFlag span{float:left}
+ .commtSub .myPic img{border-radius:3px}
+ .commtSub .replyTop{float:left;cursor:pointer}
+ .commtSub .replyBtn{float:right}
+ .commtSub .replyBtn .cancel{font-size:14px;font-weight:600;color:#ccc;float:right;text-decoration:none;height:30px;line-height:30px;width:80px;text-align:center;}
+ 
+ .commtSub .submitBtn{float:right;overflow:hidden}
+ 
+ .tipInfo{color:#999;padding:50px;text-align:center;height:18px;}
+ .waitting{background:url(http://mat1.gtimg.com/www/niuping2013/loadgray.gif) center no-repeat}
+ .maskObj{width:10000px;filter:alpha(opacity =80);opacity:0.8;position:fixed;z-index:90000;top:0px;left:0px;display:none;background:#ccc}
+ .loadMore{height:30px;line-height:30px;text-align:center;color:#fff;cursor:pointer;display:none}
+ .loadMore span{background:#768187; display:none;}/**/
+ .loadMore i{font-style:normal}
+ .loadMore .loading{width:100%;height:100%;display:none;background: url(http://mat1.gtimg.com/www/niuping2013/loadgray.gif) center no-repeat;}
+ .avatar{position:absolute;left:0px;top:20px;}
+ .undis{display:none}
+ .dis{display:block}
+ .wait{font-size:12px;color:#999;padding-left:15px}
+ 
+ #commentArea{height:72px;overflow:hidden;margin-bottom:10px;border:1px solid #d3d3d3;box-shadow: 0px 0px 0px 0px #d3d3d3}
+ #commentArea .commtSub{height:40px;padding:5px 10px;border-top:1px solid #ebebeb;position:relative;}
+ #commentArea .submit,#commentArea .submitOn{margin-top:5px}
+ #commentArea .myName{font-size:14px;padding:13px 0px 0px 15px}
+ #commentArea .change{color:#b3b3b3;padding:14px 0px 0px 22px;cursor:pointer}
+ 
+ /*
+ 
+ #commentArea{box-shadow: 0px 0px 3px 1px #379be9;border-color:#379be9}
+ 
+ */
+ 
+#commentArea{-webkit-transition-property:box-shadow,height,border-color; -webkit-transition-duration:0.6s,0.6s,0.6s;position:relative}
+/*#commentArea{box-shadow:0px 0px 3px 1px #379be9}*/
+#commentArea.on{box-shadow: 0px 0px 3px 1px #379be9;border-color:#379be9;height:132px;}
+#commentArea.on .textarea textarea{color:#000;font-size:16px; line-height:24px;}
+#commentArea .tips{top:19px;display:block;position:absolute;right:100px}
 
-	 .popObj .upandnum .area{background:url(img/pop1.png) no-repeat;padding-left:20px;padding-right:12px}
-	 .popObj .upandnum .upvote{background:url(img/uphand.jpg) no-repeat;padding-left:20px;padding-right:12px}
-	 .popObj .upandnum .num{background:url(img/replyico.png) no-repeat;padding-left:20px}
-	 .popObj .upandnum .num i{font-style:normal;margin-right:3px}
-	 .popObj .close{width:19px;height:19px;position:absolute;top:20px;right:20px;cursor:pointer;background:url(http://mat1.gtimg.com/www/niuping2013/closex.png) no-repeat;z-index:999}
-	 .popObj .popContent{height:100%;background:#fff;max-height:660px}
-	 .popObj .popInner{padding:10px;overflow:hidden;padding-left:20px}
-	 
+ 
+ /* top reply area */
+ 
+ 
+ #top_reply .commentTotleNum{float:right;width:200px;height:28px;line-height:28px;overflow:hidden}
+ #top_reply .commentTotleNum strong{float:right;text-align:center;color:#666;font-size:14px;font-weight:normal;}
+ #top_reply .commentTotleNum a:hover{text-decoration:none;cursor:pointer} 
+ #top_reply .commentTotleNum a:hover strong span{color:#cc0000}
+ 
+ #top_reply .commentTotleNum span{color:#666;font-weight:800;padding-right:5px;font-family:'Times New Roman';font-size:16px}
+ 
+ #top_reply .globalNav{padding-bottom:0px;height:30px;line-height:30px;border-bottom:1px solid #e8e8e8;border-top:3px solid #379be9; }
+ #top_reply .globalNav h1{float:left;color:#56abee;font-size:16px;font-family:'Microsoft YaHei';border-bottom:1px solid #56abee;font-weight:normal;padding-right:5px;}
+ #mainCoral #top_reply .globalNav{margin-bottom: 10px;}
+ 
+ #top_reply .textarea{margin-left:20px;}
+ #top_reply textarea{width:100%;padding:10px;resize:none;height:60px;color:#ccc;border:0;outline:none;overflow:auto;font-size:16px; line-height:24px;margin-left:-20px}
+ #top_reply textarea.on{color:#000}
+ #top_reply .userTitle{display:none}
 
-	 /*slider*/
-	
-	
-	#parent {width:1px; height:600px; background:#b5daf7 url(http://mat1.gtimg.com/www/niuping2013/scrollTopbg.png) top no-repeat;display:none;position:relative; float:right;margin-right:5px}
-	#parent .bottom{width:1px;position:absolute;bottom:1px;height:67px;background:url(http://mat1.gtimg.com/www/niuping2013/scrollBottombg.png) no-repeat;}
-	#div1 {width:10px;height:50px;background:#a8d3f6;position:absolute;cursor:pointer;top:0px;left:-5px;z-index:5;border-radius:7px}
-	#div2 {width:625px; height:600px;  position:relative; overflow:hidden;float:left}
-	#div3 {height:auto;position:absolute;width:100%}
+ 
+ /*wraper*/
+ .w1000{width:960px;margin:0 auto;}
+ #wraper{width:960px;margin:30px auto 0px auto;position: relative;}
+ #mainBody{width:640px;padding-bottom:30px; float:left; background:#fff;}
+ #mainCoral{padding-bottom:30px;}
+ #sliderBar{width:300px;float:right;overflow:hidden}
+ #sliderBar .ad_cmt_text{ margin-top:8px;}
+ #content{font-size:14px;font-faimly:'simsun'} 
+ 
+ #content .main_titleTab{border-bottom:2px solid #cfcece;height:35px;line-height:35px;padding-top:5px;position:relative;font-family:"Microsoft Yahei";}/*set font*/
+ 
+ #content .main_titleTab span.on{color:#000;border-bottom:2px solid #379be9;}
+ #content .main_titleTab span.on a{color:#000}
+ #content .main_titleTab span{font-size:16px;position:absolute;display:inline-block;width:82px;text-align:center;cursor:pointer;padding:0px 5px}
+ #content .main_titleTab span a{color:#999;font-weight:800}
+ #content .main_titleTab span a:hover{text-decoration:none}
+ 
+ 
+ #content .main_titleTab span.tab1{left:0px;}
+ #content .main_titleTab span.tab2{left:92px;}
+ #content .main_titleTab span.tab2 em{position:absolute;display:block;height:20px;line-height:20px;color:#fff;background:#379be9 url(http://mat1.gtimg.com/www/niuping2013/popNum.png) no-repeat;left:83px;top:8px;padding:0px 6px 0px 10px;font-size:12px;display:none}
+ 
+ #content .chid_titleTab{height:32px;line-height:28px;margin-top:9px;}
+ #content .chid_titleTab span a:hover{text-decoration:none}
+ #content .chid_titleTab span{font-size:14px;font-weight:normal;width:75px;height:31px;text-align:center;float:left;cursor:pointer}
+ #content .chid_titleTab span a{color:#b3b3b3}
+ #content .chid_titleTab span.on{background:url(http://mat1.gtimg.com/www/niuping2013/btn.png) no-repeat;}
+ #content .chid_titleTab span.on a{color:#fff}
+ 
+ 
+ #content .showNum{height:0px;line-height:30px;background:#379be9;cursor:pointer;text-align:center;color:#fff;margin:25px 0px 0px 0px;display:none}
+ #tab1_allComments li.post{position:relative;zoom:1;_float:left;padding:10px 0px 2px 42px;border-bottom:1px solid #e6e6e6}/*change padding*/
+ #tab1_allComments li.post .post-content .avatar img{border-radius:5px;width:40px;height:40px}
+ #tab1_allComments li.post .children .post-content .avatar img{width:25px;height:25px;border-radius:2px;}/*make it small*/
+ #tab1_allComments .children li.post{border:none;border-top:1px dotted #e6e6e6;overflow:hidden}
+ #tab1_allComments .children .children .children .children .children {margin-left:-37px}
+ #tab1_allComments .children .children .children .children .children li.post{padding-left:37px;}
+ #tab1_allComments .children .children .children .children{margin-left:-37px}
+ #tab1_allComments .children .post{padding-left:0px} /*delete padding-left make children in a line*/
+ #tab1_allComments .post-body{padding-left:10px}
+ #tab1_allComments .children .post-body{padding-left:32px}
+ #tab1_allComments .post-header .uptime,#tab1_allComments .post-header .uptime0{color:#999;margin-left:5px;font-size:12px}
+ /*change color and font*/
+ #tab1_allComments .post-header .publisher{color:#56abee;font-weight:600;font-family:"Microsoft Yahei"; padding-right:8px;font-size:12px;cursor:pointer}
+ 
+ #tab1_allComments .post-header .replywho{padding-left:19px;color:#455e85;font-size:12px;background:url(http://mat1.gtimg.com/www/niuping2013/plbg.png) 0px -71px no-repeat;}
+ 
+ 
+ #tab1_allComments .post-footer{overflow:hidden;height:30px;line-height:30px;width:100%}
+ #tab1_allComments .children .post-footer{display:none} /*hide children comments button*/
+ #tab1_allComments .post-footer .newcoment{float:right;padding-left:10px;background:url(http://mat1.gtimg.com/www/niuping2013/bluepoint.png) 0px no-repeat;font-size:12px;color:#b2b2b2;cursor:pointer;display:none}
+ #tab1_allComments .post-footer span{color:#808080;cursor:pointer;font-size:12px;}
+ #tab1_allComments .post-content{line-height:24px;}
+ #tab1_allComments .post-list .indicator{display:none}
+ 
+ #tab1_allComments .post-list .blueflag .indicator{background:#2e9fff;width:5px;height:40px;position:absolute;left:0px;top:20px;border-radius:3px;display:block}
+ #tab1_allComments .post-list .children .blueflag .indicator{height:35px}
+ #tab1_allComments .post-list .blueflag .avatar{left:10px;}
+ #tab1_allComments .post-list .blueflag .post-body{padding-left:20px;}
+ 
+ #my-message .post-list .blueflag .indicator{background:#2e9fff;width:5px;height:40px;position:absolute;left:0px;top:15px;border-radius:3px;display:block}
+ #my-message .post-list .children .blueflag .indicator{height:35px}
+ #my-message .post-list .blueflag .avatar{left:10px;}
+ #my-message .post-list .blueflag .post-body{padding-left:20px;}
+ 
+ #tab1_allComments .pop_reply{margin-top:10px;padding-left:12px}
+ #tab1_allComments .post-list .Occupy .children .post-footer,.post-list .Occupy .children .post-footer{height:30px}
+ #tab1_allComments .post-list .Occupy .post-footer,.post-list .Occupy .post-footer{height:10px}
+ #tab1_allComments .post .children .children .children .children .pop_reply{padding-left:49px}
+ /* popup */
+ 
+ .popObj{width:664px;height:80%;max-height:780px;position:fixed;_position:absolute;left:50%;top:100%;margin-left:-340px;border-radius: 7px;background:rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr = '#60000000',endColorstr = '#60000000')\9;z-index:90001;border:1px solid #a9a9a9;overflow:hidden;padding:8px;display:none}
+ .popObj .head{background:url(http://mat1.gtimg.com/www/niuping2013/pop_bg.png) repeat-x;height:120px;color:#fff;position:relative;}
+ .popObj .head .info{height:80px;padding:20px 0px 0px 20px;}
+ .popObj .head .info .name{float:left;margin-left:15px;padding-top:15px}
+ .popObj .head .info .name strong{display:block;font-size:16px;margin-bottom:10px}
+ .popObj .userPic{float:left}
+ .popObj .userPic img{width:80px; height:80px;}/*20130704*/
+ .popObj .head .info img{border-radius:5px}
+ .popObj .upandnum{line-height:30px;font-size:14px}
 
-	 /* by linkai */
-	 
-	.my-comments {padding-top:10px;font-size:14px;overflow:hidden}
-	.my-comments .post .post-body .message-article{ color:#808080;}
-	
-	.my-comments .post .post-body .message-article span strong{color:#0a8cd2}
-	
-	.my-comments .post-content{/*position:relative;zoom:1;*/}
-	.my-comments .avatar{position:absolute;left:0;/*-42px*/top:15px;}
-	.my-comments .avatar img{width:40px;height:40px;border-radius:4px; }
-	.my-comments .children .avatar img{width:35px;height:35px;border-radius:4px; }
-	
-	.my-comments .my-btn { background: #2e9fff; text-align: center; margin-bottom: 18px; padding: 10px; color: #fff; border-radius: 4px; cursor: pointer; }
-	.my-comments .my-nav { margin-bottom: 18px }
-	.my-comments .my-nav li { float: left; width: 75px; height: 31px; line-height: 24px; text-align: center; cursor: pointer; }
-	.my-comments .my-nav li.active { background: url(http://mat1.gtimg.com/www/niuping2013/btn.png) no-repeat; color: #fff; }
-	.my-comments .post { position: relative; zoom:1;_float:left; width:100}
-	.my-comments .post .post-time { position: absolute; left: 0px; top: 0px; width: 80px; padding-right: 9px; ; background: url(img/dot.png) no-repeat right top; color: #808080;text-align:center;font-size:12px}
-	.my-comments .post .post-body { padding: 15px 0px 0px 10px; }
-	.my-comments .post .post-body.target { padding-left: 12px; }
-	.my-comments .my-notification .post .post-body .message-content { padding-left: 30px}
-	.my-comments .my-notification .post .post-footer { padding-left: 30px;padding-top:10px}
-	.my-comments .my-notification .post .message-article { font-size: 12px; color: #999999; padding-left:2px; }
-	.my-comments .my-notification .post .message-article .rename{color:#0a8cd2;padding-right:5px}
-	
-    .my-comments .my-notification .upvote span{cursor:text}
-	.my-comments .my-notification .post .post-body .article-title { padding-left: 30px; line-height: 22px;}
-	.my-comments .my-notification .post .line { border-bottom: 1px solid #e6e6e6; margin-left: 15px;font-size:1px; height:1px;}
-	.my-comments .my-notification .post .line { border-bottom: 1px solid #e6e6e6; margin-left: 15px;font-size:1px; height:1px;}
-	.my-comments .post .post-body .message-article a { padding: 0 4px; color: #0a8cd2; line-height:18px}
-	.my-comments .post .post-body .message-article .publisher{color: #0a8cd2;cursor:pointer}
-	.my-comments .post .post-body .article-title { height: 24px; margin-top: 10px; }
-	.my-comments .post .post-body .article-title a { color: #7cb3d0; font-size: 12px; }
-	.my-comments .post .post-body .article-title .userlist a { font-weight: bold; }
-	.my-comments .post .post-body .message-content { margin-top: 5px; line-height: 24px; color: #222;}
-	.my-comments .post .post-footer .menu li { float: left; padding-right: 18px; ; }
-	.my-comments .my-notification{padding-top:5px}
-	.my-comments .my-notification .textarea{padding-left:46px;}
-	
-	
-	
-	.my-comments .my-notification .post-list .post {padding-left:80px;width:559px;padding-bottom:15px;background:url(http://mat1.gtimg.com/www/niuping2013/solider.png) 80px 0px repeat-y;}
-	#my-notification-list .post .post{display:none;}/*20130718 by link*/
-	.my-comments .my-notification .post-list .temporary{background:none;padding-left:40px;padding-bottom:8px;line-height:24px}
-	.my-comments .my-notification .post-list .temporary .post-body{padding-left:7px;padding-bottom:0px}
-	.my-comments .my-notification .post-list .temporary .avatar{display:none}
-	.my-comments .my-notification .post-list .temporary .post-footer{display:none}
-	.my-comments .my-notification .post-list .temporary .uptime{font-size:12px;color:#999;margin-left:10px;font-size:12px;margin-left:10px}
-	.my-comments .my-notification .post .post-body { padding: 0 0px 16px 18px;}
-	.my-comments .my-message{padding-top:5px}
-	.my-comments .my-message .post-list .post { padding-left:42px;padding-bottom:15px;}
-	.my-comments .my-message .post-list .post li.post{border:none}
-	.my-comments .my-message .post-list .post li.post .post-body{padding-left:0px;line-height:24px;}
-	.my-comments .my-message .post-list .post .post{padding-left:37px;padding-bottom:0px}
-	.my-comments .my-message .post-list .post .post .post-content{padding-left:00px}
-	.my-comments .my-message .post-list .children .children{ margin-left:-37px;}
-	
-	.my-comments .my-message .pop_reply{padding:10px 0px 0px 10px;overflow:hidden}
-	.my-comments .my-notification .pop_reply{overflow:hidden}
-	.my-comments .my-message .post { border-bottom: 1px solid #e6e6e6 }
-	.my-comments .post .my-userPic { position: absolute; left:-52px; top: 16px; }
-	.my-comments .indicator {  width: 5px; height: 48px; background: #2e9fff; border-radius: 3px; top: 0; left: 0; position: absolute;display:none}
-	.my-comments .my-notification .post .indicator { height: 13px }
-	.my-comments .time,.uptime0,.uptime{ color: #999; font-size: 12px; display: inline-block; padding-left: 8px; }
-	.my-comments .publisher a{color:#0a8cd2;font-weight:800}
-	 
-	#my-notice .post{width:535px;}
-	#my-notice .post-footer a,#my-notification .post-footer a{cursor:text}
-	#my-notice .post-footer .upvote a:hover,#my-notification .post-footer .upvote a:hover{background-position:0 0}
-	#my-notice .post-footer .reply a:hover{background-position:0 -69px}
-	#my-notice .post-body .rename a{cursor:text;}
-	#my-notice .post-body .rename a:hover{text-decoration:none}
-	#my-notice .reply span{cursor:text}
-	
-	 /* Right sliderbar */
-	 
-	#sliderBar .hotlist{width:300px;}
-	#sliderBar .hotlist .hd{height:36px;font-size:16px; background:#f7f7f7 url(http://mat1.gtimg.com/www/niuping2013/hotlisthd.gif) repeat-x 0 bottom;}
-	#sliderBar .hotlist .hd .lefttitle{ float:left; line-height:34px; padding-left:12px;}
-	#sliderBar .hotlist .hd .side-tab-title{ float:right;}
-	#sliderBar .hotlist .hd .side-tab-title li{float:left; width:55px; line-height:34px;text-align:center;cursor:pointer;color:#999}
-	#sliderBar .hotlist .hd li.curr{ border-bottom:2px solid #60b3f4; height:34px;color:#000}
-	#sliderBar .hotlist .bd{border:1px solid #e6e6e6; border-top:none;}	
-	
-	
-	#sliderBar .hotlist .bd li{ *+height:1%;overflow:hidden; padding:10px; padding-left:0px;border-bottom:1px solid #e6e6e6;}
-	#sliderBar .hotlist .bd li:after{content:".";display:block;height:0;clear:both;visibility:hidden}
-	#sliderBar .hotlist .bd li em{ float:left;width:48px; color:#dadada; font-size:22px; font-family:Verdana, Geneva, sans-serif; text-align:center;}
-	#sliderBar .hotlist .bd li.f-three em{ color:#fa6768}
-	#sliderBar .hotlist .bd li .r_txt{ float:left;width:228px; line-height:18px;}
-	#sliderBar .hotlist .bd li .r_txt a{ color:#6c6c6c;}
-	#sliderBar .hotlist .bd li .r_txt a:hover{color:#BC2D09;}
-	#sliderBar .hotlist .bd li .r_txt i a{ color:#999999; font-style:normal;}
-	
+ .popObj .upandnum .area{background:url(img/pop1.png) no-repeat;padding-left:20px;padding-right:12px}
+ .popObj .upandnum .upvote{background:url(img/uphand.jpg) no-repeat;padding-left:20px;padding-right:12px}
+ .popObj .upandnum .num{background:url(img/replyico.png) no-repeat;padding-left:20px}
+ .popObj .upandnum .num i{font-style:normal;margin-right:3px}
+ .popObj .close{width:19px;height:19px;position:absolute;top:20px;right:20px;cursor:pointer;background:url(http://mat1.gtimg.com/www/niuping2013/closex.png) no-repeat;z-index:999}
+ .popObj .popContent{height:100%;background:#fff;max-height:660px}
+ .popObj .popInner{padding:10px;overflow:hidden;padding-left:20px}
+ 
 
-    /* title */
+ /*slider*/
 
-	.bigTitle{height:}	
-	.bigTitle h1 a{padding-bottom:16px;font-family:'simhei';font-size: 26px;color:#000;font-weight:normal}
-	.bigTitle h1 a:hover{color:#cc0000}
-	 
-	 /*css style */
-	 
-	 #mainBody .userPopObj{width:220px;height:195px;background:#ccc;position:absolute;z-index:99;left:40px;top:0px;border-radius:5px}
-	 #mainBody .hiddenCon{display:none;}
-	 #mainBody .userInfo{display:none}
-	 #mainBody .userInfo img{vertical-align:middle;margin-right:3px}*/
-	 #mainBody .pop_reply .tips a{color:#fff}
-	 #mainCoral .userPopObj{width:220px;height:195px;background:#ccc;position:absolute;z-index:99;left:40px;top:0px;border-radius:5px}
-	 #mainCoral .hiddenCon{display:none;}
-	 #mainCoral .userInfo{display:none}
-	 #mainCoral .userInfo img{vertical-align:middle;margin-right:3px}*/
-	 #mainCoral .pop_reply .tips a{color:#fff}
-	 
-	 .mian-ad{ position:relative;}
-	/*  |xGv00|62f3981ce12c9f9d6d240522fe348b12 */
+
+#parent {width:1px; height:600px; background:#b5daf7 url(http://mat1.gtimg.com/www/niuping2013/scrollTopbg.png) top no-repeat;display:none;position:relative; float:right;margin-right:5px}
+#parent .bottom{width:1px;position:absolute;bottom:1px;height:67px;background:url(http://mat1.gtimg.com/www/niuping2013/scrollBottombg.png) no-repeat;}
+#div1 {width:10px;height:50px;background:#a8d3f6;position:absolute;cursor:pointer;top:0px;left:-5px;z-index:5;border-radius:7px}
+#div2 {width:625px; height:600px;  position:relative; overflow:hidden;float:left}
+#div3 {height:auto;position:absolute;width:100%}
+
+ /* by linkai */
+ 
+.my-comments {padding-top:10px;font-size:14px;overflow:hidden}
+.my-comments .post .post-body .message-article{ color:#808080;}
+
+.my-comments .post .post-body .message-article span strong{color:#0a8cd2}
+
+.my-comments .post-content{/*position:relative;zoom:1;*/}
+.my-comments .avatar{position:absolute;left:0;/*-42px*/top:15px;}
+.my-comments .avatar img{width:40px;height:40px;border-radius:4px; }
+.my-comments .children .avatar img{width:35px;height:35px;border-radius:4px; }
+
+.my-comments .my-btn { background: #2e9fff; text-align: center; margin-bottom: 18px; padding: 10px; color: #fff; border-radius: 4px; cursor: pointer; }
+.my-comments .my-nav { margin-bottom: 18px }
+.my-comments .my-nav li { float: left; width: 75px; height: 31px; line-height: 24px; text-align: center; cursor: pointer; }
+.my-comments .my-nav li.active { background: url(http://mat1.gtimg.com/www/niuping2013/btn.png) no-repeat; color: #fff; }
+.my-comments .post { position: relative; zoom:1;_float:left; width:100}
+.my-comments .post .post-time { position: absolute; left: 0px; top: 0px; width: 80px; padding-right: 9px; ; background: url(img/dot.png) no-repeat right top; color: #808080;text-align:center;font-size:12px}
+.my-comments .post .post-body { padding: 15px 0px 0px 10px; }
+.my-comments .post .post-body.target { padding-left: 12px; }
+.my-comments .my-notification .post .post-body .message-content { padding-left: 30px}
+.my-comments .my-notification .post .post-footer { padding-left: 30px;padding-top:10px}
+.my-comments .my-notification .post .message-article { font-size: 12px; color: #999999; padding-left:2px; }
+.my-comments .my-notification .post .message-article .rename{color:#0a8cd2;padding-right:5px}
+
+.my-comments .my-notification .upvote span{cursor:text}
+.my-comments .my-notification .post .post-body .article-title { padding-left: 30px; line-height: 22px;}
+.my-comments .my-notification .post .line { border-bottom: 1px solid #e6e6e6; margin-left: 15px;font-size:1px; height:1px;}
+.my-comments .my-notification .post .line { border-bottom: 1px solid #e6e6e6; margin-left: 15px;font-size:1px; height:1px;}
+.my-comments .post .post-body .message-article a { padding: 0 4px; color: #0a8cd2; line-height:18px}
+.my-comments .post .post-body .message-article .publisher{color: #0a8cd2;cursor:pointer}
+.my-comments .post .post-body .article-title { height: 24px; margin-top: 10px; }
+.my-comments .post .post-body .article-title a { color: #7cb3d0; font-size: 12px; }
+.my-comments .post .post-body .article-title .userlist a { font-weight: bold; }
+.my-comments .post .post-body .message-content { margin-top: 5px; line-height: 24px; color: #222;}
+.my-comments .post .post-footer .menu li { float: left; padding-right: 18px; ; }
+.my-comments .my-notification{padding-top:5px}
+.my-comments .my-notification .textarea{padding-left:46px;}
+
+
+
+.my-comments .my-notification .post-list .post {padding-left:80px;width:559px;padding-bottom:15px;background:url(http://mat1.gtimg.com/www/niuping2013/solider.png) 80px 0px repeat-y;}
+#my-notification-list .post .post{display:none;}/*20130718 by link*/
+.my-comments .my-notification .post-list .temporary{background:none;padding-left:40px;padding-bottom:8px;line-height:24px}
+.my-comments .my-notification .post-list .temporary .post-body{padding-left:7px;padding-bottom:0px}
+.my-comments .my-notification .post-list .temporary .avatar{display:none}
+.my-comments .my-notification .post-list .temporary .post-footer{display:none}
+.my-comments .my-notification .post-list .temporary .uptime{font-size:12px;color:#999;margin-left:10px;font-size:12px;margin-left:10px}
+.my-comments .my-notification .post .post-body { padding: 0 0px 16px 18px;}
+.my-comments .my-message{padding-top:5px}
+.my-comments .my-message .post-list .post { padding-left:42px;padding-bottom:15px;}
+.my-comments .my-message .post-list .post li.post{border:none}
+.my-comments .my-message .post-list .post li.post .post-body{padding-left:0px;line-height:24px;}
+.my-comments .my-message .post-list .post .post{padding-left:37px;padding-bottom:0px}
+.my-comments .my-message .post-list .post .post .post-content{padding-left:00px}
+.my-comments .my-message .post-list .children .children{ margin-left:-37px;}
+
+.my-comments .my-message .pop_reply{padding:10px 0px 0px 10px;overflow:hidden}
+.my-comments .my-notification .pop_reply{overflow:hidden}
+.my-comments .my-message .post { border-bottom: 1px solid #e6e6e6 }
+.my-comments .post .my-userPic { position: absolute; left:-52px; top: 16px; }
+.my-comments .indicator {  width: 5px; height: 48px; background: #2e9fff; border-radius: 3px; top: 0; left: 0; position: absolute;display:none}
+.my-comments .my-notification .post .indicator { height: 13px }
+.my-comments .time,.uptime0,.uptime{ color: #999; font-size: 12px; display: inline-block; padding-left: 8px; }
+.my-comments .publisher a{color:#0a8cd2;font-weight:800}
+ 
+#my-notice .post{width:535px;}
+#my-notice .post-footer a,#my-notification .post-footer a{cursor:text}
+#my-notice .post-footer .upvote a:hover,#my-notification .post-footer .upvote a:hover{background-position:0 0}
+#my-notice .post-footer .reply a:hover{background-position:0 -69px}
+#my-notice .post-body .rename a{cursor:text;}
+#my-notice .post-body .rename a:hover{text-decoration:none}
+#my-notice .reply span{cursor:text}
+
+ /* Right sliderbar */
+ 
+#sliderBar .hotlist{width:300px;}
+#sliderBar .hotlist .hd{height:36px;font-size:16px; background:#f7f7f7 url(http://mat1.gtimg.com/www/niuping2013/hotlisthd.gif) repeat-x 0 bottom;}
+#sliderBar .hotlist .hd .lefttitle{ float:left; line-height:34px; padding-left:12px;}
+#sliderBar .hotlist .hd .side-tab-title{ float:right;}
+#sliderBar .hotlist .hd .side-tab-title li{float:left; width:55px; line-height:34px;text-align:center;cursor:pointer;color:#999}
+#sliderBar .hotlist .hd li.curr{ border-bottom:2px solid #60b3f4; height:34px;color:#000}
+#sliderBar .hotlist .bd{border:1px solid #e6e6e6; border-top:none;}	
+
+
+#sliderBar .hotlist .bd li{ *+height:1%;overflow:hidden; padding:10px; padding-left:0px;border-bottom:1px solid #e6e6e6;}
+#sliderBar .hotlist .bd li:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+#sliderBar .hotlist .bd li em{ float:left;width:48px; color:#dadada; font-size:22px; font-family:Verdana, Geneva, sans-serif; text-align:center;}
+#sliderBar .hotlist .bd li.f-three em{ color:#fa6768}
+#sliderBar .hotlist .bd li .r_txt{ float:left;width:228px; line-height:18px;}
+#sliderBar .hotlist .bd li .r_txt a{ color:#6c6c6c;}
+#sliderBar .hotlist .bd li .r_txt a:hover{color:#BC2D09;}
+#sliderBar .hotlist .bd li .r_txt i a{ color:#999999; font-style:normal;}
+
+
+/* title */
+
+.bigTitle{height:}	
+.bigTitle h1 a{padding-bottom:16px;font-family:'simhei';font-size: 26px;color:#000;font-weight:normal}
+.bigTitle h1 a:hover{color:#cc0000}
+ 
+ /*css style */
+ 
+ #mainBody .userPopObj{width:220px;height:195px;background:#ccc;position:absolute;z-index:99;left:40px;top:0px;border-radius:5px}
+ #mainBody .hiddenCon{display:none;}
+ #mainBody .userInfo{display:none}
+ #mainBody .userInfo img{vertical-align:middle;margin-right:3px}*/
+ #mainBody .pop_reply .tips a{color:#fff}
+ #mainCoral .userPopObj{width:220px;height:195px;background:#ccc;position:absolute;z-index:99;left:40px;top:0px;border-radius:5px}
+ #mainCoral .hiddenCon{display:none;}
+ #mainCoral .userInfo{display:none}
+ #mainCoral .userInfo img{vertical-align:middle;margin-right:3px}*/
+ #mainCoral .pop_reply .tips a{color:#fff}
+ 
+ .mian-ad{ position:relative;}
+/*  |xGv00|62f3981ce12c9f9d6d240522fe348b12 */

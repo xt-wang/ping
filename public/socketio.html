@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>这是我的评论演示页面</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/jquery.min.js"></script>
+</head>
+<body>
+    <div id="content"></div>
+    <script>
+        $(document).ready(function() {
+            var socket = new io.connect(null)//('localhost', {port: 3000, rememberTransport: false/*, transports: ['xhr-polling']*/});
+            var content = $('#content');
+            socket.on('connect', function() {
+            });
+            socket.on('message', function(message){
+                content.prepend(message + '<br />');
+            }) ;
+            socket.on('disconnect', function() {
+                console.log('disconnected');
+                content.html("<b>Disconnected!</b>");
+            });
+
+            //socket.connect();
+        });
+    </script>
+    <!--
+    <div id="coral_comment">
+        <script type="text/javascript" src="js/coral.js"></script>
+    </div>
+    -->
+</body>
+</html>
