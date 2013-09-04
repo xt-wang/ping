@@ -18,14 +18,17 @@ module.exports = function(grunt){
                     },
                     files : {
                          'dist/application.js' : ['.build/application.js'],  // 合并.build/application.js文件到dist/application.js中
-                         'dist/application-debug.js' : ['.build/application-debug.js']
+                         'dist/application-debug.js' : ['.build/application-debug.js'],
+                         'dist/util.js' : ['.build/util.js'],  // 合并.build/application.js文件到dist/application.js中
+                         'dist/util-debug.js' : ['.build/util-debug.js']
                     }
                }
           },
           uglify : {
                main : {
                     files : {
-                         'dist/application.js' : ['dist/application.js'] //对dist/application.js进行压缩，之后存入dist/application.js文件
+                         'dist/application.js' : ['dist/application.js'], //对dist/application.js进行压缩，之后存入dist/application.js文件
+                         'dist/util.js' : ['.build/util.js']
                     }
                }
           },

@@ -1,0 +1,54 @@
+creatMask : function(){
+getTargetId: function(){    // 获取评论id
+insertMyComment: function(data){
+creatHmtl: function(info,control,top){ 
+makeCommentList: function(){    // 首页评论渲染 --后面需要修改
+makeHotList: function(){
+beforeSend: function() {
+success: function(data){
+tabsComment : function(){    // 页卡公用方法
+loadMore: function(lastID){
+beforeSend: function() {
+success: function(data){
+blueLine: function(targetId){
+probeEvent: function(){
+loadNew: function(){
+changeTab: function(){
+loadNum: function(){
+beforeSend: function() {
+success: function(data){
+bindFooterEvent: function(container){   // 参数为评论列表容器
+beforeSend: function() {
+success: function(data) { //设置一个空回调防止屏蔽返回数据。
+showLoginLayer: function(){ 
+onLogined: function(uin, nick, headUrl){
+loginOut: function(flag){
+bindLoginButtonsClick: function(){
+getLoginStatus: function(){
+postData: function(textAreaId) {
+sendStat: function(site) {
+submitForm: function(fields,position) {
+pubCallback: function(textAreaId, data, _pubTimer) {
+insertTempComment: function(commentid,_content,parentid,_pubTime,check) {
+popupLayer: function(data){   // 传进去的个人数据
+popScroll: function(){
+onScriptLoad: function(){
+bindOtherEvents: function() {
+formatTime : function($time){
+updateTime : function(){
+myCreateHmtl: function(info,type,blueflag){    // 创建 dom
+loadMyMessage: function(){   // 个人中心提醒 列表拉取
+beforeSend: function() {
+loadMyComment: function(){  // 个人中心 我的评论列表拉取
+beforeSend: function() {
+loadUserComment: function(){   // 个人中心 我的评论列表拉取
+_create:function(){
+success:function(data){ 
+error:function(){
+success:function(data){   //从服务器得到数据，显示数据并继续查询  
+error:function(XMLHttpRequest,textStatus,errorThrown){ 
+bindSubmitEvent:function(){
+checkAndPublish:function(textAreaId){
+subString:function(str,n){
+clickLoadMore:function(){           // 个人中心 loadMore 按钮
+isVisible:function(){  

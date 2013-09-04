@@ -1,0 +1,43 @@
+beforeSend: () {
+success: (data) { //设置一个空回调防止屏蔽返回数据。
+
+bindFooterEvent: (container){   // 参数为评论列表容器
+bindLoginButtonsClick: (){
+bindOtherEvents: () {
+bindSubmitEvent:(){
+blueLine: (targetId){
+changeTab: (){
+checkAndPublish:(textAreaId){
+clickLoadMore:(){           // 个人中心 loadMore 按钮
+_create:(){
+creatHmtl: (info,control,top){ 
+creatMask : (){
+formatTime : ($time){
+getLoginStatus: (){
+getTargetId: (){    // 获取评论id
+insertMyComment: (data){
+insertTempComment: (commentid,_content,parentid,_pubTime,check) {
+isVisible:(){  
+loadMore: (lastID){
+loadMyComment: (){  // 个人中心 我的评论列表拉取
+loadMyMessage: (){   // 个人中心提醒 列表拉取
+loadNew: (){
+loadNum: (){
+loadUserComment: (){   // 个人中心 我的评论列表拉取
+loginOut: (flag){
+makeCommentList: (){    // 首页评论渲染 --后面需要修改
+makeHotList: (){
+myCreateHmtl: (info,type,blueflag){    // 创建 dom
+onLogined: (uin, nick, headUrl){
+onScriptLoad: (){
+popScroll: (){
+popupLayer: (data){   // 传进去的个人数据
+postData: (textAreaId) {
+probeEvent: (){
+pubCallback: (textAreaId, data, _pubTimer) {
+sendStat: (site) {
+showLoginLayer: (){ 
+submitForm: (fields,position) {
+subString:(str,n){
+tabsComment : (){    // 页卡公用方法
+updateTime : (){

@@ -1,4 +1,4 @@
-document.domain = 'dev.ping.com';
+//document.domain = 'dev.qq.com';
 /*
  * jQuery cookie plugin
  * 已设置默认设置（config.defaults），domain=qq.com，path=/
@@ -99,6 +99,7 @@ jQuery(document).ready(function(){
 		 * 用于识别当前频道等
 		 */
 		var curSite = newsUrl.match(/https?:\/\/([^\.]+)/)[1];
+		
 		$.widget("qq.comment",{
 			options: {
 				dataSource0: '',  //默认首页评论列表数据源
