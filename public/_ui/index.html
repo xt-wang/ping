@@ -159,241 +159,214 @@ Omore.onmouseout = function() {
     <iframe src="http://view.news.qq.com/PL_adT.htm" scrolling="no" border="0" frameborder="0" style="width:1000px;height:90px;border:none;overflow:hidden;"></iframe>
 </div>
 <div id="wraper" class="cf">
-   
-    <div id ="mainBody">
-        <!-- 主标题 -->
-        <div class="bigTitle">
-            <h1><a target='_blank' href="http://sports.qq.com/a/20130731/001543.htm">内马尔迟到的首秀 替补登场15分钟几无亮点 </a></h1>
-        </div>
-
-
-        <!----评论框---->	
-
-        <div id ="top_reply">
-            <div id="globalNav" class="globalNav"> 
-
-                <div class="commentTotleNum" >
-
-                    <a href='' target='_blank'><strong id="commentTotleNum"></strong></a>
-
-                </div>
-
-
-                <h1>网友评论</h1>
-
-                <div id='loginBtn' style='display:none'></div>
-
+    
+    <div id="np_cmt_frame">
+        <div id ="mainBody">
+            <!-- 主标题 -->
+            <div class="bigTitle">
+                <h1><a target='_blank' href="http://sports.qq.com/a/20130731/001543.htm">内马尔迟到的首秀 替补登场15分钟几无亮点 </a></h1>
             </div>
-            <div id="commentArea">
-                <div class="textarea">
-                    <textarea tabindex="1" autocomplete="off" name="content" accesskey="u" id="top_content">文明上网，理性发言</textarea>   
-                </div>        
-                <div class="commtSub" id="p_login_btn">  <!-- 用户登录模块 -->
-
-                    <div class ="loginFlag" id="loginFlag">    
 
 
-
+            <!----评论框---->	
+            <div id ="np_cmt_top">
+                <div id="globalNav" class="globalNav"> 
+                    <div class="cmt_sum" >
+                        <a href='' target='_blank'><strong id="cmt_sum"></strong></a>
                     </div>
+                    <h1>网友评论</h1>
+                    <div id='loginBtn' style='display:none'></div>
+                </div>
+                <div id="cmt_box">
+                    <div class="textarea">
+                        <textarea tabindex="1" autocomplete="off" name="content" accesskey="u" id="top_content">文明上网，理性发言</textarea>   
+                    </div>        
+                    <div class="commtSub" id="p_login_btn">  <!-- 用户登录模块 -->
 
-                    <span class="tips"></span>
+                        <div class ="loginFlag" id="loginFlag">    
 
-                    <div class = 'submitBtn'>
 
-                        <a href="javascript:void(0)" class="submit" id="top_post_btn_login">登录</a>
 
-                        <a href="javascript:void(0)" class="submit" id="top_post_btn" style='display:none'>发表评论</a>
+                        </div>
 
-                        <a href="javascript:void(0)" class="submitOn" id="top_post_btn_load" style='display:none'></a>
+                        <span class="tips"></span>
 
+                        <div class = 'submitBtn'>
+
+                            <a href="javascript:void(0)" class="submit" id="top_post_btn_login">登录</a>
+
+                            <a href="javascript:void(0)" class="submit" id="top_post_btn" style='display:none'>发表评论</a>
+
+                            <a href="javascript:void(0)" class="submitOn" id="top_post_btn_load" style='display:none'></a>
+
+
+                        </div>
 
                     </div>
 
                 </div>
-
-            </div>
-        </div>
-
-
-        <!----评论显示列表---->	
-
-        <div id="content">
-
-
-            <!----实时显示---->	
-
-
-            <div class ="main_titleTab">
-
-                <h2>
-                    <span class='tab1 on' id="myAllComment"><a href="javascript:void(0)">全部评论</a></span>
-                    <span class='tab2' id ="myCowComment"><a href="javascript:void(0)">我的牛评<em class="popNum" id="popMsg"></em></a></span>
-                </h2>	
-
-            </div>	
-
-
-            <div id="tab1_allComments" class="dis">	 <!--页卡一 全部评论-->
-
-
-                <div id ="showNum" class="showNum">
-
-                    <span></span>
-
-                </div>
-
-                <div id='allComments'>
-
-                    <div class="tipInfo waitting">
-
-
-
-                    </div>
-
-                </div>     <!-- 全部评论 -->
-
-
-                <div id="loadMore" class="loadMore">
-
-                    <!--<span class="loading"></span>-->
-                    <span class="loadfonts">加载更多</span>
-
-
-                </div>
-
-
-                <!--------更新数据数据源后的渲染 应该和 上面全部评论一致--------->
-
-
-                <div id ='newComments'>
-
-
-
-
-                </div>
-
             </div>
 
-            <div id = "tab2_myComments" class="undis my-comments">  <!--页卡二 我的牛评-->
 
-                <div class="chid_titleTab">
+            <!----评论显示列表---->	
 
+            <div id="content">
+                <!----实时显示---->	
+
+                <div class ="main_titleTab">
                     <h2>
-                        <span class='tab1 on' id='mytips'><a href="javascript:void(0)">提醒</a></span>
-                        <span class='tab2' id = 'mycon'><a href="javascript:void(0)">我的评论</a></span>
-                    </h2>
+                        <span class='tab1 on' id="myAllComment"><a href="javascript:void(0)">全部评论</a></span>
+                        <span class='tab2' id ="myCowComment"><a href="javascript:void(0)">我的牛评<em class="popNum" id="popMsg"></em></a></span>
+                    </h2>	
+                </div>
+
+                <div id="tab1_allComments" class="dis">	 <!--页卡一 全部评论-->
+                    <div id ="showNum" class="showNum">
+                        <span></span>
+                    </div>
+                    <div id='allComments'>
+                        <div class="tipInfo waitting">
+                        </div>
+                    </div>     <!-- 全部评论 -->
+                    <div id="loadMore" class="loadMore">
+                        <!--<span class="loading"></span>-->
+                        <span class="loadfonts">加载更多</span>
+                    </div>
+
+
+                    <!--------更新数据数据源后的渲染 应该和 上面全部评论一致--------->
+
+
+                    <div id ='newComments'>
+
+
+
+
+                    </div>
 
                 </div>
 
-                <div id="tab3_tips" class='dis'>
+                <div id = "tab2_myComments" class="undis my-comments">  <!--页卡二 我的牛评-->
 
-                    <div id="my-message" class="my-message">
+                    <div class="chid_titleTab">
 
-                        <div class="tipInfo waitting">
+                        <h2>
+                            <span class='tab1 on' id='mytips'><a href="javascript:void(0)">提醒</a></span>
+                            <span class='tab2' id = 'mycon'><a href="javascript:void(0)">我的评论</a></span>
+                        </h2>
+
+                    </div>
+
+                    <div id="tab3_tips" class='dis'>
+
+                        <div id="my-message" class="my-message">
+
+                            <div class="tipInfo waitting">
 
 
 
+                            </div>
+
+
+                            <ul id="my-message-list" class="post-list">
+
+
+                            </ul>
+                            <div class="loadMore" id="loadMsgMore"> <span>加载更多</span></div>
                         </div>
 
 
-                        <ul id="my-message-list" class="post-list">
+
+                    </div>
+
+                    <div id="tab4_mycon" class='undis'>
 
 
-                        </ul>
-                        <div class="loadMore" id="loadMsgMore"> <span>加载更多</span></div>
+                        <div id="my-notification" class="my-notification ">
+
+                            <div class="tipInfo waitting">
+
+
+
+                            </div>
+
+                            <ul id="my-notification-list" class="post-list">
+
+
+
+
+                            </ul>
+                            <div class="loadMore" id="loadCmtMore"> <span>加载更多</span></div>
+                        </div>
+
+
+
+
                     </div>
 
 
 
+
                 </div>
+            </div>
 
-                <div id="tab4_mycon" class='undis'>
-
-
-                    <div id="my-notification" class="my-notification ">
-
-                        <div class="tipInfo waitting">
-
-
-
-                        </div>
-
-                        <ul id="my-notification-list" class="post-list">
-
-
-
-
-                        </ul>
-                        <div class="loadMore" id="loadCmtMore"> <span>加载更多</span></div>
+            <div id = "hiddenCon" class="hiddenCon"> 
+            </div>
+            <div class="pop_reply" id="public_reply" style = "display:none">
+                <div class="textarea">
+                    <textarea tabindex="1" autocomplete="off" name="content" accesskey="u" id="pop_content"></textarea>   
+                </div>        
+                <div class="commtSub" id="p_login_btn">
+                    <div class="replyTop">
+                        <span class='pop_user_login'>登录</span><span class='pop_user_info'></span><span class="tips"></span>
                     </div>
-
-
-
-
-                </div>
-
-
-
-
-            </div>
-        </div>
-
-        <div id = "hiddenCon" class="hiddenCon"> 
-        </div>
-        <div class="pop_reply" id="public_reply" style = "display:none">
-            <div class="textarea">
-                <textarea tabindex="1" autocomplete="off" name="content" accesskey="u" id="pop_content"></textarea>   
-            </div>        
-            <div class="commtSub" id="p_login_btn">
-                <div class="replyTop">
-                    <span class='pop_user_login'>登录</span><span class='pop_user_info'></span><span class="tips"></span>
-                </div>
-                <div class='replyBtn'>
-                    <a href="javascript:void(0)" class="cancel" id="cancel_btn">取消</a>
-                    <a href="javascript:void(0)" class="submit" id="pop_post_btn">回复</a>
-                </div> 
-            </div>
-        </div>
-    </div>
-
-    <!--遮罩层-->
-    <div class = 'maskObj' id = 'maskObj'>
-    </div>
-
-    <!--弹出层-->
-    <div class='popObj' id ='popObj'>
-        <div class ='head'>
-            <div class='info'>	
-                <div class ='userPic'>
-                    <a href="javascript:void(0)"><img src="http://q2.qlogo.cn/g?b=qq&k=8NmmcImibNoradRIiaGrRVLw&s=40&t=1370280713" width=80></a>
-                </div>
-                <div class ="name">
-                    <div class="upandnum">
-                        <strong></strong>
-                        <span class='area'></span><span class="upvote">被顶(<i></i>)</span><span class="num"><i></i>条评论</span>
-                    </div>		
+                    <div class='replyBtn'>
+                        <a href="javascript:void(0)" class="cancel" id="cancel_btn">取消</a>
+                        <a href="javascript:void(0)" class="submit" id="pop_post_btn">回复</a>
+                    </div> 
                 </div>
             </div>
-            <div class="close"></div>
         </div>
-        <div class ="popContent " id="popContent">
-            <div class="popInner">
-                <div id="div2">	
-                    <div id="div3">
-                        <div class="my-comments">
-                            <div id="my-notice" class="my-notification ">
-                                <div class="tipInfo waitting">
+
+        <!--遮罩层-->
+        <div class = 'maskObj' id = 'maskObj'>
+        </div>
+
+        <!--弹出层-->
+        <div class='popObj' id ='popObj'>
+            <div class ='head'>
+                <div class='info'>	
+                    <div class ='userPic'>
+                        <a href="javascript:void(0)"><img src="http://q2.qlogo.cn/g?b=qq&k=8NmmcImibNoradRIiaGrRVLw&s=40&t=1370280713" width=80></a>
+                    </div>
+                    <div class ="name">
+                        <div class="upandnum">
+                            <strong></strong>
+                            <span class='area'></span><span class="upvote">被顶(<i></i>)</span><span class="num"><i></i>条评论</span>
+                        </div>		
+                    </div>
+                </div>
+                <div class="close"></div>
+            </div>
+            <div class ="popContent " id="popContent">
+                <div class="popInner">
+                    <div id="div2">	
+                        <div id="div3">
+                            <div class="my-comments">
+                                <div id="my-notice" class="my-notification ">
+                                    <div class="tipInfo waitting">
+                                    </div>
+                                    <ul id="popInfo" class="post-list">
+                                    <div class="loadMore" id="loadPopInfo" style="display:none"> <span class='loading'></span><span>加载更多</span></div>
                                 </div>
-                                <ul id="popInfo" class="post-list">
-                                <div class="loadMore" id="loadPopInfo" style="display:none"> <span class='loading'></span><span>加载更多</span></div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="parent">
-                    <div id="div1">
-                    </div>
-                    <div class="bottom">
+                    <div id="parent">
+                        <div id="div1">
+                        </div>
+                        <div class="bottom">
+                        </div>
                     </div>
                 </div>
             </div>

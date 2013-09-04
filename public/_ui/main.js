@@ -172,14 +172,14 @@
 								$logoutTrigger: $('#loginOut'), //mini导航 退出按钮 
 								loginEvent: 'logined',
 								$popReply: $('#public_reply'), // 评论弹出框
-								$topReply: $('#top_reply'),
+								$topReply: $('#np_cmt_top'),
 								$topContent: $('#top_content'), //发布评论内容框
 								$popContent: $('#pop_content'),
 								$allComments: $('#allComments'),
 								
 								$showNum: $('#showNum'),
 								$postBtns:$('#top_post_btn,#pop_post_btn'), // 发布评论按钮
-								$commentTotleNum: $("#commentTotleNum"),  // 全部评论数
+								$cmt_sum: $("#cmt_sum"),  // 全部评论数
 								
 								$loadMore: $("#loadMore"), // loadmore 按钮
 								toggleEvent: 'toggle',
@@ -402,7 +402,7 @@
 									    var _this = this;
 										var o = this.options;
 																				
-										o.$commentTotleNum.parent('a').attr('href','http://coral.qq.com/'+ ARTICLE_INFO.targetid);
+										o.$cmt_sum.parent('a').attr('href','http://coral.qq.com/'+ ARTICLE_INFO.targetid);
 										$('#cmtNum').attr({href:'http://coral.qq.com/'+ ARTICLE_INFO.targetid,target:'_blank'});
 
 										_this.loadMore();
@@ -545,7 +545,7 @@
 													   
 													   _this.probeEvent(); // 启动探测接口
 
-													   o.$commentTotleNum.html('<span>' + data.data.total + '</span>' + '条评论');
+													   o.$cmt_sum.html('<span>' + data.data.total + '</span>' + '条评论');
 													   
 													   if($('#cmtNum')){
 													   
@@ -697,9 +697,9 @@
 														
 															if(info.checkstatus != 2){
 															
-																var a = o.$commentTotleNum.children('span').html();
+																var a = o.$cmt_sum.children('span').html();
 															
-																o.$commentTotleNum.children('span').html(parseInt(a) + 1);
+																o.$cmt_sum.children('span').html(parseInt(a) + 1);
 																
 																if($('#cmtNum')){
 																
@@ -1910,7 +1910,7 @@
 									
 									o.$topContent.val(o.topContentTips);
 								    o.$topContent.focus(function() {
-										$('#commentArea').addClass('on');
+										$('#cmt_box').addClass('on');
 									
 										clearTimeout(o.blurTimer);
 										if (o.$topContent.val() == o.topContentTips) {
@@ -1924,8 +1924,8 @@
 										//发表评论框失去焦点事件
 									});
 									
-									$('#commentArea').bind('click',function(event){
-										 $('#commentArea').addClass('on');
+									$('#cmt_box').bind('click',function(event){
+										 $('#cmt_box').addClass('on');
 										 event.stopPropagation();  // 阻止冒泡
 										 o.$topContent.focus();
 										 
@@ -1933,15 +1933,15 @@
 																	
 									$doc.click(function(){
 	
-										if($('#commentArea').hasClass('on') && o.$topContent.val() == o.topContentTips || o.$topContent.val().length <= 0){
-											 $('#commentArea').removeClass('on');
+										if($('#cmt_box').hasClass('on') && o.$topContent.val() == o.topContentTips || o.$topContent.val().length <= 0){
+											 $('#cmt_box').removeClass('on');
 											 if(o.$topContent.val().length <= 0){
 													o.$topContent.val(o.topContentTips);
 											 }
 										}
 									});
 									
-									$('#commentArea').delegate('span.change','click',function(){   // 切换账号
+									$('#cmt_box').delegate('span.change','click',function(){   // 切换账号
 										o.$loginBtns.first().click();
 									}); 
 									

@@ -1,7 +1,90 @@
+@nice-blue: #5B83AD;
+@light-blue: @nice-blue + #111;
+@black:#000000;
+@blue:#379be9;
 #np_cmt_frame{
-	#cmt_box{
+	color:@black;
+	width: 100%; 
+	font-size: 14px;
+	font-family: 'Microsoft YaHei',arial,tahoma,"宋体",sans-serif; 
+	position: relative; 
+	float: left;
+	border:none;
+	//基础样式 BEGIN
+	button, select, textarea { font-family: 'Microsoft YaHei',arial,tahoma,"宋体",sans-serif;}
+	h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight:normal}
+	address, cite, dfn, em, var,i { font-style: normal }
+	small { font-size: 12px }
+	ul, ol { list-style: none }
+	legend { color: #000 }
+	fieldset, img { border: none }
+	button, input, select, textarea { font-size: 100%; vertical-align:middle }
+	table { border-collapse: collapse; border-spacing:0 }
+	img { vertical-align:bottom }
+	a:link { outline:none; color: #000; text-decoration: none }
+	a:visited { color: #000; text-decoration: none }
+	a:hover, a:active { color: #cd0000; text-decoration: underline }
+	a:focus{ outline:0 }
+	//基础样式 END
 
+	#np_cmt_top	{
+		.cmt_sum{float:right;width:200px;height:28px;line-height:28px;overflow:hidden}
+		.cmt_sum strong{float:right;text-align:center;color:#666;font-size:14px;font-weight:normal;}
+		.cmt_sum a:hover{text-decoration:none;cursor:pointer} 
+		.cmt_sum a:hover strong span{color:#cc0000}
+		.cmt_sum span{color:#666;font-weight:800;padding-right:5px;font-family:'Times New Roman';font-size:16px}
+
+		.globalNav{padding-bottom:0px;height:30px;line-height:30px;border-bottom:1px solid #e8e8e8;border-top:3px solid #379be9; }
+		.globalNav h1{float:left;color:#56abee;font-size:16px;font-family:'Microsoft YaHei';border-bottom:1px solid #56abee;font-weight:normal;padding-right:5px;}
+		.textarea{margin-left:20px;}
+		textarea{width:100%;padding:10px;resize:none;height:60px;color:#ccc;border:0;outline:none;overflow:auto;font-size:16px; line-height:24px;margin-left:-20px}
+		textarea.on{color:#000}
+		.userTitle{display:none}
 	}
+	
+	#cmt_box{//主评论框
+		height:72px;
+		overflow:hidden;
+		margin-bottom:10px;
+		border:1px solid #d3d3d3;
+		box-shadow: 0px 0px 0px 0px #d3d3d3;
+		-webkit-transition-property:box-shadow,height,border-color; 
+		-webkit-transition-duration:0.6s,0.6s,0.6s;
+		position:relative
+		.myName{
+			font-size:14px;
+			padding:13px 0px 0px 15px
+		}
+		.change{
+			color:#b3b3b3;
+			padding:14px 0px 0px 22px;
+			cursor:pointer
+		}
+		.commtSub{
+			height:40px;
+			padding:5px 10px;
+			border-top:1px solid #ebebeb;
+			position:relative;
+		}
+		.submit,.submitOn{margin-top:5px}
+		.tips{
+			top:19px;
+			display:block;
+			position:absolute;
+			right:100px
+		}
+	}
+	/*#cmt_box{box-shadow:0px 0px 3px 1px #379be9}*/
+	#cmt_box.on{
+		box-shadow: 0px 0px 3px 1px #379be9;
+		border-color:#379be9;
+		height:132px;
+		.textarea textarea{
+			color:#000;
+			line-height:24px;
+		}
+	}
+		
 	#cmt_list{
 
 	}
@@ -9,6 +92,22 @@
 
 	}
 	#cmt_user{
-		
+
+	}
+	.publisher{
+		color:@blue;
+	}
+
+	.block{
+		border:2px solid;
+		border-radius:25px;
+		-moz-border-radius:25px; /* Old Firefox */
+	}
+
+	.blue{
+		background: @blue;
+	}
+	.white{
+		background: white;
 	}
 }
