@@ -20,55 +20,6 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,dl, dt, dd, ul, ol, li, fieldset
 #wraper{width:960px;margin:30px auto 0px auto;position: relative;}
 #mainBody{width:640px;padding-bottom:30px; float:left; background:#fff;}
 
-.upvote a,.upvote span,.upvote a:hover,.reply a,.reply span,.reply a:hover{font-size:12px;color:#808080;cursor:pointer;background:url(http://mat1.gtimg.com/www/niuping2013/plbg.png) no-repeat;}
-.upvote a:hover,.reply a:hover{text-decoration:none}
-.upvote a,.upvote span{padding:2px 0px 3px 15px;background-position:0px 0px}
-.upvote a:hover{background-position:0px -23px;}
-.upvote em{font-style:normal;font-size:12px;color:#808080}
-.upvote i{font-style:normal;}
-.upvote .hasup,.upvote .hasup:hover{color:#ccc;background-position:0px -47px}
-
-.popClick{cursor:pointer}	 
-.reply {margin-left:10px}
-.reply a,.reply span{padding:2px 0px 3px 15px;background-position:0px -69px;color:#808080}
-.reply a:visited{color:#808080}
-.reply a:hover{background-position:0px -93px;text-decoration:none}
-
-.post-list .topIco{background:url(http://mat1.gtimg.com/www/niuping2013/ding.png) right 21px no-repeat}
-.post-list .hide{display:none}
-.post-list .Occupy .upvote,.post-list .Occupy .reply{display:none}
-.post-list .Occupy .children .upvote,.post-list .Occupy .children .reply{display:inline}
-.post-list .Occupy .post-message-container .s{color:#666}
-.post{word-break: normal;word-wrap: break-word;}
-.over{overflow:hidden}
-/*textarea publick*/
-
-.post .children .textarea{margin-left:12px}
-.post .children .textarea textarea{width:100%;border:1px solid #ccc;height:90px;resize:none;padding:5px;overflow:auto;font-size:16px; line-height:24px; margin-left:-12px}
-
-.commtSub{padding:5px 0px 10px 0px;padding-bottom:8p;height:30px;line-height:26px;overflow:hidden;}
-.commtSub a.submit{float:right;width:80px;height:30px;line-height:30px;text-align:center;text-decoration:none;background:#3090E0;color:#fff;font-size:14px}
-.commtSub a.submit:visited,.commtSub a.submit:active{color:#fff}
-.commtSub .submitOn{float:right;width:80px;height:30px;line-height:30px;text-align:center;text-decoration:none;background:#3090E0 url(http://mat1.gtimg.com/www/niuping2013/load.gif) center no-repeat;color:#fff;font-size:14px}
-.commtSub .loginFlag{float:left}
-.commtSub .loginFlag span{float:left}
-.commtSub .myPic img{border-radius:3px}
-.commtSub .replyTop{float:left;cursor:pointer}
-.commtSub .replyBtn{float:right}
-.commtSub .replyBtn .cancel{font-size:14px;font-weight:600;color:#ccc;float:right;text-decoration:none;height:30px;line-height:30px;width:80px;text-align:center;}
-.commtSub .submitBtn{float:right;overflow:hidden}
-
-.tipInfo{color:#999;padding:50px;text-align:center;height:18px;}
-.waitting{background:url(http://mat1.gtimg.com/www/niuping2013/loadgray.gif) center no-repeat}
-.maskObj{width:10000px;filter:alpha(opacity =80);opacity:0.8;position:fixed;z-index:90000;top:0px;left:0px;display:none;background:#ccc}
-.loadMore{height:30px;line-height:30px;text-align:center;color:#fff;cursor:pointer;display:none}
-.loadMore span{background:#768187; display:none;}/**/
-.loadMore i{font-style:normal}
-.loadMore .loading{width:100%;height:100%;display:none;background: url(http://mat1.gtimg.com/www/niuping2013/loadgray.gif) center no-repeat;}
-.avatar{position:absolute;left:0px;top:20px;}
-.undis{display:none}
-.dis{display:block}
-.wait{font-size:12px;color:#999;padding-left:15px}
 
 
 

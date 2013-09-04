@@ -10,17 +10,9 @@
 
   /* Right sliderbar */
 
-  /* popup */
-
-  /*slider*/
-
-  /*20130718 by link*/
-
-  /* title */
-
   /*css style */
 
-  /*wraper*/
+  /*textarea publick*/
 
 }
 #np_cmt_frame button,
@@ -837,14 +829,14 @@
   border-radius: 3px;
   display: block;
 }
-#np_cmt_frame #my-message .post-list .children .blueflag .indicator {
-  height: 35px;
-}
 #np_cmt_frame #my-message .post-list .blueflag .avatar {
   left: 10px;
 }
 #np_cmt_frame #my-message .post-list .blueflag .post-body {
   padding-left: 20px;
+}
+#np_cmt_frame #my-message .post-list .children .blueflag .indicator {
+  height: 35px;
 }
 #np_cmt_frame #parent {
   width: 1px;
@@ -885,43 +877,45 @@
   position: absolute;
   width: 100%;
 }
-#np_cmt_frame #my-notification-list .post .post {
-  display: none;
-}
-#np_cmt_frame #my-notice .post {
+#np_cmt_frame #my-notice .post,
+#np_cmt_frame #my-notification .post {
   width: 535px;
 }
 #np_cmt_frame #my-notice .post-footer a,
 #np_cmt_frame #my-notification .post-footer a {
   cursor: text;
 }
-#np_cmt_frame #my-notice .post-footer .upvote a:hover,
-#np_cmt_frame #my-notification .post-footer .upvote a:hover {
+#np_cmt_frame #my-notice .upvote a:hover,
+#np_cmt_frame #my-notification .upvote a:hover {
   background-position: 0 0;
 }
-#np_cmt_frame #my-notice .post-footer .reply a:hover {
+#np_cmt_frame #my-notice .reply a:hover,
+#np_cmt_frame #my-notification .reply a:hover {
   background-position: 0 -69px;
 }
-#np_cmt_frame #my-notice .post-body .rename a {
+#np_cmt_frame #my-notice .reply span,
+#np_cmt_frame #my-notification .reply span {
   cursor: text;
 }
-#np_cmt_frame #my-notice .post-body .rename a:hover {
+#np_cmt_frame #my-notice .post-body .rename a,
+#np_cmt_frame #my-notification .post-body .rename a {
+  cursor: text;
+}
+#np_cmt_frame #my-notice .post-body .rename a:hover,
+#np_cmt_frame #my-notification .post-body .rename a:hover {
   text-decoration: none;
 }
-#np_cmt_frame #my-notice .reply span {
-  cursor: text;
-}
-#np_cmt_frame .bigTitle h1 a {
+#np_cmt_frame a.bigTitle {
   padding-bottom: 16px;
   font-family: 'simhei';
   font-size: 26px;
   color: #000;
   font-weight: normal;
 }
-#np_cmt_frame .bigTitle h1 a:hover {
+#np_cmt_frame a.bigTitle:hover {
   color: #cc0000;
 }
-#np_cmt_frame #mainBody .use.cmt_popbox {
+#np_cmt_frame .use.cmt_popbox {
   width: 220px;
   height: 195px;
   background: #ccc;
@@ -931,42 +925,220 @@
   top: 0px;
   border-radius: 5px;
 }
-#np_cmt_frame #mainBody .hiddenCon {
+#np_cmt_frame .hiddenCon {
   display: none;
 }
-#np_cmt_frame #mainBody .userInfo {
+#np_cmt_frame .userInfo {
   display: none;
 }
-#np_cmt_frame #mainBody .userInfo img {
+#np_cmt_frame .userInfo img {
   vertical-align: middle;
   margin-right: 3px;
 }
-#np_cmt_frame #mainBody .pop_reply .tips a {
+#np_cmt_frame .pop_reply .tips a {
+  color: #fff;
+}
+#np_cmt_frame .upvote a,
+#np_cmt_frame .upvote span {
+  font-size: 12px;
+  color: #808080;
+  cursor: pointer;
+  background: url(http://mat1.gtimg.com/www/niuping2013/plbg.png) no-repeat;
+  padding: 2px 0px 3px 15px;
+  background-position: 0px 0px;
+}
+#np_cmt_frame .upvote a:hover,
+#np_cmt_frame .upvote span:hover {
+  text-decoration: none;
+  background-position: 0px -23px;
+}
+#np_cmt_frame .upvote em {
+  font-style: normal;
+  font-size: 12px;
+  color: #808080;
+}
+#np_cmt_frame .upvote i {
+  font-style: normal;
+}
+#np_cmt_frame .upvote .hasup,
+#np_cmt_frame .upvote .hasup:hover {
+  color: #ccc;
+  background-position: 0px -47px;
+}
+#np_cmt_frame .popClick {
+  cursor: pointer;
+}
+#np_cmt_frame .reply {
+  margin-left: 10px;
+}
+#np_cmt_frame .reply a,
+#np_cmt_frame .reply span {
+  padding: 2px 0px 3px 15px;
+  background-position: 0px -69px;
+  color: #808080;
+}
+#np_cmt_frame .reply a:visited {
+  color: #808080;
+}
+#np_cmt_frame .reply a:hover {
+  background-position: 0px -93px;
+  text-decoration: none;
+}
+#np_cmt_frame .post-list .topIco {
+  background: url(http://mat1.gtimg.com/www/niuping2013/ding.png) right 21px no-repeat;
+}
+#np_cmt_frame .post-list .hide {
+  display: none;
+}
+#np_cmt_frame .post-list .post-list .Occupy .upvote,
+#np_cmt_frame .post-list .Occupy .reply {
+  display: none;
+}
+#np_cmt_frame .post-list .Occupy .children .upvote,
+#np_cmt_frame .post-list .Occupy .children .reply {
+  display: inline;
+}
+#np_cmt_frame .post-list .Occupy .post-message-container .s {
+  color: #666666;
+}
+#np_cmt_frame .post {
+  word-break: normal;
+  word-wrap: break-word;
+}
+#np_cmt_frame .over {
+  overflow: hidden;
+}
+#np_cmt_frame .post .children .textarea {
+  margin-left: 12px;
+}
+#np_cmt_frame .post .children .textarea textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  height: 90px;
+  resize: none;
+  padding: 5px;
+  overflow: auto;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: -12px;
+}
+#np_cmt_frame .commtSub {
+  padding: 5px 0px 10px 0px;
+  padding-bottom: 8p;
+  height: 30px;
+  line-height: 26px;
+  overflow: hidden;
+}
+#np_cmt_frame .commtSub a.submit {
+  float: right;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  background: #3090E0;
+  color: #fff;
+  font-size: 14px;
+}
+#np_cmt_frame .commtSub a.submit:visited,
+#np_cmt_frame .commtSub a.submit:active {
   color: #ffffff;
 }
-#np_cmt_frame #mainCoral {
-  padding-bottom: 30px;
+#np_cmt_frame .commtSub .submitOn {
+  float: right;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  background: #3090e0 url(http://mat1.gtimg.com/www/niuping2013/load.gif) center no-repeat;
+  color: #fff;
+  font-size: 14px;
 }
-#np_cmt_frame #mainCoral .use.cmt_popbox {
-  width: 220px;
-  height: 195px;
-  background: #ccc;
-  position: absolute;
-  z-index: 99;
-  left: 40px;
+#np_cmt_frame .commtSub .loginFlag {
+  float: left;
+}
+#np_cmt_frame .commtSub .myPic img {
+  border-radius: 3px;
+}
+#np_cmt_frame .commtSub .loginFlag span {
+  float: left;
+}
+#np_cmt_frame .commtSub .replyTop {
+  float: left;
+  cursor: pointer;
+}
+#np_cmt_frame .commtSub .replyBtn {
+  float: right;
+}
+#np_cmt_frame .commtSub .replyBtn .cancel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ccc;
+  float: right;
+  text-decoration: none;
+  height: 30px;
+  line-height: 30px;
+  width: 80px;
+  text-align: center;
+}
+#np_cmt_frame .commtSub .submitBtn {
+  float: right;
+  overflow: hidden;
+}
+#np_cmt_frame .tipInfo {
+  color: #999;
+  padding: 50px;
+  text-align: center;
+  height: 18px;
+}
+#np_cmt_frame .waitting {
+  background: url(http://mat1.gtimg.com/www/niuping2013/loadgray.gif) center no-repeat;
+}
+#np_cmt_frame .maskObj {
+  width: 100%;
+  opacity: 0.8;
+  position: fixed;
+  z-index: 90000;
   top: 0px;
-  border-radius: 5px;
+  left: 0px;
+  display: none;
+  background: #cccccc;
 }
-#np_cmt_frame #mainCoral .hiddenCon {
+#np_cmt_frame .loadMore {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
   display: none;
 }
-#np_cmt_frame #mainCoral .userInfo {
+#np_cmt_frame .loadMore span {
+  background: #768187;
   display: none;
 }
-#np_cmt_frame #mainCoral .userInfo img {
-  vertical-align: middle;
-  margin-right: 3px;
+#np_cmt_frame .loadMore i {
+  font-style: normal;
 }
-#np_cmt_frame #mainCoral .pop_reply .tips a {
-  color: #ffffff;
+#np_cmt_frame .loadMore .loading {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: url(http://mat1.gtimg.com/www/niuping2013/loadgray.gif) center no-repeat;
+}
+#np_cmt_frame .avatar {
+  position: absolute;
+  left: 0px;
+  top: 20px;
+}
+#np_cmt_frame .undis {
+  display: none;
+}
+#np_cmt_frame .dis {
+  display: block;
+}
+#np_cmt_frame .wait {
+  font-size: 12px;
+  color: #999;
+  padding-left: 15px;
 }

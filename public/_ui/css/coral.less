@@ -396,36 +396,258 @@
 	.white{
 		background: white;
 	}
-	/* popup */
+	
 	#my-message .post-list .blueflag .indicator{background:#2e9fff;width:5px;height:40px;position:absolute;left:0px;top:15px;border-radius:3px;display:block}
-	#my-message .post-list .children .blueflag .indicator{height:35px}
 	#my-message .post-list .blueflag .avatar{left:10px;}
 	#my-message .post-list .blueflag .post-body{padding-left:20px;}
+	#my-message .post-list .children .blueflag .indicator{height:35px}
+	
 
-	/*slider*/
 	#parent {width:1px; height:600px; background:#b5daf7 url(http://mat1.gtimg.com/www/niuping2013/scrollTopbg.png) top no-repeat;display:none;position:relative; float:right;margin-right:5px}
 	#parent .bottom{width:1px;position:absolute;bottom:1px;height:67px;background:url(http://mat1.gtimg.com/www/niuping2013/scrollBottombg.png) no-repeat;}
 	#div1 {width:10px;height:50px;background:#a8d3f6;position:absolute;cursor:pointer;top:0px;left:-5px;z-index:5;border-radius:7px}
 	#div2 {width:625px; height:600px;  position:relative; overflow:hidden;float:left}
 	#div3 {height:auto;position:absolute;width:100%}
 
-	#my-notification-list .post .post{display:none;}/*20130718 by link*/
-	#my-notice .post{width:535px;}
-	#my-notice .post-footer a,#my-notification .post-footer a{cursor:text}
-	#my-notice .post-footer .upvote a:hover,#my-notification .post-footer .upvote a:hover{background-position:0 0}
-	#my-notice .post-footer .reply a:hover{background-position:0 -69px}
-	#my-notice .post-body .rename a{cursor:text;}
-	#my-notice .post-body .rename a:hover{text-decoration:none}
-	#my-notice .reply span{cursor:text}
-
-	/* title */
-	.bigTitle h1 a{padding-bottom:16px;font-family:'simhei';font-size: 26px;color:#000;font-weight:normal}
-	.bigTitle h1 a:hover{color:#cc0000}
+	//#my-notification-list .post .post{display:none;}/*20130718 by link*/
+	#my-notice, #my-notification{
+		.post{width:535px;}
+		.post-footer a{
+			cursor:text
+		}
+		.upvote a:hover{
+			background-position:0 0
+		}
+		.reply a:hover{
+			background-position:0 -69px
+		}
+		.reply span{
+			cursor:text
+		}
+		.post-body .rename a{
+			cursor:text;
+		}
+		.post-body .rename a:hover{
+			text-decoration:none;
+		}
+	}
+	
+	a.bigTitle {
+		padding-bottom:16px;font-family:'simhei';
+		font-size: 26px;color:#000;
+		font-weight:normal;
+	}
+	a.bigTitle:hover{
+		color:#cc0000;
+	}
 
 	/*css style */
-	.use.cmt_popbox{width:220px;height:195px;background:#ccc;position:absolute;z-index:99;left:40px;top:0px;border-radius:5px}
-	.hiddenCon{display:none;}
-	.userInfo{display:none}
-	.userInfo img{vertical-align:middle;margin-right:3px}
-	.pop_reply .tips a{color:#fff}
+	.use.cmt_popbox{
+		width:220px;
+		height:195px;
+		background:#ccc;
+		position:absolute;
+		z-index:99;
+		left:40px;
+		top:0px;
+		border-radius:5px
+	}
+	.hiddenCon{
+		display:none;
+	}
+	.userInfo{
+		display:none;
+	}
+	.userInfo img{
+		vertical-align:middle;margin-right:3px;
+	}
+	.pop_reply .tips a{
+		color:#fff;
+	}
+	.upvote {
+		a,span{
+			font-size:12px;
+			color:#808080;
+			cursor:pointer;
+			background:url(http://mat1.gtimg.com/www/niuping2013/plbg.png) no-repeat;
+			padding:2px 0px 3px 15px;
+			background-position:0px 0px
+		}
+		a:hover,span:hover{
+			text-decoration:none;
+			background-position:0px -23px;
+		}
+		em{
+			font-style:normal;
+			font-size:12px;
+			color:#808080
+		}
+		i{//筛选 只留图标和文字两个标签 统一处理
+			font-style:normal;
+		}
+		.hasup,.hasup:hover{
+			color:#ccc;
+			background-position:0px -47px
+		}
+
+	}
+	
+	.popClick{
+		cursor:pointer;
+	}
+	.reply {
+		margin-left:10px;
+		a,span{
+			padding:2px 0px 3px 15px;
+			background-position:0px -69px;
+			color:#808080;
+		}
+		a:visited{
+			color:#808080
+		}
+		a:hover{
+			background-position:0px -93px;
+			text-decoration:none
+		}
+	}
+
+	.post-list {
+			.topIco{background:url(http://mat1.gtimg.com/www/niuping2013/ding.png) right 21px no-repeat}
+			.hide{display:none}
+		}
+	.post-list 
+	.post-list .Occupy .upvote,
+	.post-list .Occupy .reply{display:none}
+	.post-list .Occupy .children .upvote,
+	.post-list .Occupy .children .reply{display:inline}
+	.post-list .Occupy .post-message-container .s{color:#666}
+	
+	.post{word-break: normal;word-wrap: break-word;}
+	.over{overflow:hidden}
+	/*textarea publick*/
+
+	.post .children .textarea{
+		margin-left:12px;
+		textarea{
+			width:100%;
+			border:1px solid #ccc;
+			height:90px;
+			resize:none;
+			padding:5px;
+			overflow:auto;
+			font-size:16px;
+			line-height:24px;
+			margin-left:-12px;
+		}
+	}
+
+	.commtSub{
+		padding:5px 0px 10px 0px;
+		padding-bottom:8p;
+		height:30px;
+		line-height:26px;
+		overflow:hidden;
+		a.submit{
+			float:right;
+			width:80px;
+			height:30px;
+			line-height:30px;
+			text-align:center;
+			text-decoration:none;
+			background:#3090E0;
+			color:#fff;
+			font-size:14px;
+		}
+		a.submit:visited,
+		a.submit:active{
+			color:#fff
+		}
+		.submitOn{
+			float:right;
+			width:80px;
+			height:30px;
+			line-height:30px;
+			text-align:center;
+			text-decoration:none;
+			background:#3090E0 url(http://mat1.gtimg.com/www/niuping2013/load.gif) center no-repeat;
+			color:#fff;
+			font-size:14px
+		}
+		.loginFlag{float:left}
+		.myPic img{
+			border-radius:3px
+		}
+		.loginFlag span{
+			float:left;
+		}
+		.replyTop{
+			float:left;
+			cursor:pointer;
+		}
+		.replyBtn{//删除
+			float:right;
+		}
+		.replyBtn .cancel{
+			font-size:14px;
+			font-weight:600;
+			color:#ccc;
+			float:right;
+			text-decoration:none;
+			height:30px;
+			line-height:30px;
+			width:80px;
+			text-align:center;
+		}
+		.submitBtn{
+			float:right;
+			overflow:hidden;
+		}
+	}
+	
+	.tipInfo{
+		color:#999;
+		padding:50px;
+		text-align:center;
+		height:18px;
+	}
+	.waitting{
+		background:url(http://mat1.gtimg.com/www/niuping2013/loadgray.gif) center no-repeat;
+	}
+	.maskObj{
+		width:100%;
+		//filter:alpha(opacity =80);
+		opacity:0.8;
+		position:fixed;
+		z-index:90000;
+		top:0px;
+		left:0px;
+		display:none;
+		background:#ccc
+	}
+
+	.loadMore{
+		height:30px;
+		line-height:30px;
+		text-align:center;
+		color:#fff;
+		cursor:pointer;
+		display:none;
+		span{
+			background:#768187; 
+			display:none;
+		}
+		i{
+			font-style:normal;
+		}
+		.loading{
+			width:100%;
+			height:100%;
+			display:none;
+			background: url(http://mat1.gtimg.com/www/niuping2013/loadgray.gif) center no-repeat;
+		}
+	}
+	.avatar{position:absolute;left:0px;top:20px;}
+	.undis{display:none}
+	.dis{display:block}
+	.wait{font-size:12px;color:#999;padding-left:15px}
 }
