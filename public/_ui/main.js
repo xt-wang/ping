@@ -166,7 +166,7 @@
 						$.widget("qq.comment",{
 							options: {
 								dataSource0: '',  //默认首页评论列表数据源
-								$content: $('#content'),
+								$content: $('#np_cmt_body'),
 								$loginBtns: $('#loginBtn'), // 顶部评论框登陆按钮
 								$loginTrigger: $('#onekey'),  //一键登陆按钮
 								$logoutTrigger: $('#loginOut'), //mini导航 退出按钮 
@@ -192,8 +192,8 @@
 								
 								//$maskObj: $('#maskObj'), // 弹出框遮罩
 								
-								$popObj: $('#popObj'), // 弹出框
-								$allCons: $('#tab1_allComments'), // 全部评论页卡
+								$cmt_popbox: $('#cmt_popbox'), // 弹出框
+								$allCons: $('#cmt_all'), // 全部评论页卡
 								$myComments: $('#tab2_myComments'), // 我的评论页卡
 								$tips: $('#tab3_tips'), // 提醒页卡
 								$mycon: $('#tab4_mycon'),
@@ -1088,19 +1088,19 @@
 								    $(this).css('z-index','999');
 									$(this).parents('li.post').css({'z-index':'999'});
 									var userName = $(this).parent().find('span.publisher>a').html();
-									var upop = $(this).children('div.userPopObj');
+									var upop = $(this).children('div.usercmt_popbox');
 									if(upop.length){
 										upop.show();
 									}
 									else{
 									
-										$(this).append($("<div class='userPopObj'>"+ userName + "</div>"));
+										$(this).append($("<div class='usercmt_popbox'>"+ userName + "</div>"));
 									}
 								
 								});
 								container.delegate('.avatar','mouseout',function(){ 
 									$(this).parents('li.post').css('z-index','1');									
-									var upop = $(this).children('div.userPopObj');
+									var upop = $(this).children('div.usercmt_popbox');
 									if(upop.length){
 										upop.hide();
 									}
@@ -1626,15 +1626,15 @@
 								$('#loadPopInfo').hide();
 								$('#loadPopInfo>span').css('display','block');
 								
-								$('#popObj .userPic').find('img').attr('src','http://mat1.gtimg.com/news/dc/images/user.png'); 
+								$('#cmt_popbox .userPic').find('img').attr('src','http://mat1.gtimg.com/news/dc/images/user.png'); 
 								$('#parent').hide();
 								$('#div1').css('top','0px');
 								$('#div3').css('top','0px');
 								
 								var meanwhile = function(){
 								
-									$('#popContent').height(o.$popObj.height()- 120);
-									$('#popContent .popInner').height(o.$popObj.height()- 140);
+									$('#popContent').height(o.$cmt_popbox.height()- 120);
+									$('#popContent .popInner').height(o.$cmt_popbox.height()- 140);
 									$('#div2').height($('#popContent .popInner').height());
 									$('#parent').height($('#popContent .popInner').height());
 									$('#div1').css('height',$('#parent').height()*$('#div2').height()/$('#div3').height());
@@ -1644,29 +1644,29 @@
 								}
 								if ($.browser.msie && ($.browser.version == '6.0' || $.browser.version == '7.0') && !$.support.style) {  //  ie6 兼容
 								
-									o.$popObj.css('top',$win.scrollTop() + $win.height()*0.1);	
+									o.$cmt_popbox.css('top',$win.scrollTop() + $win.height()*0.1);	
 
-									if(o.$popObj.css('top')>$win.height()){
-										o.$popObj.hide();
+									if(o.$cmt_popbox.css('top')>$win.height()){
+										o.$cmt_popbox.hide();
 									}
 									
-									if(o.$popObj.height() < 780){   //限定ie6 下最大高度
+									if(o.$cmt_popbox.height() < 780){   //限定ie6 下最大高度
 									
-										o.$popObj.height($win.height()*0.8); 
+										o.$cmt_popbox.height($win.height()*0.8); 
 										
 									}else{
 									
-										o.$popObj.height(780);
+										o.$cmt_popbox.height(780);
 										
 									}
 									
 									$('#popContent').height($win.height()*0.8 - 120); // 弹出框内容高度
 									$win.resize(function(){
-										o.$popObj.height($win.height()*0.8);
+										o.$cmt_popbox.height($win.height()*0.8);
 									});
 
 									$win.scroll(function(){
-										o.$popObj.css('top',$win.scrollTop() + $win.height()*0.1);	
+										o.$cmt_popbox.css('top',$win.scrollTop() + $win.height()*0.1);	
 									});	
 
 									meanwhile();
@@ -1683,20 +1683,20 @@
 								
 								var popClose = function(){
 								
-									//o.$popObj.stop().animate({top:'100%'},300);
+									//o.$cmt_popbox.stop().animate({top:'100%'},300);
 									
 									if($.browser.msie && ($.browser.version == '6.0') && !$.support.style){
 										
-										o.$popObj.stop().animate({top:$win.scrollTop() + $win.height()},300).show();
+										o.$cmt_popbox.stop().animate({top:$win.scrollTop() + $win.height()},300).show();
 										
 									}else{
-										o.$popObj.stop().animate({top:'100%'},300);
+										o.$cmt_popbox.stop().animate({top:'100%'},300);
 									}
 									
 									
 									$body.css('overflow','');
 									$('html').css('overflow','auto');
-									setTimeout(function(){o.$popObj.hide()},301);  // 兼容ie6
+									setTimeout(function(){o.$cmt_popbox.hide()},301);  // 兼容ie6
 									
 									$('#maskObj').hide();
 									
@@ -1715,17 +1715,17 @@
 									
 									if($.browser.msie && ($.browser.version == '6.0') && !$.support.style){
 										
-										o.$popObj.stop().animate({top:$win.scrollTop() + $win.height()*0.1},300).show();
+										o.$cmt_popbox.stop().animate({top:$win.scrollTop() + $win.height()*0.1},300).show();
 										
 									}else{
-										o.$popObj.stop().animate({top:'10%'},300).show();
+										o.$cmt_popbox.stop().animate({top:'10%'},300).show();
 									}
 									
 									
 								$('#maskObj').unbind().click(function(){	
 									popClose();
 								});
-								o.$popObj.find('.close').unbind().click(function(){ 								
+								o.$cmt_popbox.find('.close').unbind().click(function(){ 								
 									popClose();
 								
 								});
@@ -2396,11 +2396,11 @@
 														var bigPic = usermeta.head.replace(/40/,"100");
 														var area = usermeta.region.replace(/:/g,' ');
 														
-														$('#popObj .head .userPic').find('img').attr('src',bigPic); // 更新头像
-														$('#popObj .head .upvote i').html(usermeta.upnum);
-														$('#popObj .head .num i').html(usermeta.commentnum);
-														$('#popObj .head .upandnum strong').html(usermeta.nick);
-														$('#popObj .head .area').html($.trim(area)!=''?area:'腾讯网友');
+														$('#cmt_popbox .head .userPic').find('img').attr('src',bigPic); // 更新头像
+														$('#cmt_popbox .head .upvote i').html(usermeta.upnum);
+														$('#cmt_popbox .head .num i').html(usermeta.commentnum);
+														$('#cmt_popbox .head .upandnum strong').html(usermeta.nick);
+														$('#cmt_popbox .head .area').html($.trim(area)!=''?area:'腾讯网友');
 													}
 
 													
