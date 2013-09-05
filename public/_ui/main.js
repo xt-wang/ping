@@ -1118,16 +1118,16 @@
 					$('#loadPopInfo').hide();
 					$('#loadPopInfo>span').css('display', 'block');
 					$('#cmt_popbox .userPic').find('img').attr('src', 'http://mat1.gtimg.com/news/dc/images/user.png');
-					$('#parent').hide();
-					$('#div1').css('top', '0px');
+					$('#scrollbar_parent').hide();
+					$('#scrollbar').css('top', '0px');
 					$('#div3').css('top', '0px');
 					var meanwhile = function() {
 						$('#popContent').height(o.$cmt_popbox.height() - 120);
 						$('#popContent .popInner').height(o.$cmt_popbox.height() - 140);
 						$('#div2').height($('#popContent .popInner').height());
-						$('#parent').height($('#popContent .popInner').height());
-						$('#div1').css('height', $('#parent').height() * $('#div2').height() / $('#div3').height());
-						$('#div1').css('top', '0px');
+						$('#scrollbar_parent').height($('#popContent .popInner').height());
+						$('#scrollbar').css('height', $('#scrollbar_parent').height() * $('#div2').height() / $('#div3').height());
+						$('#scrollbar').css('top', '0px');
 						$('#div3').css('top', '0px');
 					}
 					if ($.browser.msie && ($.browser.version == '6.0' || $.browser.version == '7.0') && !$.support.style) { //  ie6 兼容
@@ -1197,10 +1197,10 @@
 								弹出框模拟滚动条
 							*****/
 				popScroll: function() {
-					var oDiv = $('#div1');
+					var oDiv = $('#scrollbar');
 					var oDiv2 = $('#div2');
 					var oDiv3 = $('#div3');
-					var oParent = $('#parent');
+					var oParent = $('#scrollbar_parent');
 					oParent.bind('mousewheel', function() {
 						onMouseWheel();
 					}); // ie & chrome
@@ -1726,12 +1726,12 @@
 								}
 								// 计算滚动条高度及位置
 								if ($('#div3').height() < $('#div2').height()) {
-									$('#parent').hide();
+									$('#scrollbar_parent').hide();
 								} else {
-									$('#div1').css('height', $('#parent').height() * $('#div2').height() / $('#div3').height());
-									//$('#div1').css('top','0px');
+									$('#scrollbar').css('height', $('#scrollbar_parent').height() * $('#div2').height() / $('#div3').height());
+									//$('#scrollbar').css('top','0px');
 									//$('#div3').css('top','0px');
-									$('#parent').show();
+									$('#scrollbar_parent').show();
 								}
 							}
 							//未从服务器得到数据，继续查询      

@@ -229,7 +229,7 @@
 				cursor:pointer
 			}
 			span a{
-				color:#b3b3b3;
+				color:@dark-gray;
 				//border: 1px solid @gray;
 				.btn;
 			}
@@ -359,13 +359,20 @@
 		.popContent{height:100%;background:#fff;max-height:660px}
 		.popInner{padding:10px;overflow:hidden;padding-left:20px}
 		.close{width:19px;height:19px;position:absolute;top:20px;right:20px;cursor:pointer;background:url(http://mat1.gtimg.com/www/niuping2013/closex.png) no-repeat;z-index:999}
-		#div1 {//对话框?哼哼感觉不是了， 滚动条！
+		#scrollbar {//对话框?哼哼感觉不是了， 滚动条！
 			width:10px;height:50px;background:#a8d3f6;position:absolute;cursor:pointer;top:0px;left:-5px;z-index:5;border-radius:7px
+		}
+		#scrollbar_parent {//滚动条的一部分
+			width:1px; height:600px; background:#b5daf7 url(http://mat1.gtimg.com/www/niuping2013/scrollTopbg.png) top no-repeat;display:none;position:relative; float:right;margin-right:5px
+		}
+		#scrollbar_parent .bottom{//滚动条的下部
+			width:1px;position:absolute;bottom:1px;height:67px;background:url(http://mat1.gtimg.com/www/niuping2013/scrollBottombg.png) no-repeat;
 		}
 		#div2 {//对话框
 			width:625px; height:600px;  position:relative; overflow:hidden;float:left
 		}
 		#div3 {height:auto;position:absolute;width:100%}
+
 	}
 	.cmt_my{
 		padding-top:10px;
@@ -475,6 +482,7 @@
 	.blue{
 		background: @blue;
 	}
+
 	.white{
 		background: @white;
 	}
@@ -486,8 +494,7 @@
 	.post-list .children .blueflag .indicator{height:35px}
 	
 
-	#parent {width:1px; height:600px; background:#b5daf7 url(http://mat1.gtimg.com/www/niuping2013/scrollTopbg.png) top no-repeat;display:none;position:relative; float:right;margin-right:5px}
-	#parent .bottom{width:1px;position:absolute;bottom:1px;height:67px;background:url(http://mat1.gtimg.com/www/niuping2013/scrollBottombg.png) no-repeat;}
+	
 	
 
 	//#my-notification-list .post .post{display:none;}/*20130718 by link*/
