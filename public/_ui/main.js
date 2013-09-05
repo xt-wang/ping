@@ -36,9 +36,11 @@
 	 */
 	(function($, document, undefined) { //这里$是什么 jQuery对象？是否会和其他框架冲突 是否noConflict?
 		var pluses = /\+/g;
+
 		function raw(s) {
 			return s;
 		}
+
 		function decoded(s) {
 			return decodeURIComponent(s.replace(pluses, ' '));
 		}
@@ -368,6 +370,7 @@
 					var o = this.options;
 					lastID = lastID || 0;
 					var moreUrl = o.fetchUrl + 'article/' + ARTICLE_INFO.targetid + '/comment?commentid=' + lastID + '&reqnum=' + o.homePageSize;
+
 					function emptyListOrForbiddenL() {
 						if ($('#allComments li').length == 0) {
 							$('#allComments').children('.tipInfo').removeClass('waitting').html('暂无评论').show();
@@ -861,8 +864,7 @@
 					if (__uin != getUin()) { //登录状态出现异常，可能用户在其他页面已退出/切换账户
 						try {
 							this.logout();
-						} catch (err) {
-						}
+						} catch (err) {}
 					}
 					if (__uin) {
 						//if(MI.S && MI.S('account_mbflag_'+ __uin)){    无需验证微博用户
@@ -1049,10 +1051,10 @@
 					}
 				},
 				/**
-							 * 当用户发表评论成功后，将评论内容展示在评论列表中
-							 * @param _content 需要展示的微博内容
-							 * @param _pubTime 微博发布的时间
-							 */
+				 * 当用户发表评论成功后，将评论内容展示在评论列表中
+				 * @param _content 需要展示的微博内容
+				 * @param _pubTime 微博发布的时间
+				 */
 				insertTempComment: function(commentid, _content, parentid, _pubTime, check) {
 					var _this = this;
 					var o = this.options;
@@ -1116,16 +1118,16 @@
 					$('#loadPopInfo').hide();
 					$('#loadPopInfo>span').css('display', 'block');
 					$('#cmt_popbox .userPic').find('img').attr('src', 'http://mat1.gtimg.com/news/dc/images/user.png');
-					$('#parent').hide();
-					$('#div1').css('top', '0px');
+					$('#scrollbar_parent').hide();
+					$('#scrollbar').css('top', '0px');
 					$('#div3').css('top', '0px');
 					var meanwhile = function() {
 						$('#popContent').height(o.$cmt_popbox.height() - 120);
 						$('#popContent .popInner').height(o.$cmt_popbox.height() - 140);
 						$('#div2').height($('#popContent .popInner').height());
-						$('#parent').height($('#popContent .popInner').height());
-						$('#div1').css('height', $('#parent').height() * $('#div2').height() / $('#div3').height());
-						$('#div1').css('top', '0px');
+						$('#scrollbar_parent').height($('#popContent .popInner').height());
+						$('#scrollbar').css('height', $('#scrollbar_parent').height() * $('#div2').height() / $('#div3').height());
+						$('#scrollbar').css('top', '0px');
 						$('#div3').css('top', '0px');
 					}
 					if ($.browser.msie && ($.browser.version == '6.0' || $.browser.version == '7.0') && !$.support.style) { //  ie6 兼容
@@ -1195,10 +1197,10 @@
 								弹出框模拟滚动条
 							*****/
 				popScroll: function() {
-					var oDiv = $('#div1');
+					var oDiv = $('#scrollbar');
 					var oDiv2 = $('#div2');
 					var oDiv3 = $('#div3');
-					var oParent = $('#parent');
+					var oParent = $('#scrollbar_parent');
 					oParent.bind('mousewheel', function() {
 						onMouseWheel();
 					}); // ie & chrome
@@ -1211,6 +1213,7 @@
 					oDiv3.bind('DOMMouseScroll', function() {
 						onMouseWheel();
 					});
+
 					function onMouseWheel(ev) {
 						ev = ev || window.event;
 						var bDown = true;
@@ -1238,6 +1241,7 @@
 							ev.preventDefault();
 						}
 					}
+
 					function moveSlide(l) // 滚动
 					{
 						if (-l < 0) {
@@ -1249,6 +1253,7 @@
 						var scale = -(l) / (oDiv3.height() - oDiv2.height());
 						oDiv.css('top', (oParent.height() - oDiv.height()) * scale);
 					}
+
 					function moveDownSlide(l) // 拖动
 					{
 						if (l < 0) {
@@ -1493,7 +1498,7 @@
 									if (i > 0) {
 										Userlist += "、"
 									}
-									Userlist += "<span post_uid=" + uInfo.userid + " class='popClick'><strong>" + uInfo.nick + "</strong></span>"
+									Userlist += "<span post_uid=" + uInfo.userid + " class='popClick'>" + uInfo.nick + "</span>"
 								});
 								if (info.userlist.length < info.up) {
 									Userlist += "等"
@@ -1501,21 +1506,21 @@
 							}
 						}
 						leftGrid = "<div class=\'avatar " + (DING ? '' : 'popClick') + "\' post_uid='" + info.userinfo.userid + "'><img src=\'" + picUrl + "\'></div>";
-						article = (HUIFU ? "<strong post_uid='" + info.userinfo.userid + "' class=\'publisher popClick\'>" + info.userinfo.nick + "</strong> 回复了你的评论：<em class=\'title\'>" + _this.subString(info.parentinfo.content, 46) + "</em>" : (DING ? (Userlist + info.up + "人  顶了你的评论：<em class=\'title\'>" + _this.subString(info.content, 46) + "</em> <span date='" + info.time + "' class=\'time\'>" + _this.formatTime(info.time) + "</span>") : ''));
+						article = (HUIFU ? "<span post_uid='" + info.userinfo.userid + "' class=\'publisher popClick\'>" + info.userinfo.nick + "</span> 回复了你的评论：<em class=\'title\'>" + _this.subString(info.parentinfo.content, 46) + "</em>" : (DING ? (Userlist + info.up + "人  顶了你的评论：<em class=\'title\'>" + _this.subString(info.content, 46) + "</em> <span date='" + info.time + "' class=\'time\'>" + _this.formatTime(info.time) + "</span>") : ''));
 					}
 					if (type == 'myComment') {
 						listId = 'post_';
 						replyString = "(<em>" + info.repnum + "</em>)"
 						leftGrid = "<div class=\"post-time\" ><span date='" + info.time + "'>" + (info.time ? _this.formatTime(info.time) : "刚刚") + "</span></div>";
-						nick = "<strong class=\"rename\">" + info.userinfo.nick + "</strong>"
+						nick = "<span class=\"rename\">" + info.userinfo.nick + "</span>"
 						if ($.cookie('uid') == info.userinfo.userid) {
 							nick = "我"
 						}
 						if (info.parentinfo) {
 							if (info.parentinfo.userinfo) {
-								nick2 = "<strong post_uid='" + info.parentinfo.userinfo.userid + "' class=\"rename popClick\">" + info.parentinfo.userinfo.nick + "</strong>"
+								nick2 = "<span post_uid='" + info.parentinfo.userinfo.userid + "' class=\"rename popClick\">" + info.parentinfo.userinfo.nick + "</span>"
 								if (info.userinfo.userid == info.parentinfo.userinfo.userid) {
-									nick2 = "<strong>Ta</strong>"
+									nick2 = "<span>Ta</span>"
 								}
 								if ($.cookie('uid') == info.parentinfo.userinfo.userid) {
 									nick2 = "我"
@@ -1527,10 +1532,7 @@
 							titleHtml = ''
 						}
 					}
-					newstrHTML += "<li class=\'post " + blueflag + "\' id=\'" + listId + "" + info.id + "\'>" + "<div class=\'post-content\'><div class='indicator'></div>" + leftGrid + "<div class=\'post-body\'>" + "<div class=\'message-article\'>" + article + "</div>" + (!DING ? "<div class=\'message-content\'>" + "<div>" + info.content + "<span date='" + info.time + "' class=\'time\'>"
-						+ (HUIFU ? _this.formatTime(info.time) : '') + "</span></div>" + "</div>" : '')
-					+ titleHtml
-					+ (!DING ? "<div class=\'post-footer\'><em class='newcoment' id='am_" + info.id + "'></em><span class=\'upvote\'><span><i>顶</i>(<em>" + info.up + "</em>)</span></span><span class=\'reply\'><span>回复" + replyString + "</span></span></div>" : '') + "</div>" + "</div>" + "<ul class=\'children\'>" + "</ul>" + "</li>";
+					newstrHTML += "<li class=\'post " + blueflag + "\' id=\'" + listId + "" + info.id + "\'>" + "<div class=\'post-content\'><div class='indicator'></div>" + leftGrid + "<div class=\'post-body\'>" + "<div class=\'message-article\'>" + article + "</div>" + (!DING ? "<div class=\'message-content\'>" + "<div>" + info.content + "<span date='" + info.time + "' class=\'time\'>" + (HUIFU ? _this.formatTime(info.time) : '') + "</span></div>" + "</div>" : '') + titleHtml + (!DING ? "<div class=\'post-footer\'><em class='newcoment' id='am_" + info.id + "'></em><span class=\'upvote\'><span><i>顶</i>(<em>" + info.up + "</em>)</span></span><span class=\'reply\'><span>回复" + replyString + "</span></span></div>" : '') + "</div>" + "</div>" + "<ul class=\'children\'>" + "</ul>" + "</li>";
 					return newstrHTML
 				},
 				loadMyMessage: function() { // 个人中心提醒 列表拉取
@@ -1681,7 +1683,7 @@
 								$('#cmt_popbox .head .userPic').find('img').attr('src', bigPic); // 更新头像
 								$('#cmt_popbox .head .upvote i').html(usermeta.upnum);
 								$('#cmt_popbox .head .num i').html(usermeta.commentnum);
-								$('#cmt_popbox .head .upandnum strong').html(usermeta.nick);
+								$('#cmt_popbox .head .upandnum span').html(usermeta.nick);
 								$('#cmt_popbox .head .area').html($.trim(area) != '' ? area : '腾讯网友');
 							}
 							if (data.errCode == 0) {
@@ -1724,12 +1726,12 @@
 								}
 								// 计算滚动条高度及位置
 								if ($('#div3').height() < $('#div2').height()) {
-									$('#parent').hide();
+									$('#scrollbar_parent').hide();
 								} else {
-									$('#div1').css('height', $('#parent').height() * $('#div2').height() / $('#div3').height());
-									//$('#div1').css('top','0px');
+									$('#scrollbar').css('height', $('#scrollbar_parent').height() * $('#div2').height() / $('#div3').height());
+									//$('#scrollbar').css('top','0px');
 									//$('#div3').css('top','0px');
-									$('#parent').show();
+									$('#scrollbar_parent').show();
 								}
 							}
 							//未从服务器得到数据，继续查询      
@@ -1789,20 +1791,25 @@
 		return this.replace(/[^\x00-\xff]/g, "**").length; // [^\x00-\xff] - 匹配非双字节的字符 
 	};
 	//顶部发表评论的回调
+
 	function topCallback(data) {
 		jQuery(document).comment('pubCallback', 'top', data, new Date().getTime());
 	}
 	//弹出框发表评论的回调
+
 	function popCallback(data) {
 		jQuery(document).comment('pubCallback', 'pop', data, new Date().getTime());
 	}
+
 	function getUin() {
 		var cookieUin = jQuery.cookie('uin') || jQuery.cookie('luin');
 		return cookieUin && cookieUin.match(/[1-9][0-9]*/)[0];
 	}
+
 	function getKey() {
 		return jQuery.cookie('skey') || jQuery.cookie('lskey');
 	}
+
 	function generateToken(key) {
 		var hash = 2013;
 		for (var i = 0, len = key.length; i < len; i++) {
@@ -1816,6 +1823,7 @@
 	 * @param _baseTimestamp: 基准时间戳
 	 * @param _timestamps: 各参数时间戳对象，e.g. {1: newDate().getTime(), 2: 1350881412511}，1 和 2为Qos接口查询参数名
 	 */
+
 	function Qoss(_name, _baseTimestamp, _timestamps, _randomRange) {
 		//随机采样
 		if (_randomRange) {
@@ -1858,10 +1866,11 @@ function PgvCount(_domain, _path) {
 } 
   */
 	/**
- * BOSS平台上报函数
- * 用于发送指定接口的统计数据
- * cursite 当前所属频道页面 ，classType 业务类型：1 是boss 2是PGV，opType 操作类型: 1 是评论页 2 是文章底层， iStatus 操作结果
- */
+	 * BOSS平台上报函数
+	 * 用于发送指定接口的统计数据
+	 * cursite 当前所属频道页面 ，classType 业务类型：1 是boss 2是PGV，opType 操作类型: 1 是评论页 2 是文章底层， iStatus 操作结果
+	 */
+
 	function sendClientStat(site, classType, iTargetid, opType, iStatus) {
 		var newsUrl = location.protocol + '//' + location.host + location.pathname;
 		var iFlow = parseInt(Math.random() * 1000000000),
