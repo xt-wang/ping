@@ -1,8 +1,4 @@
-@nice-blue: #5B83AD;
-@light-blue: @nice-blue + #111;
-@black:#000000;
-@blue:#379be9;
-@imgpath:"../img/";
+@import "variables.less";
 
 #np_cmt_frame{
 	color:@black;
@@ -13,6 +9,7 @@
 	float: left;
 	border:none;
 	//基础样式 BEGIN
+	/*
 	button, select, textarea { font-family: 'Microsoft YaHei',arial,tahoma,"宋体",sans-serif;}
 	h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight:normal}
 	address, cite, dfn, em, var,i { font-style: normal }
@@ -27,8 +24,69 @@
 	a:visited { color: #000; text-decoration: none }
 	a:hover, a:active { color: #cd0000; text-decoration: underline }
 	a:focus{ outline:0 }
+	*/
 	//基础样式 END
+	.border-radius( @radius: 3px ) {
+		-webkit-border-radius: @radius;
+		-moz-border-radius: @radius;
+		border-radius: @radius;
+	}
+	.btn{//按钮样式 圆角矩形
+		.border-radius;
+	}
+	.block{//下划线效果
 
+	}
+	.tips{//提示标志样式
+
+	}
+	.textarea{//编辑框样式
+
+	}
+	.icon{//图标样式
+		.icon-reply{//回复图标
+
+		}
+		.icon-plus{//顶图标
+			background: url('http://v2.uyan.cc/code/images/upDig2.png') no-repeat scroll 0 0 transparent; 
+			cursor: pointer; 
+			display: block; 
+			float: left; 
+			height: 13px; 
+			margin-right: 4px; 
+			margin-top: 0px; 
+			width: 13px;
+		}
+		.icon-local{//位置图标
+
+		}
+		.icon-report{//举报图标
+
+		}
+	}
+	.more{//加载更多
+
+	}
+	.avatar{
+
+	}
+	.submit{
+
+	}
+	.avatar{//拽出来！！！
+			position:absolute;
+			left:0;/*-42px*/
+			top:15px;
+			span{
+
+			}
+			img{width:40px;height:40px;border-radius:4px; }
+		}
+	textarea{
+		font-family: 'Microsoft YaHei',arial,tahoma,"宋体",sans-serif; 
+		height: auto;
+
+	}
 	//评论顶部样式
 	#np_cmt_top	{
 		.cmt_sum{float:right;width:200px;height:28px;line-height:28px;overflow:hidden}
@@ -38,10 +96,33 @@
 		.cmt_sum span{color:#666;font-weight:800;padding-right:5px;font-family:'Times New Roman';font-size:16px}
 
 		.globalNav{padding-bottom:0px;height:30px;line-height:30px;border-bottom:1px solid #e8e8e8;border-top:3px solid #379be9; }
-		.globalNav h1{float:left;color:#56abee;font-size:16px;font-family:'Microsoft YaHei';border-bottom:1px solid #56abee;font-weight:normal;padding-right:5px;}
+		.globalNav h1{
+				float:left;
+				//color:#56abee;
+				font-size:18px;
+				//border-bottom:1px solid #56abee;
+				font-weight:normal;
+				padding-right:5px;
+			}
 		.textarea{margin-left:20px;}
-		textarea{width:100%;padding:10px;resize:none;height:60px;color:#ccc;border:0;outline:none;overflow:auto;font-size:16px; line-height:24px;margin-left:-20px}
-		textarea.on{color:#000}
+		textarea{
+			width:100%;
+			padding:10px;
+			resize:none;
+			height:60px;
+			color:#ccc;
+			border:0;
+			outline:none;
+			overflow:auto;
+			font-size:16px;
+			line-height:24px;
+			margin-left:-20px;
+
+
+		}
+		textarea.on{
+			color:#000
+		}
 		.userTitle{display:none}
 	}
 
@@ -76,12 +157,13 @@
 			position:absolute;
 			right:100px
 		}
+		&.on{
+			border-color:#379be9;
+			height:140px;
+		}
 	}
 	/*#cmt_box{box-shadow:0px 0px 3px 1px #379be9}*/
 	#cmt_box.on{
-		box-shadow: 0px 0px 3px 1px #379be9;
-		border-color:#379be9;
-		height:132px;
 		.textarea textarea{
 			color:#000;
 			line-height:24px;
@@ -244,12 +326,7 @@
 			color:#808080;
 			span strong{color:#0a8cd2}
 		}
-		.avatar{//拽出来！！！
-			position:absolute;
-			left:0;/*-42px*/
-			top:15px;
-			img{width:40px;height:40px;border-radius:4px; }
-		}
+		
 		.children .avatar img{width:35px;height:35px;border-radius:4px; }
 		.my-btn { //拽出来！！！
 			background: #2e9fff; 
@@ -439,10 +516,11 @@
 	}
 	a.bigTitle:hover{
 		color:#cc0000;
+		text-decoration: none;
 	}
 
 	/*css style */
-	.use.cmt_popbox{
+	.cmt_popbox{
 		width:220px;
 		height:195px;
 		background:#ccc;
@@ -472,11 +550,12 @@
 			background:url(http://mat1.gtimg.com/www/niuping2013/plbg.png) no-repeat;
 			padding:2px 0px 3px 15px;
 			background-position:0px 0px
+			&:hover{
+				text-decoration:none;
+				background-position:0px -23px;
+			}
 		}
-		a:hover,span:hover{
-			text-decoration:none;
-			background-position:0px -23px;
-		}
+		
 		em{
 			font-style:normal;
 			font-size:12px;
@@ -548,6 +627,7 @@
 		line-height:26px;
 		overflow:hidden;
 		a.submit{
+			.btn;
 			float:right;
 			width:80px;
 			height:30px;
@@ -646,7 +726,8 @@
 			background: url(http://mat1.gtimg.com/www/niuping2013/loadgray.gif) center no-repeat;
 		}
 	}
-	.avatar{position:absolute;left:0px;top:20px;}
+
+
 	.undis{display:none}
 	.dis{display:block}
 	.wait{font-size:12px;color:#999;padding-left:15px}
