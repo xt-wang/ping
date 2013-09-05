@@ -1498,7 +1498,7 @@
 									if (i > 0) {
 										Userlist += "、"
 									}
-									Userlist += "<span post_uid=" + uInfo.userid + " class='popClick'><strong>" + uInfo.nick + "</strong></span>"
+									Userlist += "<span post_uid=" + uInfo.userid + " class='popClick'>" + uInfo.nick + "</span>"
 								});
 								if (info.userlist.length < info.up) {
 									Userlist += "等"
@@ -1506,21 +1506,21 @@
 							}
 						}
 						leftGrid = "<div class=\'avatar " + (DING ? '' : 'popClick') + "\' post_uid='" + info.userinfo.userid + "'><img src=\'" + picUrl + "\'></div>";
-						article = (HUIFU ? "<strong post_uid='" + info.userinfo.userid + "' class=\'publisher popClick\'>" + info.userinfo.nick + "</strong> 回复了你的评论：<em class=\'title\'>" + _this.subString(info.parentinfo.content, 46) + "</em>" : (DING ? (Userlist + info.up + "人  顶了你的评论：<em class=\'title\'>" + _this.subString(info.content, 46) + "</em> <span date='" + info.time + "' class=\'time\'>" + _this.formatTime(info.time) + "</span>") : ''));
+						article = (HUIFU ? "<span post_uid='" + info.userinfo.userid + "' class=\'publisher popClick\'>" + info.userinfo.nick + "</span> 回复了你的评论：<em class=\'title\'>" + _this.subString(info.parentinfo.content, 46) + "</em>" : (DING ? (Userlist + info.up + "人  顶了你的评论：<em class=\'title\'>" + _this.subString(info.content, 46) + "</em> <span date='" + info.time + "' class=\'time\'>" + _this.formatTime(info.time) + "</span>") : ''));
 					}
 					if (type == 'myComment') {
 						listId = 'post_';
 						replyString = "(<em>" + info.repnum + "</em>)"
 						leftGrid = "<div class=\"post-time\" ><span date='" + info.time + "'>" + (info.time ? _this.formatTime(info.time) : "刚刚") + "</span></div>";
-						nick = "<strong class=\"rename\">" + info.userinfo.nick + "</strong>"
+						nick = "<span class=\"rename\">" + info.userinfo.nick + "</span>"
 						if ($.cookie('uid') == info.userinfo.userid) {
 							nick = "我"
 						}
 						if (info.parentinfo) {
 							if (info.parentinfo.userinfo) {
-								nick2 = "<strong post_uid='" + info.parentinfo.userinfo.userid + "' class=\"rename popClick\">" + info.parentinfo.userinfo.nick + "</strong>"
+								nick2 = "<span post_uid='" + info.parentinfo.userinfo.userid + "' class=\"rename popClick\">" + info.parentinfo.userinfo.nick + "</span>"
 								if (info.userinfo.userid == info.parentinfo.userinfo.userid) {
-									nick2 = "<strong>Ta</strong>"
+									nick2 = "<span>Ta</span>"
 								}
 								if ($.cookie('uid') == info.parentinfo.userinfo.userid) {
 									nick2 = "我"
@@ -1683,7 +1683,7 @@
 								$('#cmt_popbox .head .userPic').find('img').attr('src', bigPic); // 更新头像
 								$('#cmt_popbox .head .upvote i').html(usermeta.upnum);
 								$('#cmt_popbox .head .num i').html(usermeta.commentnum);
-								$('#cmt_popbox .head .upandnum strong').html(usermeta.nick);
+								$('#cmt_popbox .head .upandnum span').html(usermeta.nick);
 								$('#cmt_popbox .head .area').html($.trim(area) != '' ? area : '腾讯网友');
 							}
 							if (data.errCode == 0) {
