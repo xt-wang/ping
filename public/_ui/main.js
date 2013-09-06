@@ -286,7 +286,7 @@
 						hide = '';
 					}
 					var newstrHTML = "";
-					newstrHTML += "<li class='post " + dis + ' ' + topIco + ' ' + hide + "' id=" + topId + info.id + "><div class='post-content'><div class='indicator'></div><div class='avatar " + popClick + "' post_uid = '" + info.userinfo.userid + "'><span><img src='" + headImg + "'/></span></div><div class='post-body'><div class='post-header'><span   post_uid = " + info.userinfo.userid + " class='publisher " + popClick + "'>" + nick + "</span>" + ((info.parent == 0) ? "<span class='replywho' style='display:none'>回复了  " + info.replyuser + "</span>" : "<span class='replywho'>" + info.replyuser + "</span>") + "<span date=" + info.time + " class='uptime'>" + this.formatTime(info.time) + "</span></div><div class='post-message-container'>" + content + "</div><div class='post-footer'><em class='newcoment' id=em_" + info.id + "></em><span class='upvote'><a href='javascript:void(0)'><i>顶</i>(<em>" + info.up + "</em>)</a></span><span class='reply'><a href='javascript:void(0)'>回复</a></span></div></div></div><ul class='children'></ul></li>";
+					newstrHTML += "<li class='post " + dis + ' ' + topIco + ' ' + hide + "' id=" + topId + info.id + "><div class='post-content'><div class='indicator'></div><div class='avatar " + popClick + "' post_uid = '" + info.userinfo.userid + "'><span><img src='" + headImg + "'/></span></div><div class='post-body'><div class='post-header'><span   post_uid = " + info.userinfo.userid + " class='publisher " + popClick + "'>" + nick + "</span>" + ((info.parent == 0) ? "<span class='replywho' style='display:none'>回复了  " + info.replyuser + "</span>" : "<span class='replywho'>" + info.replyuser + "</span>") + "<span date=" + info.time + " class='uptime'>" + this.formatTime(info.time) + "</span></div><div class='post-message-container'>" + content + "</div><div class='post-footer'><em class='newcoment' id=em_" + info.id + "></em><span class='plus'><a href='javascript:void(0)'><i>顶</i>(<em>" + info.up + "</em>)</a></span><span class='reply'><a href='javascript:void(0)'>回复</a></span></div></div></div><ul class='children'></ul></li>";
 					return newstrHTML
 				},
 				makeCommentList: function() { // 首页评论渲染 --后面需要修改
@@ -373,7 +373,7 @@
 
 					function emptyListOrForbiddenL() {
 						if ($('#allComments li').length == 0) {
-							$('#allComments').children('.tipInfo').removeClass('waitting').html('暂无评论').show();
+							$('#allComments').children('.tipInfo').removeClass('loading').html('暂无评论').show();
 						}
 						if (!$('#allComments .post-list').length) {
 							$('#allComments').append("<ul class='post-list'></ul>");
@@ -426,7 +426,7 @@
 					});
 					var show1 = function(commentList) {
 						if (!commentList.data.commentid.length && $('#allComments li').length == 0) {
-							$('#allComments').children('.tipInfo').removeClass('waitting').html('暂无评论').show();
+							$('#allComments').children('.tipInfo').removeClass('loading').html('暂无评论').show();
 						} else {
 							$('#allComments').children('.tipInfo').hide();
 						}
@@ -704,11 +704,11 @@
 					container.delegate('.pop_user_login', 'click', function() {
 						_this.showLoginLayer();
 					});
-					$('#my-notification').delegate('.upvote', 'click', function() {
+					$('#my-notification').delegate('.plus', 'click', function() {
 						alert('自己不能顶自己');
 						return false;
 					});
-					container.delegate('.upvote', 'click', function() { //绑定顶事件 --  暂定需要登录才可顶
+					container.delegate('.plus', 'click', function() { //绑定顶事件 --  暂定需要登录才可顶
 						var commentid = $(this).parent('.post-footer').children('em.newcoment').attr('id').split('_')[1];
 						if ($(this).find('a').hasClass('hasup')) {
 							return false;
@@ -727,8 +727,8 @@
 										if (!$('#post_iframe').length) {
 											$body.append('<iframe id="post_iframe" name="post_iframe" style="display:none"><script type="text/javascript">document.domain = "qq.com";</script></iframe>');
 										}
-										var _$form = $('#_upvote').length ?
-											$('#_upvote').attr('action' ,url).empty() :
+										var _$form = $('#_plus').length ?
+											$('#_plus').attr('action' ,url).empty() :
 											$('<form action="'+ url +'" method="post" target="' + _target
 													+'" id="_messageform" style="display:none;"></form>').appendTo($body);
 										*/
@@ -1532,7 +1532,7 @@
 							titleHtml = ''
 						}
 					}
-					newstrHTML += "<li class=\'post " + blueflag + "\' id=\'" + listId + "" + info.id + "\'>" + "<div class=\'post-content\'><div class='indicator'></div>" + leftGrid + "<div class=\'post-body\'>" + "<div class=\'message-article\'>" + article + "</div>" + (!DING ? "<div class=\'message-content\'>" + "<div>" + info.content + "<span date='" + info.time + "' class=\'time\'>" + (HUIFU ? _this.formatTime(info.time) : '') + "</span></div>" + "</div>" : '') + titleHtml + (!DING ? "<div class=\'post-footer\'><em class='newcoment' id='am_" + info.id + "'></em><span class=\'upvote\'><span><i>顶</i>(<em>" + info.up + "</em>)</span></span><span class=\'reply\'><span>回复" + replyString + "</span></span></div>" : '') + "</div>" + "</div>" + "<ul class=\'children\'>" + "</ul>" + "</li>";
+					newstrHTML += "<li class=\'post " + blueflag + "\' id=\'" + listId + "" + info.id + "\'>" + "<div class=\'post-content\'><div class='indicator'></div>" + leftGrid + "<div class=\'post-body\'>" + "<div class=\'message-article\'>" + article + "</div>" + (!DING ? "<div class=\'message-content\'>" + "<div>" + info.content + "<span date='" + info.time + "' class=\'time\'>" + (HUIFU ? _this.formatTime(info.time) : '') + "</span></div>" + "</div>" : '') + titleHtml + (!DING ? "<div class=\'post-footer\'><em class='newcoment' id='am_" + info.id + "'></em><span class=\'plus\'><span><i>顶</i>(<em>" + info.up + "</em>)</span></span><span class=\'reply\'><span>回复" + replyString + "</span></span></div>" : '') + "</div>" + "</div>" + "<ul class=\'children\'>" + "</ul>" + "</li>";
 					return newstrHTML
 				},
 				loadMyMessage: function() { // 个人中心提醒 列表拉取
@@ -1590,12 +1590,12 @@
 								$('#my-message').children('.tipInfo').hide();
 							} else if (data.errCode == 0 && data.data.retnum == 0) {
 								if ($('#cmt_my_list li').length == 0) {
-									$('#my-message').children('.tipInfo').removeClass('waitting').html('暂无提醒').show();
+									$('#my-message').children('.tipInfo').removeClass('loading').html('暂无提醒').show();
 								} else {
 									$('#my-message').children('.tipInfo').hide();
 								}
 							} else {
-								$('#my-message').children('.tipInfo').removeClass('waitting').html('暂无提醒').show();
+								$('#my-message').children('.tipInfo').removeClass('loading').html('暂无提醒').show();
 							}
 							Qoss('wdtx', _this._tips0, {
 								1: (_this._tips0 + 1),
@@ -1644,7 +1644,7 @@
 								}
 								$('#my-notification').children('.tipInfo').hide();
 							} else {
-								$('#my-notification').children('.tipInfo').removeClass('waitting').html('暂无评论').show();
+								$('#my-notification').children('.tipInfo').removeClass('loading').html('暂无评论').show();
 								if ($('#my-notification-list li').length == 0) {
 									$('#my-notification').children('.tipInfo').show();
 								}
@@ -1669,7 +1669,7 @@
 						oMyCmt.msgid = '';
 					}
 					if ($("#popInfo li").length == 0) {
-						$('#my-notice').children('.tipInfo').removeClass('waitting').addClass('waitting').html('').show(); //初始化弹出层状态
+						$('#my-notice').children('.tipInfo').removeClass('loading').addClass('loading').html('').show(); //初始化弹出层状态
 					}
 					$.ajax({
 						url: o.fetchUrl + 'user/' + oMyCmt.userId + "/comment?lastid=" + oMyCmt.msgid + "&pageflag=" + oMyCmt.pageflag + "&reqnum=" + o.centerPageSize, //o.allNew + o.$showNum.data('maxID'),
@@ -1681,14 +1681,14 @@
 								var bigPic = usermeta.head.replace(/40/, "100");
 								var area = usermeta.region.replace(/:/g, ' ');
 								$('#cmt_popbox .head .userPic').find('img').attr('src', bigPic); // 更新头像
-								$('#cmt_popbox .head .upvote i').html(usermeta.upnum);
+								$('#cmt_popbox .head .plus i').html(usermeta.upnum);
 								$('#cmt_popbox .head .num i').html(usermeta.commentnum);
 								$('#cmt_popbox .head .upandnum span').html(usermeta.nick);
 								$('#cmt_popbox .head .area').html($.trim(area) != '' ? area : '腾讯网友');
 							}
 							if (data.errCode == 0) {
 								if (data.data.comments.length == 0 && $("#popInfo li").length == 0) {
-									$('#my-notice').children('.tipInfo').removeClass('waitting').html('暂无评论').show();
+									$('#my-notice').children('.tipInfo').removeClass('loading').html('暂无评论').show();
 								} else {
 									$('#my-notice').children('.tipInfo').hide();
 								}
@@ -1714,7 +1714,7 @@
 									//document.getElementById('popInfo').innerHTML = strHTML;// 方法没问题 报错
 								}
 								if ($("#popInfo li").length == 0) { // 内容为空提示信息
-									$('#my-notice').children('.tipInfo').removeClass('waitting').html('暂无评论').show();
+									$('#my-notice').children('.tipInfo').removeClass('loading').html('暂无评论').show();
 								}
 								if (data.data.retnum < o.centerPageSize || data.data.total <= 10) {
 									$('#loadPopInfo>span').hide();

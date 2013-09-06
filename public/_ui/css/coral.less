@@ -84,23 +84,17 @@ i.tips{
 	position: relative; 
 	float: left;
 	border:none;
-	//基础样式 BEGIN
-	/*
-	button, select, textarea { font-family: 'Microsoft YaHei',arial,tahoma,"宋体",sans-serif;}
-	h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight:normal}
-	address, cite, dfn, em, var,i { font-style: normal }
-	small { font-size: 12px }
-	ul, ol { list-style: none }
-	legend { color: #000 }
-	fieldset, img { border: none }
-	button, input, select, textarea { font-size: 100%; vertical-align:middle }
-	table { border-collapse: collapse; border-spacing:0 }
-	img { vertical-align:bottom }
-	a:link { outline:none; color: #000; text-decoration: none }
-	a:visited { color: #000; text-decoration: none }
-	a:hover, a:active { color: #cd0000; text-decoration: underline }
-	a:focus{ outline:0 }
-	*/
+	a{
+		color:@black;
+		&:hover{
+			color:@black;
+			text-decoration: none;
+		}
+	}
+	ul{//清除li修饰符
+		list-style-type: none;
+	}
+	
 	//基础样式 END
 	.border-radius( @radius: 3px ) {
 		-webkit-border-radius: @radius;
@@ -383,6 +377,7 @@ i.tips{
 			.pop_reply{margin-top:10px;padding-left:12px}
 		}
 	}
+	
 	.cmt_popbox{
 		width:664px;
 		height:80%;
@@ -392,15 +387,14 @@ i.tips{
 		left:50%;
 		top:100%;
 		margin-left:-340px;
-		border-radius: 7px;
 		background:rgba(0,0,0,0.6);
 		//filter:progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr = '#60000000',endColorstr = '#60000000')\9;
 		z-index:90001;
+		border-radius: 7px;
 		border:1px solid #a9a9a9;
 		overflow:hidden;
 		padding:8px;
 		display:none;
-
 		.head{
 			background:url(http://mat1.gtimg.com/www/niuping2013/pop_bg.png) repeat-x;
 			height:120px;
@@ -425,7 +419,7 @@ i.tips{
 					line-height:30px;
 					font-size:14px;
 					//.area{background:url("@{imgpath}pop1.png") no-repeat;padding-left:20px;padding-right:12px}
-					//.upvote{background:url("@{imgpath}uphand.jpg") no-repeat;padding-left:20px;padding-right:12px}
+					//.plus{background:url("@{imgpath}uphand.jpg") no-repeat;padding-left:20px;padding-right:12px}
 					//.num{background:url("@{imgpath}replyico.png") no-repeat;padding-left:20px}
 					.num i{font-style:normal;margin-right:3px}
 				}
@@ -582,7 +576,7 @@ i.tips{
 	.pop_reply .tips a{
 		color:#fff;
 	}
-	.upvote {
+	.plus {
 		a,span{
 			font-size:12px;
 			color:#808080;
@@ -731,19 +725,11 @@ i.tips{
 		text-align:center;
 		height:18px;
 	}
-	.waitting{
-		background:url(http://mat1.gtimg.com/www/niuping2013/loadgray.gif) center no-repeat;
-	}
-	.maskObj{
+	.loading{
+		background:url("@{imgpath}/loading.gif") center no-repeat;
 		width:100%;
-		//filter:alpha(opacity =80);
-		opacity:0.8;
-		position:fixed;
-		z-index:90000;
-		top:0px;
-		left:0px;
+		height:100%;
 		display:none;
-		background:#ccc
 	}
 
 	.loadMore{
@@ -760,25 +746,21 @@ i.tips{
 		i{
 			font-style:normal;
 		}
-		.loading{
-			width:100%;
-			height:100%;
-			display:none;
-			background: url(http://mat1.gtimg.com/www/niuping2013/loadgray.gif) center no-repeat;
-		}
+		
 	}
 
 
 	.undis{display:none}
 	.dis{display:block}
 	.wait{font-size:12px;color:#999;padding-left:15px}
+	
 	a.bigTitle {
 		padding-bottom:16px;font-family:'simhei';
 		font-size: 26px;color:#000;
 		font-weight:normal;
+		&:hover{
+			color:#cc0000;
+			text-decoration: none;
+		}//是否该属于牛评
 	}
-	a.bigTitle:hover{
-		color:#cc0000;
-		text-decoration: none;
-	}//是否该属于牛评
 }
