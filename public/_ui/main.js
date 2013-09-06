@@ -817,7 +817,7 @@
 					this.options.$loginFlag.data('userPic', headUrl);
 					this.options.$loginFlag.html(userInfoHTML).show();
 					//_this.loadNum();
-					$('#my-message-list').html('');
+					$('#cmt_my_list').html('');
 					$('#my-notification-list').html('');
 					this.options.$loginBtns.hide();
 					if (_this.options.loginuin) {
@@ -1367,23 +1367,23 @@
 							}
 							if ($(this).hasClass('on')) {
 								if ($('#popMsg').html() == '') {
-									if ($('#my-message-list li').length >= 0) {
+									if ($('#cmt_my_list li').length >= 0) {
 										return
 									}
-									$('#my-message-list').html('');
+									$('#cmt_my_list').html('');
 									_this.loadMyMessage(); //个人中心的提醒
 									$('#popMsg').html('').hide();
 								} else {
-									$('#my-message-list').html('');
+									$('#cmt_my_list').html('');
 									_this.loadMyMessage();
 									$('#popMsg').html('').hide();
 								}
 								return;
 							}
 							if (!$(this).hasClass('on')) { // 如果没有 .on 排除点击二次
-								if ($('#my-message-list li').length) {
+								if ($('#cmt_my_list li').length) {
 									if ($('#popMsg').css('display') != 'none') {
-										$('#my-message-list').html('');
+										$('#cmt_my_list').html('');
 										_this.loadMyMessage();
 										$('#popMsg').html('').hide();
 									}
@@ -1391,7 +1391,7 @@
 									_this.loadMyMessage();
 								}
 							} else if ($('#popMsg').css('display') != 'none') {
-								$('#my-message-list').html('');
+								$('#cmt_my_list').html('');
 								_this.loadMyMessage();
 								$('#popMsg').html('').hide();
 							}
@@ -1557,7 +1557,7 @@
 								if (oMyMsg.pageflag == 0) {
 									oMyMsg.msgid = oMyMsg.first = data.data.first;
 									oMyMsg.last = data.data.last;
-									$('#my-message-list').html('');
+									$('#cmt_my_list').html('');
 								}
 								if (oMyMsg.pageflag == 1) {
 									oMyMsg.msgid = oMyMsg.last = data.data.last;
@@ -1572,10 +1572,10 @@
 									strHTML += _this.myCreateHmtl(info, "message", blueflag);
 								});
 								if (o.$urlapi.pageflag == 1) {
-									$("#my-message-list").append(strHTML)
+									$("#cmt_my_list").append(strHTML)
 								} else {
-									$("#my-message-list").prepend(strHTML);
-									$("#my-message-list .blueflag").each(function(index, element) { /*20130710 by link*/
+									$("#cmt_my_list").prepend(strHTML);
+									$("#cmt_my_list .blueflag").each(function(index, element) { /*20130710 by link*/
 										_this.blueLine("#" + $(this).attr('id'));
 									});
 								}
@@ -1589,7 +1589,7 @@
 								}
 								$('#my-message').children('.tipInfo').hide();
 							} else if (data.errCode == 0 && data.data.retnum == 0) {
-								if ($('#my-message-list li').length == 0) {
+								if ($('#cmt_my_list li').length == 0) {
 									$('#my-message').children('.tipInfo').removeClass('waitting').html('暂无提醒').show();
 								} else {
 									$('#my-message').children('.tipInfo').hide();

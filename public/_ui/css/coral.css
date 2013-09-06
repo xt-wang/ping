@@ -6,81 +6,58 @@
   position: relative;
   float: left;
   border: none;
+  /*
+	button, select, textarea { font-family: 'Microsoft YaHei',arial,tahoma,"宋体",sans-serif;}
+	h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight:normal}
+	address, cite, dfn, em, var,i { font-style: normal }
+	small { font-size: 12px }
+	ul, ol { list-style: none }
+	legend { color: #000 }
+	fieldset, img { border: none }
+	button, input, select, textarea { font-size: 100%; vertical-align:middle }
+	table { border-collapse: collapse; border-spacing:0 }
+	img { vertical-align:bottom }
+	a:link { outline:none; color: #000; text-decoration: none }
+	a:visited { color: #000; text-decoration: none }
+	a:hover, a:active { color: #cd0000; text-decoration: underline }
+	a:focus{ outline:0 }
+	*/
+
   /*#cmt_box{box-shadow:0px 0px 3px 1px #379be9}*/
-
-  /* Right sliderbar */
-
-  /*css style */
 
   /*textarea publick*/
 
 }
-#np_cmt_frame button,
-#np_cmt_frame select,
+#np_cmt_frame .btn {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+#np_cmt_frame .icon .icon-plus {
+  background: url('http://v2.uyan.cc/code/images/upDig2.png') no-repeat scroll 0 0 transparent;
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: 13px;
+  margin-right: 4px;
+  margin-top: 0px;
+  width: 13px;
+}
+#np_cmt_frame .avatar {
+  position: absolute;
+  left: 0;
+  /*-42px*/
+
+  top: 15px;
+}
+#np_cmt_frame .avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
 #np_cmt_frame textarea {
   font-family: 'Microsoft YaHei', arial, tahoma, "宋体", sans-serif;
-}
-#np_cmt_frame h1,
-#np_cmt_frame h2,
-#np_cmt_frame h3,
-#np_cmt_frame h4,
-#np_cmt_frame h5,
-#np_cmt_frame h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
-#np_cmt_frame address,
-#np_cmt_frame cite,
-#np_cmt_frame dfn,
-#np_cmt_frame em,
-#np_cmt_frame var,
-#np_cmt_frame i {
-  font-style: normal;
-}
-#np_cmt_frame small {
-  font-size: 12px;
-}
-#np_cmt_frame ul,
-#np_cmt_frame ol {
-  list-style: none;
-}
-#np_cmt_frame legend {
-  color: #000000;
-}
-#np_cmt_frame fieldset,
-#np_cmt_frame img {
-  border: none;
-}
-#np_cmt_frame button,
-#np_cmt_frame input,
-#np_cmt_frame select,
-#np_cmt_frame textarea {
-  font-size: 100%;
-  vertical-align: middle;
-}
-#np_cmt_frame table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-#np_cmt_frame img {
-  vertical-align: bottom;
-}
-#np_cmt_frame a:link {
-  outline: none;
-  color: #000;
-  text-decoration: none;
-}
-#np_cmt_frame a:visited {
-  color: #000;
-  text-decoration: none;
-}
-#np_cmt_frame a:hover,
-#np_cmt_frame a:active {
-  color: #cd0000;
-  text-decoration: underline;
-}
-#np_cmt_frame a:focus {
-  outline: 0;
+  height: auto;
 }
 #np_cmt_frame #np_cmt_top .cmt_sum {
   float: right;
@@ -119,10 +96,7 @@
 }
 #np_cmt_frame #np_cmt_top .globalNav h1 {
   float: left;
-  color: #56abee;
-  font-size: 16px;
-  font-family: 'Microsoft YaHei';
-  border-bottom: 1px solid #56abee;
+  font-size: 18px;
   font-weight: normal;
   padding-right: 5px;
 }
@@ -143,7 +117,7 @@
   margin-left: -20px;
 }
 #np_cmt_frame #np_cmt_top textarea.on {
-  color: #000000;
+  color: #000;
 }
 #np_cmt_frame #np_cmt_top .userTitle {
   display: none;
@@ -156,9 +130,9 @@
   box-shadow: 0px 0px 0px 0px #d3d3d3;
   -webkit-transition-property: box-shadow, height, border-color;
   -webkit-transition-duration: 0.6s,0.6s,0.6s;
+  position: relative;
 }
-#np_cmt_frame #cmt_box position:relative .myName {
-  font-size: 14px;
+#np_cmt_frame #cmt_box .myName {
   padding: 13px 0px 0px 15px;
 }
 #np_cmt_frame #cmt_box .change {
@@ -183,9 +157,8 @@
   right: 100px;
 }
 #np_cmt_frame #cmt_box.on {
-  box-shadow: 0px 0px 3px 1px #379be9;
   border-color: #379be9;
-  height: 132px;
+  height: 140px;
 }
 #np_cmt_frame #cmt_box.on .textarea textarea {
   color: #000;
@@ -198,25 +171,24 @@
   padding-top: 5px;
   position: relative;
 }
-#np_cmt_frame #np_cmt_body .main_titleTab span.on {
-  color: #000;
-  border-bottom: 2px solid #379be9;
-}
-#np_cmt_frame #np_cmt_body .main_titleTab span.on a {
-  color: #000000;
-}
 #np_cmt_frame #np_cmt_body .main_titleTab span {
   font-size: 16px;
   position: absolute;
   display: inline-block;
-  width: 82px;
+  width: 65px;
   text-align: center;
   cursor: pointer;
-  padding: 0px 5px;
+  margin: 0px 5px;
+}
+#np_cmt_frame #np_cmt_body .main_titleTab span.on {
+  border-bottom: 4px solid #379be9;
+}
+#np_cmt_frame #np_cmt_body .main_titleTab span.on a {
+  color: #000;
 }
 #np_cmt_frame #np_cmt_body .main_titleTab span a {
-  color: #999;
-  font-weight: 800;
+  color: #000;
+  font-weight: normal;
 }
 #np_cmt_frame #np_cmt_body .main_titleTab span a:hover {
   text-decoration: none;
@@ -258,7 +230,10 @@
   cursor: pointer;
 }
 #np_cmt_frame #np_cmt_body .chid_titleTab span a {
-  color: #b3b3b3;
+  color: #808080;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 #np_cmt_frame #np_cmt_body .chid_titleTab span.on {
   background: url(http://mat1.gtimg.com/www/niuping2013/btn.png) no-repeat;
@@ -295,9 +270,9 @@
   height: 40px;
 }
 #np_cmt_frame #np_cmt_body #cmt_all li.post .children .post-content .avatar img {
-  width: 25px;
-  height: 25px;
-  border-radius: 2px;
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
 }
 #np_cmt_frame #np_cmt_body #cmt_all .children {
   /*delete padding-left make children in a line*/
@@ -324,7 +299,7 @@
   padding-left: 37px;
 }
 #np_cmt_frame #np_cmt_body #cmt_all .children .post-body {
-  padding-left: 32px;
+  padding-left: 40px;
 }
 #np_cmt_frame #np_cmt_body #cmt_all .post-body {
   padding-left: 10px;
@@ -334,12 +309,6 @@
   color: #999;
   margin-left: 5px;
   font-size: 12px;
-}
-#np_cmt_frame #np_cmt_body #cmt_all .post-header .publisher {
-  font-weight: 600;
-  padding-right: 8px;
-  font-size: 12px;
-  cursor: pointer;
 }
 #np_cmt_frame #np_cmt_body #cmt_all .post-header .replywho {
   padding-left: 19px;
@@ -454,17 +423,17 @@
   font-size: 14px;
 }
 #np_cmt_frame .cmt_popbox .head .info .upandnum .area {
-  background: url("pop1.png") no-repeat;
+  background: url("http://dev.qq.com:8081/ping/public/_ui/img/pop1.png") no-repeat;
   padding-left: 20px;
   padding-right: 12px;
 }
 #np_cmt_frame .cmt_popbox .head .info .upandnum .upvote {
-  background: url("uphand.jpg") no-repeat;
+  background: url("http://dev.qq.com:8081/ping/public/_ui/img/uphand.jpg") no-repeat;
   padding-left: 20px;
   padding-right: 12px;
 }
 #np_cmt_frame .cmt_popbox .head .info .upandnum .num {
-  background: url("replyico.png") no-repeat;
+  background: url("http://dev.qq.com:8081/ping/public/_ui/img/replyico.png") no-repeat;
   padding-left: 20px;
 }
 #np_cmt_frame .cmt_popbox .head .info .upandnum .num i {
@@ -491,6 +460,45 @@
   background: url(http://mat1.gtimg.com/www/niuping2013/closex.png) no-repeat;
   z-index: 999;
 }
+#np_cmt_frame .cmt_popbox #scrollbar {
+  width: 10px;
+  height: 50px;
+  background: #a8d3f6;
+  position: absolute;
+  cursor: pointer;
+  top: 0px;
+  left: -5px;
+  z-index: 5;
+  border-radius: 7px;
+}
+#np_cmt_frame .cmt_popbox #scrollbar_parent {
+  width: 1px;
+  height: 600px;
+  background: #b5daf7 url(http://mat1.gtimg.com/www/niuping2013/scrollTopbg.png) top no-repeat;
+  display: none;
+  position: relative;
+  float: right;
+  margin-right: 5px;
+}
+#np_cmt_frame .cmt_popbox #scrollbar_parent .bottom {
+  width: 1px;
+  position: absolute;
+  bottom: 1px;
+  height: 67px;
+  background: url(http://mat1.gtimg.com/www/niuping2013/scrollBottombg.png) no-repeat;
+}
+#np_cmt_frame .cmt_popbox #div2 {
+  width: 625px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+#np_cmt_frame .cmt_popbox #div3 {
+  height: auto;
+  position: absolute;
+  width: 100%;
+}
 #np_cmt_frame .cmt_my {
   padding-top: 10px;
 }
@@ -498,19 +506,7 @@
   color: #808080;
 }
 #np_cmt_frame .cmt_my overflow:hidden .post .post-body .message-article span strong {
-  color: #0a8cd2;
-}
-#np_cmt_frame .cmt_my .avatar {
-  position: absolute;
-  left: 0;
-  /*-42px*/
-
-  top: 15px;
-}
-#np_cmt_frame .cmt_my .avatar img {
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
+  color: #379be9;
 }
 #np_cmt_frame .cmt_my .children .avatar img {
   width: 35px;
@@ -553,7 +549,7 @@
   top: 0px;
   width: 80px;
   padding-right: 9px;
-  background: url(img/dot.png) no-repeat right top;
+  background: url("http://dev.qq.com:8081/ping/public/_ui/img//dot.png") no-repeat right top;
   color: #808080;
   text-align: center;
   font-size: 12px;
@@ -566,19 +562,15 @@
 }
 #np_cmt_frame .cmt_my .post .post-body .message-article a {
   padding: 0 4px;
-  color: #0a8cd2;
+  color: #1a649d;
   line-height: 18px;
-}
-#np_cmt_frame .cmt_my .post .post-body .message-article .publisher {
-  color: #0a8cd2;
-  cursor: pointer;
 }
 #np_cmt_frame .cmt_my .post .post-body .article-title {
   height: 24px;
   margin-top: 10px;
 }
 #np_cmt_frame .cmt_my .post .post-body .article-title a {
-  color: #7cb3d0;
+  color: #808080;
   font-size: 12px;
 }
 #np_cmt_frame .cmt_my .post .post-body .article-title .userlist a {
@@ -611,7 +603,7 @@
   padding-left: 2px;
 }
 #np_cmt_frame .cmt_my .my-notification .post .message-article .rename {
-  color: #0a8cd2;
+  color: #379be9;
   padding-right: 5px;
 }
 #np_cmt_frame .cmt_my .my-notification .upvote span {
@@ -721,91 +713,6 @@
   display: inline-block;
   padding-left: 8px;
 }
-#np_cmt_frame .cmt_my .publisher a {
-  color: #0a8cd2;
-  font-weight: 800;
-}
-#np_cmt_frame #sliderBar {
-  width: 300px;
-  float: right;
-  overflow: hidden;
-}
-#np_cmt_frame #sliderBar .ad_cmt_text {
-  margin-top: 8px;
-}
-#np_cmt_frame #sliderBar .hotlist {
-  width: 300px;
-}
-#np_cmt_frame #sliderBar .hotlist .hd {
-  height: 36px;
-  font-size: 16px;
-  background: #f7f7f7 url(http://mat1.gtimg.com/www/niuping2013/hotlisthd.gif) repeat-x 0 bottom;
-  border: 1px solid #e6e6e6;
-  border-top: none;
-}
-#np_cmt_frame #sliderBar .hotlist .hd .lefttitle {
-  float: left;
-  line-height: 34px;
-  padding-left: 12px;
-}
-#np_cmt_frame #sliderBar .hotlist .hd .side-tab-title {
-  float: right;
-}
-#np_cmt_frame #sliderBar .hotlist .hd .side-tab-title li {
-  float: left;
-  width: 55px;
-  line-height: 34px;
-  text-align: center;
-  cursor: pointer;
-  color: #999999;
-}
-#np_cmt_frame #sliderBar .hotlist .hd li.curr {
-  border-bottom: 2px solid #60b3f4;
-  height: 34px;
-  color: #000000;
-}
-#np_cmt_frame #sliderBar .hotlist .hd li {
-  overflow: hidden;
-  padding: 10px;
-  padding-left: 0px;
-  border-bottom: 1px solid #e6e6e6;
-}
-#np_cmt_frame #sliderBar .hotlist .hd li:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-#np_cmt_frame #sliderBar .hotlist .hd li em {
-  float: left;
-  width: 48px;
-  color: #dadada;
-  font-size: 22px;
-  font-family: Verdana, Geneva, sans-serif;
-  text-align: center;
-}
-#np_cmt_frame #sliderBar .hotlist .hd li.f-three em {
-  color: #fa6768;
-}
-#np_cmt_frame #sliderBar .hotlist .hd li .r_txt {
-  float: left;
-  width: 228px;
-  line-height: 18px;
-}
-#np_cmt_frame #sliderBar .hotlist .hd li .r_txt a {
-  color: #6c6c6c;
-}
-#np_cmt_frame #sliderBar .hotlist .hd li .r_txt a:hover {
-  color: #BC2D09;
-}
-#np_cmt_frame #sliderBar .hotlist .hd li .r_txt i a {
-  color: #999999;
-  font-style: normal;
-}
-#np_cmt_frame .publisher {
-  color: #379be9;
-}
 #np_cmt_frame .block {
   border: 2px solid;
   border-radius: 25px;
@@ -817,7 +724,7 @@
   background: #379be9;
 }
 #np_cmt_frame .white {
-  background: white;
+  background: #ffffff;
 }
 #np_cmt_frame #my-message .post-list .blueflag .indicator {
   background: #2e9fff;
@@ -832,50 +739,11 @@
 #np_cmt_frame #my-message .post-list .blueflag .avatar {
   left: 10px;
 }
-#np_cmt_frame #my-message .post-list .blueflag .post-body {
+#np_cmt_frame .post-list .blueflag .post-body {
   padding-left: 20px;
 }
-#np_cmt_frame #my-message .post-list .children .blueflag .indicator {
+#np_cmt_frame .post-list .children .blueflag .indicator {
   height: 35px;
-}
-#np_cmt_frame #parent {
-  width: 1px;
-  height: 600px;
-  background: #b5daf7 url(http://mat1.gtimg.com/www/niuping2013/scrollTopbg.png) top no-repeat;
-  display: none;
-  position: relative;
-  float: right;
-  margin-right: 5px;
-}
-#np_cmt_frame #parent .bottom {
-  width: 1px;
-  position: absolute;
-  bottom: 1px;
-  height: 67px;
-  background: url(http://mat1.gtimg.com/www/niuping2013/scrollBottombg.png) no-repeat;
-}
-#np_cmt_frame #div1 {
-  width: 10px;
-  height: 50px;
-  background: #a8d3f6;
-  position: absolute;
-  cursor: pointer;
-  top: 0px;
-  left: -5px;
-  z-index: 5;
-  border-radius: 7px;
-}
-#np_cmt_frame #div2 {
-  width: 625px;
-  height: 600px;
-  position: relative;
-  overflow: hidden;
-  float: left;
-}
-#np_cmt_frame #div3 {
-  height: auto;
-  position: absolute;
-  width: 100%;
 }
 #np_cmt_frame #my-notice .post,
 #np_cmt_frame #my-notification .post {
@@ -914,16 +782,7 @@
 }
 #np_cmt_frame a.bigTitle:hover {
   color: #cc0000;
-}
-#np_cmt_frame .use.cmt_popbox {
-  width: 220px;
-  height: 195px;
-  background: #ccc;
-  position: absolute;
-  z-index: 99;
-  left: 40px;
-  top: 0px;
-  border-radius: 5px;
+  text-decoration: none;
 }
 #np_cmt_frame .hiddenCon {
   display: none;
@@ -945,10 +804,9 @@
   cursor: pointer;
   background: url(http://mat1.gtimg.com/www/niuping2013/plbg.png) no-repeat;
   padding: 2px 0px 3px 15px;
-  background-position: 0px 0px;
 }
-#np_cmt_frame .upvote a:hover,
-#np_cmt_frame .upvote span:hover {
+background-position:0px 0px #np_cmt_frame .upvote a:hover,
+background-position:0px 0px #np_cmt_frame .upvote span:hover {
   text-decoration: none;
   background-position: 0px -23px;
 }
@@ -965,7 +823,12 @@
   color: #ccc;
   background-position: 0px -47px;
 }
+#np_cmt_frame .publisher,
 #np_cmt_frame .popClick {
+  color: #379be9;
+  font-weight: 600;
+  padding-right: 2px;
+  font-size: 12px;
   cursor: pointer;
 }
 #np_cmt_frame .reply {
@@ -1030,6 +893,9 @@
   overflow: hidden;
 }
 #np_cmt_frame .commtSub a.submit {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   float: right;
   width: 80px;
   height: 30px;
@@ -1058,11 +924,11 @@
 #np_cmt_frame .commtSub .loginFlag {
   float: left;
 }
-#np_cmt_frame .commtSub .myPic img {
-  border-radius: 3px;
-}
 #np_cmt_frame .commtSub .loginFlag span {
   float: left;
+}
+#np_cmt_frame .commtSub .myPic img {
+  border-radius: 3px;
 }
 #np_cmt_frame .commtSub .replyTop {
   float: left;
@@ -1125,11 +991,6 @@
   height: 100%;
   display: none;
   background: url(http://mat1.gtimg.com/www/niuping2013/loadgray.gif) center no-repeat;
-}
-#np_cmt_frame .avatar {
-  position: absolute;
-  left: 0px;
-  top: 20px;
 }
 #np_cmt_frame .undis {
   display: none;

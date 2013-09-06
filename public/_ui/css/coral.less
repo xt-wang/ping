@@ -1,4 +1,80 @@
 @import "variables.less";
+@iconimgpath:"http://dev.qq.com:8081/ping/public/_ui/img/bg.png";
+#bg{
+	background: url(@iconimgpath);
+	height: 150px;
+	width: 400px;
+}
+
+i.topIco{//置顶
+	background:url(http://mat1.gtimg.com/www/niuping2013/ding.png) right 21px no-repeat
+}
+i.plus {
+	background: url(@iconimgpath) -20px -40px;
+	height: 20px;
+	width: 20px;
+}
+i.local{
+	background: url(@iconimgpath) 0 -40px;
+	height: 20px;
+	width: 20px;
+}
+i.reply{
+	background: url(@iconimgpath) -40px -40px;
+	height: 20px;
+	width: 20px;
+}
+i.report{
+	background: url(@iconimgpath) -40px 0;
+	height: 10px;
+	width: 10px;
+}
+i.dot{
+	background: url(@iconimgpath) -60px 0;
+	height: 10px;
+	width: 10px;	
+}
+i.smallplus{
+	background: url(@iconimgpath) 0 0;
+	height: 15px;
+	width: 15px;
+	&.on{
+		background: url(@iconimgpath) 0 -20px;
+	}
+}
+i.smallreply{
+	background: url(@iconimgpath) -20px 0;
+	height: 15px;
+	width: 15px;
+	&.on{
+		background: url(@iconimgpath) -20px -20px;
+	}
+}
+i.marrow{
+	background: url(@iconimgpath) 0 -70px;
+	height: 20px;
+	width: 42px;	
+}
+i.avatar_plus{
+	background: url(@iconimgpath) -90px 0;
+	height: 40px;
+	width: 40px;	
+}
+i.tips{
+	background: url(@iconimgpath) -60px -40px;
+	height: 15px;
+	width: 28px;
+}
+#cmt_none{
+	background: url(@iconimgpath) -135px 0;
+	height: 125px;
+	width: 105px;
+}
+.avatar_qq{
+	background: url(@iconimgpath) -240px 0;
+	height: 82px;
+	width: 82px;
+}
 
 #np_cmt_frame{
 	color:@black;
@@ -348,9 +424,9 @@
 				.upandnum{
 					line-height:30px;
 					font-size:14px;
-					.area{background:url("@{imgpath}pop1.png") no-repeat;padding-left:20px;padding-right:12px}
-					.upvote{background:url("@{imgpath}uphand.jpg") no-repeat;padding-left:20px;padding-right:12px}
-					.num{background:url("@{imgpath}replyico.png") no-repeat;padding-left:20px}
+					//.area{background:url("@{imgpath}pop1.png") no-repeat;padding-left:20px;padding-right:12px}
+					//.upvote{background:url("@{imgpath}uphand.jpg") no-repeat;padding-left:20px;padding-right:12px}
+					//.num{background:url("@{imgpath}replyico.png") no-repeat;padding-left:20px}
 					.num i{font-style:normal;margin-right:3px}
 				}
 			}
@@ -419,7 +495,6 @@
 			.post .post-footer { padding-left: 30px;padding-top:10px}
 			.post .message-article { font-size: 12px; color: #999999; padding-left:2px; }
 			.post .message-article .rename{color:@blue;padding-right:5px}
-			.upvote span{cursor:text}
 			.post .post-body .article-title { padding-left: 30px; line-height: 22px;}
 			.post .line { border-bottom: 1px solid #e6e6e6; margin-left: 15px;font-size:1px; height:1px;}
 			.post .line { border-bottom: 1px solid #e6e6e6; margin-left: 15px;font-size:1px; height:1px;}
@@ -488,48 +563,13 @@
 	}
 	
 	//奇葩的样式结构
-	#my-message .post-list .blueflag .indicator{background:#2e9fff;width:5px;height:40px;position:absolute;left:0px;top:15px;border-radius:3px;display:block}
-	#my-message .post-list .blueflag .avatar{left:10px;}
-	.post-list .blueflag .post-body{padding-left:20px;}
-	.post-list .children .blueflag .indicator{height:35px}
-	
-
-	
-	
-
-	//#my-notification-list .post .post{display:none;}/*20130718 by link*/
-	#my-notice, #my-notification{
-		.post{width:535px;}
-		.post-footer a{
-			cursor:text
-		}
-		.upvote a:hover{
-			background-position:0 0
-		}
-		.reply a:hover{
-			background-position:0 -69px
-		}
-		.reply span{
-			cursor:text
-		}
-		.post-body .rename a{
-			cursor:text;
-		}
-		.post-body .rename a:hover{
-			text-decoration:none;
-		}
+	.blueflag {
+		.indicator{background:#2e9fff;width:5px;height:40px;position:absolute;left:0px;top:15px;border-radius:3px;display:block}
+		.avatar{left:10px;}	//考虑通过html格式 修改掉
+		.post-body{padding-left:20px;}
+		.indicator{height:35px}
 	}
-	
-	a.bigTitle {
-		padding-bottom:16px;font-family:'simhei';
-		font-size: 26px;color:#000;
-		font-weight:normal;
-	}
-	a.bigTitle:hover{
-		color:#cc0000;
-		text-decoration: none;
-	}
-
+			
 	.hiddenCon{
 		display:none;
 	}
@@ -595,22 +635,15 @@
 			text-decoration:none
 		}
 	}
-
-	.post-list {
-			.topIco{background:url(http://mat1.gtimg.com/www/niuping2013/ding.png) right 21px no-repeat}
-			.hide{display:none}
-		}
-	.post-list 
-	.post-list .Occupy .upvote,
-	.post-list .Occupy .reply{display:none}
-	.post-list .Occupy .children .upvote,
-	.post-list .Occupy .children .reply{display:inline}
-	.post-list .Occupy .post-message-container .s{color:#666}
 	
-	.post{word-break: normal;word-wrap: break-word;}
-	.over{overflow:hidden}
-	/*textarea publick*/
-
+	.post{//设置断字信息
+		word-break: normal;
+		word-wrap: break-word;
+	}
+	.over{//需确定作用
+		overflow:hidden
+	}
+	
 	.post .children .textarea{
 		margin-left:12px;
 		textarea{
@@ -739,4 +772,13 @@
 	.undis{display:none}
 	.dis{display:block}
 	.wait{font-size:12px;color:#999;padding-left:15px}
+	a.bigTitle {
+		padding-bottom:16px;font-family:'simhei';
+		font-size: 26px;color:#000;
+		font-weight:normal;
+	}
+	a.bigTitle:hover{
+		color:#cc0000;
+		text-decoration: none;
+	}//是否该属于牛评
 }
