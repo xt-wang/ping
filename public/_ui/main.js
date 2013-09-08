@@ -1,3 +1,10 @@
+var config = {
+	avatar_default : 'http://t0.qlogo.cn/mbloghead/01676c4b10bbdb6f2618/50',
+	avatar_plus :'img/plus.jpg',
+	api_user : '',
+	api_list ：'',
+	api_notice : '',
+}
 	/*code by 2013.6.17  15:32*/
 	/*最后更新时间 by 2013.6.18  17:05*/
 	/*最后更新时间 by 2013.6.20  12:42*/
@@ -1489,10 +1496,10 @@
 						HUIFU = (info.tipstype == '3'); //提醒4顶  3回复
 						DING = (info.tipstype == '4');
 						if (HUIFU) {
-							picUrl = headP || 'http://t0.qlogo.cn/mbloghead/01676c4b10bbdb6f2618/50'
+							picUrl = headP || config.avatar_default
 						} //	我的头像
 						if (DING) {
-							picUrl = 'http://mat1.gtimg.com/www/niuping2013/upico.jpg';
+							picUrl = config.avatar_plus;
 							if (info.userlist.length > 0) {
 								$.each(info.userlist, function(i, uInfo) {
 									if (i > 0) {
