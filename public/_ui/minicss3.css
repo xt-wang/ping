@@ -1,0 +1,202 @@
+
+
+
+/* clearfix */
+.movielist ul:before,.movielist ul:after,.clearfix:before,.clearfix:after { content:"";display:table } .clearfix:after { clear:both } 
+.movielist ul,.clearfix { zoom:1 }
+
+.ll { float:left } .r { float:right } .pr { position:relative }
+.dis { display:block }
+.undis { display:none }
+textarea { resize:none }
+a:link { outline:none; color: #000; text-decoration: none }
+a:visited { color: #000; text-decoration: none }
+a:hover, a:active { color: #cd0000; text-decoration: underline }
+a:focus{ outline:0 }
+/*全局*/
+body { font:12px/1.75 "宋体","Arial",sans-serif;  background:#fff; color:#000; -webkit-text-size-adjust:100% }
+.user_mod .userName:after,.btbox:after,.hot-read .bd li:after,.hot-comment .bd dl:after,.wb-news-mod .bd dl:after,.love-read dl:after,.essence-mod dl:after,.cf:after { content:""; display:block; clear:both; height:0px; visibility:hidden }
+.user_mod .userName,.btbox,.hot-read .bd li,.hot-comment .bd dl,.wb-news-mod .bd dl,.love-read dl,.essence-mod dl,.cf { *display:inline-block; zoom:1 }
+.ff-t { font-family:Tahoma } .fw-b { font-weight:bold } .f14 { font-size:14px }
+.mar-cf { margin-bottom:0 }
+.mar-b-10 { margin-bottom:10px }
+.mar-b-30 { margin-bottom:23px }
+.mar-b-18 { margin-bottom:11px }
+
+/* layout */
+.body-Article-QQ { width:1000px; margin:0 auto }
+.main { float:left; width:640px }
+.side { float:right; width:300px }
+#top {top:0; width:100%; z-index:100; left:0; margin-bottom:10px;  }
+.topList { width:100%;  height:85px; overflow:hidden }
+.navWrap { height:35px; margin-bottom:10px }
+.nav { width:100%; min-width:1000px; text-align:center; height:35px; background:#379be9; top:0; z-index: 100 }
+
+.nav-Article-QQ { outline: none; }
+ #moreNav { position: relative; }
+ #moreNav .moreLink:hover { background:none; }
+span.moreNav1 { display:block; padding-right:10px; background:url( http://mat1.gtimg.com/news/dc/images/icon_down.gif) no-repeat right center;  font-family:'Microsoft Yahei';}
+ .moreNav2 { display:block; padding-right:10px; position: relative; background:url( http://mat1.gtimg.com/news/dc/images/icon_up.gif) no-repeat right center; }
+ .navmenu { display:none; position: absolute;  top:35px; background:#379BE9; text-align:left; width:74px; }
+ .navmenu a:hover { background:#1669AB; }
+ .nav-Article-QQ { z-index:20; }
+.nav-color { color:#FFCC00; }
+.nav-Article-QQ ul .nav-color a,.nav-Article-QQ ul .nav-color a:visited,.nav-Article-QQ ul .nav-color a:link,.nav-Article-QQ ul .nav-color a:hover { color:#FFCC00; font-family:'Microsoft Yahei' }
+/* sprite */
+.shareBtn-bd a, .scrollBtn a, .hot-voting-con, .hot-voting, #cmt_post_btn, #topPic_close, .cmt-share-btn label{ background:url(http://mat1.gtimg.com/news/dc/images/s_gallery_2012110702.png) no-repeat 0 0; display:inline-block  }
+.scrollBtn a,.scrollBtn a:link,.scrollBtn a:visited,.scrollBtn a:hover { color:#fff }
+
+
+
+/*主导航 迷你导航*/
+.nav-Article-QQ { padding:0 10px 0 0; line-height:25px; float:left; font-family:' Microsoft Yahei'; position: relative; z-index:20 ; }
+.nav-Article-QQ ul { float:left }
+.nav-Article-QQ ul li { float:left; font-size:14px; background:url(http://mat1.gtimg.com/joke/temp/bg_nav_li.png) no-repeat right center }
+.nav-Article-QQ ul li a,.nav-Article-QQ ul li a:visited,.nav-Article-QQ ul li a:link,.nav-Article-QQ ul li a:hover { color:#feffff; text-decoration:none;  font-family:'Microsoft Yahei'}
+.nav-Article-QQ ul li a { display:block; padding:5px 11px }
+.nav-Article-QQ ul li a:hover { background:#1669AB }
+.colorPd { color:#fff000 }
+.nav-Article-QQ ul .colorPd a,.nav-Article-QQ ul .colorPd a:visited,.nav-Article-QQ ul .colorPd a:link,.nav-Article-QQ ul .colorPd a:hover { color:#fff000 }
+
+.nav-Article-QQ ul .nav-color a,.nav-Article-QQ ul .nav-color a:visited,.nav-Article-QQ ul .nav-color a:link,.nav-Article-QQ ul .nav-color a:hover { color:#FFCC00 }
+
+/*迷你导航*/
+.site-nav-mblogin { float:right }
+.mblog_logined_info { float:left }
+.mblog_logined_info,.mblog-info,.qzone-info,.mail-info,.pengyou-info { display:inline; float:left; margin-right:10px }
+.qzone-nav,.qzone-nav,.mail-nav,.pengyou-nav { background-image:url(http://mat1.gtimg.com/joke/temp/icon_mininav.png);  background-repeat:no-repeat }
+.mblog-info a,.qzone-nav a,.mail-nav a,.pengyou-nav a { display:inline-block; width:44px; text-indent:18px }
+ 
+.mblog-info a { background-position:left 3px }
+.qzone-nav a { background-position:left 3px }
+.mail-nav a { background-position:left 3px }
+.pengyou-nav a { background-position:left 3px }
+
+
+/*主体部分*/
+
+
+
+
+ 
+/* login S */
+#login_div { position:fixed; _position:absolute; width:490px; height:382px;  top:50%; left:50%; margin:-165px 0 0 -276px; z-index:9999; display:none }
+.loginSmartTop,.loginSmartBottom{background-image:url(http://mat1.gtimg.com/www/images/qq2012/qqbg_1.5.2.png); background-repeat:no-repeat}
+a.login,a.login:hover,a.weiboLogin,a.weiboLogin:hover,a.qzoneLogin,a.qzoneLogin:hover,a.mailLogin,a.mailLogin:hover,a.pengyouLogin,a.pengyouLogin:hover,.mininavRight .weibo,.mininavRight .weibo:hover,.mininavRight .qzone,.mininavRight .qzone:hover,.mininavRight .mail,.mininavRight .mail:hover,.mininavRight .pengyou,.mininavRight .pengyou:hover{ background-image:url(http://mat1.gtimg.com/news/dc/images/loginall.png); background-repeat:no-repeat }
+a.login{width:70px;height:28px;display:block;float:right;background-position:left -450px }
+a.login:hover{background-position:left -500px }
+a.weiboLogin{width:30px;height:28px;display:block;float:right;background-position:left -50px }
+a.weiboLogin:hover{background-position:right -50px }
+a.qzoneLogin{width:30px;height:28px;display:block;float:right;background-position:left -100px }
+a.qzoneLogin:hover{background-position:right -100px }
+a.mailLogin{width:30px;height:28px;display:block;float:right;background-position:left -150px }
+a.mailLogin:hover{background-position:right -150px }
+a.pengyouLogin{width:28px;height:28px;display:block;float:right;background-position:left -200px }
+a.pengyouLogin:hover{background-position:right -200px }
+
+.mininavRight .weibo:hover,.mininavRight .qzone:hover,.mininavRight .mail:hover,.mininavRight .pengyou:hover { background-color:#1669ab; color:#fff }
+
+.mininavRight .weibo{background-position:7px -240px }
+.mininavRight .weibo:hover{background-position:-79px -240px }
+.mininavRight .qzone{background-position:7px -292px }
+.mininavRight .qzone:hover{background-position:-74px -292px }
+.mininavRight .mail{background-position:7px -339px }
+.mininavRight .mail:hover{background-position:-77px -339px }
+.mininavRight .pengyou{background-position:7px -392px }
+.mininavRight .pengyou:hover{background-position:-76px -392px }
+.mininavRight { position:absolute; right:0; background:#379BE9; color:#c7c7c7;line-height:28px; height:33px;text-align:left; border-left:1px solid #47A3EC;padding:0 10px 0 9px }
+.mininavRight a{color:#f6fbff }
+.mininavRight a:hover { color:#fff }
+.mininavRight .qqNameLayout{margin-right:8px }
+.mininavRight .qqName{margin-right:12px;color:#666;float:left }
+.mininavRight .weibo{font-family:Tahoma,"宋体";padding:0 7px;display:block;height:35px; line-height: 35px;float:left;text-indent:17px }
+.mininavRight .qzone{font-family:Tahoma,"宋体";padding:0 7px;display:block;height:35px; line-height: 35px;float:left;text-indent:22px }
+.mininavRight .mail{font-family:Tahoma,"宋体";padding:0 7px;display:block;height:35px; line-height: 35px;float:left;text-indent:19px }
+.mininavRight .pengyou{font-family:Tahoma,"宋体";padding:0 7px;display:block;height:35px; line-height: 35px;float:left;text-indent:20px }
+.loginSmartBox{width:120px;background:#fff; position:absolute; top:34px; z-index:100; border:1px solid #eae8e9; border-top:1px solid #1669ab; box-shadow:1px 1px 5px #e3e3e3 }
+.mininavRight .loginSmartInner a { color:#000 }
+.loginSmartContent{width:118px }
+.loginSmartInner{width:116px;  }
+.loginSmartInner ul{width:100%;padding:2px 0 }
+.loginSmartInner li{width:100%;height:20px;line-height:20px;color:#666;text-indent:8px }
+.loginSmartInner li a{color:#333 }
+.loginSmartInner li a:hover span{color:#000 }
+.loginSmartInner li a span,.loginSmartInner li a:hover span{font-family:Tahoma }
+#pengyouIcon{position:relative }
+#mailIcon{position:relative }
+#qzoneIcon{position:relative }
+#weiboIcon{position:relative }
+#loginOut:hover{text-decoration:underline;color:#cd0200 }
+.layoutBg{width:100%;position:absolute;top:0;left:0;z-index:8888;display:none;background:url(http://mat1.gtimg.com/www/images/qq2012/alphabg.png); _background:#000;_opacity:0.3;_filter:alpha(opacity=30) }
+/* user */
+.user { font-family: tohama }
+.user .menu-hd { width:28px; line-height:0; margin-top:4px; margin-right:5px; display:block; position:relative; text-decoration:none  }
+.user img { vertical-align:top }
+.user .menu-hd img { width:22px; height:22px; overflow:hidden; background:#d6edff; border:1px solid #328bcf; padding:2px }
+.user .menu-hd .userVip{ }
+.user .menu-hd:hover .userVip{ visibility:visible }
+.user .menu-hd .userVip .icon_member { position:absolute; width:13px; height:13px; right:-3px; bottom:3px; padding:0; border:none; background:none }
+.user .menu-bd .userVip  { margin-right:10px  }
+.picT-p { width:38px; height:38px; overflow:hidden; background:#fff; border:1px solid #d9d9d9; padding:2px; float:left;margin-right:7px; margin-top:5px }
+.picT-t {}
+.picT-t p { line-height:24px; color:#666 }
+.picT-t a { color:#333 }
+.user .menu-bd .picT-p { width:38px; height:38px; overflow:hidden; background:#fff; border:1px solid #d9d9d9; padding:2px }
+.menu-item { float:right }
+.menu { position:relative }
+.menu-hd { height:30px }
+.menu-bd { position:absolute; box-shadow:-1px -1px 5px #e3e3e3; top:30px; left:-12px; width:185px; display:none }
+.menu-bd-in { border:1px solid #E3E3E3; border-top:1px solid #1669ab; box-shadow:1px 1px 5px #e3e3e3; background:#fff; padding:5px 10px 10px }
+
+
+
+ 
+
+
+
+
+
+
+/*20130628*/
+
+#dc_flash, #dc_flash_object {z-index:99!important;}
+.nav-Article-QQ ul li a {padding:5px 8px;}
+.mininavRight{z-index:20;width:256px;padding-left:0;border:none;}
+a.login, a.login:hover, a.weiboLogin, a.weiboLogin:hover, a.qzoneLogin, a.qzoneLogin:hover, a.mailLogin, a.mailLogin:hover, a.pengyouLogin, a.pengyouLogin:hover, .mininavRight .weibo, .mininavRight .weibo:hover, .mininavRight .qzone, .mininavRight .qzone:hover, .mininavRight .mail, .mininavRight .mail:hover, .mininavRight .pengyou, .mininavRight .pengyou:hover {
+background-image: url(http://mat1.gtimg.com/www/retina/dp/loginall_1x.png);
+background-image:-webkit-image-set(url(http://mat1.gtimg.com/www/retina/dp/loginall_1x.png) 1x,url(http://mat1.gtimg.com/www/retina/dp/loginall_2x.png) 2x);
+background-size:90px 250px;
+}
+
+a.login {display: block;float: right;width: 62px;height: 24px;margin-top:6px;margin-right:4px;background-position: -10px -3px;}
+a.login:hover {background-position:-10px -45px;}
+a.weiboLogin,a.qzoneLogin,a.mailLogin,a.pengyouLogin{display: block;float: right;height: 30px;width: 30px;margin-top:2px;background-color:#379be9;}
+a.weiboLogin,a.weiboLogin:hover {background-position:0 -90px;}
+a.qzoneLogin,a.qzoneLogin:hover { background-position:0 -132px;}
+a.mailLogin,a.mailLogin:hover {background-position:0 -174px;}
+a.pengyouLogin,a.pengyouLogin:hover {background-position:0 -216px;}
+
+.mininavRight .weibo,.mininavRight .qzone,.mininavRight .mail,.mininavRight .pengyou{padding-top:2px;}
+.mininavRight .weibo:hover,.mininavRight .qzone:hover,.mininavRight .mail:hover,.mininavRight .pengyou:hover{text-decoration:none}
+.mininavRight .weibo {background-position:0 -88px;}
+.mininavRight .weibo:hover {background-position:-60px -88px;}
+.mininavRight .qzone {background-position:0 -130px;}
+.mininavRight .qzone:hover {background-position:-60px -130px;}
+.mininavRight .mail {background-position:0 -171px;}
+.mininavRight .mail:hover {background-position:-60px -171px;}
+.mininavRight .pengyou {background-position:0 -214px;}
+.mininavRight .pengyou:hover {background-position:-60px -214px;}
+.loginSmartBox{top:35px;}
+
+.all-number-comment a{background-image:-webkit-image-set(url(http://mat1.gtimg.com/news/dc/images/pl_icon.png) 1x,url(http://mat1.gtimg.com/news/dc/images/pl_icon_1.png) 2x);}
+#Cnt-Main-Article-QQ .titdd-Article{margin-bottom:12px;}
+
+
+
+/*footer 20130628*/
+#PL_ad2{ margin-top:2px;}
+#ft{line-height:2; width:1000px; margin:0 auto;}
+/*copyrights*/
+.copyrights {width:100%;text-align:center;height:100px;line-height:21px;margin:10px auto;}
+.copyrights a{color:#0B3B8C;text-decoration:none;}
+.copyrights a:hover{color:#BC2D09;text-decoration:underline;}/*  |xGv00|d04782baa8542ce94491d361e9c17ad6 */

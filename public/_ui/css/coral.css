@@ -1,0 +1,201 @@
+#bg{background:url("../img/bg.png");height:150px;width:400px;}
+i.topIco{background:url(http://mat1.gtimg.com/www/niuping2013/ding.png) right 21px no-repeat;}
+i.plus{background:url("../img/bg.png") -20px -40px;height:20px;width:20px;}
+i.local{background:url("../img/bg.png") 0 -40px;height:20px;width:20px;}
+i.reply{background:url("../img/bg.png") -40px -40px;height:20px;width:20px;}
+i.report{background:url("../img/bg.png") -40px 0;height:10px;width:10px;}
+i.dot{background:url("../img/bg.png") -60px 0;height:10px;width:10px;}
+i.smallplus{background:url("../img/bg.png") 0 0;height:15px;width:15px;}
+i.smallplus.on{background:url("../img/bg.png") 0 -20px;}
+i.smallreply{background:url("../img/bg.png") -20px 0;height:15px;width:15px;}
+i.smallreply.on{background:url("../img/bg.png") -20px -20px;}
+i.marrow{background:url("../img/bg.png") 0 -70px;height:20px;width:42px;}
+i.avatar_plus{background:url("../img/bg.png") -90px 0;height:40px;width:40px;}
+i.tips{background:url("../img/bg.png") -60px -40px;height:15px;width:28px;}
+#cmt_none{background:url("../img/bg.png") -135px 0;height:125px;width:105px;}
+.avatar_qq{background:url("../img/bg.png") -240px 0;height:82px;width:82px;}
+#np_cmt_frame{color:#000000;width:100%;font-size:14px;font-family:'Microsoft YaHei',arial,tahoma,"宋体",sans-serif;position:relative;float:left;border:none;}
+#np_cmt_frame a{color:#000000;}
+#np_cmt_frame a:hover{color:#000000;text-decoration:none;}
+#np_cmt_frame ul{list-style-type:none;}
+#np_cmt_frame .btn{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+#np_cmt_frame .icon .icon-plus{background:url('http://v2.uyan.cc/code/images/upDig2.png') no-repeat scroll 0 0 transparent;cursor:pointer;display:block;float:left;height:13px;margin-right:4px;margin-top:0px;width:13px;}
+#np_cmt_frame .avatar{position:absolute;left:0;top:15px;}
+#np_cmt_frame .avatar img{width:40px;height:40px;border-radius:4px;}
+#np_cmt_frame textarea{font-family:'Microsoft YaHei',arial,tahoma,"宋体",sans-serif;height:auto;}
+#np_cmt_frame #np_cmt_top .cmt_sum{float:right;width:200px;height:28px;line-height:28px;overflow:hidden;}
+#np_cmt_frame #np_cmt_top .cmt_sum strong{float:right;text-align:center;color:#666;font-size:14px;font-weight:normal;}
+#np_cmt_frame #np_cmt_top .cmt_sum a:hover{text-decoration:none;cursor:pointer;}
+#np_cmt_frame #np_cmt_top .cmt_sum a:hover strong span{color:#cc0000;}
+#np_cmt_frame #np_cmt_top .cmt_sum span{color:#666;font-weight:800;padding-right:5px;font-family:'Times New Roman';font-size:16px;}
+#np_cmt_frame #np_cmt_top .globalNav{padding-bottom:0px;height:30px;line-height:30px;border-bottom:1px solid #e8e8e8;border-top:3px solid #379be9;}
+#np_cmt_frame #np_cmt_top .globalNav h1{float:left;font-size:18px;font-weight:normal;padding-right:5px;}
+#np_cmt_frame #np_cmt_top .textarea{margin-left:20px;}
+#np_cmt_frame #np_cmt_top textarea{width:100%;padding:10px;resize:none;height:60px;color:#ccc;border:0;outline:none;overflow:auto;font-size:16px;line-height:24px;margin-left:-20px;}
+#np_cmt_frame #np_cmt_top textarea.on{color:#000;}
+#np_cmt_frame #np_cmt_top .userTitle{display:none;}
+#np_cmt_frame #cmt_box{height:72px;overflow:hidden;margin-bottom:10px;border:1px solid #d3d3d3;box-shadow:0px 0px 0px 0px #d3d3d3;-webkit-transition-property:box-shadow,height,border-color;-webkit-transition-duration:0.6s,0.6s,0.6s;position:relative;}
+#np_cmt_frame #cmt_box .myName{padding:13px 0px 0px 15px;}
+#np_cmt_frame #cmt_box .change{color:#b3b3b3;padding:14px 0px 0px 22px;cursor:pointer;}
+#np_cmt_frame #cmt_box .commtSub{height:40px;padding:5px 10px;border-top:1px solid #ebebeb;position:relative;}
+#np_cmt_frame #cmt_box .submit,#np_cmt_frame #cmt_box .submitOn{margin-top:5px;}
+#np_cmt_frame #cmt_box .tips{top:19px;display:block;position:absolute;right:100px;}
+#np_cmt_frame #cmt_box.on{border-color:#379be9;height:140px;}
+#np_cmt_frame #cmt_box.on .textarea textarea{color:#000;line-height:24px;}
+#np_cmt_frame #np_cmt_body .main_titleTab{border-bottom:2px solid #cfcece;height:35px;line-height:35px;padding-top:5px;position:relative;}
+#np_cmt_frame #np_cmt_body .main_titleTab span{font-size:16px;position:absolute;display:inline-block;width:65px;text-align:center;cursor:pointer;margin:0px 5px;}
+#np_cmt_frame #np_cmt_body .main_titleTab span.on{border-bottom:4px solid #379be9;}
+#np_cmt_frame #np_cmt_body .main_titleTab span.on a{color:#000;}
+#np_cmt_frame #np_cmt_body .main_titleTab span a{color:#000;font-weight:normal;}
+#np_cmt_frame #np_cmt_body .main_titleTab span a:hover{text-decoration:none;}
+#np_cmt_frame #np_cmt_body .main_titleTab span.tab1{left:0px;}
+#np_cmt_frame #np_cmt_body .main_titleTab span.tab2{left:92px;}
+#np_cmt_frame #np_cmt_body .main_titleTab span.tab2 em{position:absolute;display:block;height:20px;line-height:20px;color:#fff;background:#379be9 url(http://mat1.gtimg.com/www/niuping2013/popNum.png) no-repeat;left:83px;top:8px;padding:0px 6px 0px 10px;font-size:12px;display:none;}
+#np_cmt_frame #np_cmt_body .chid_titleTab{height:32px;line-height:28px;margin-top:9px;}
+#np_cmt_frame #np_cmt_body .chid_titleTab span a:hover{text-decoration:none;}
+#np_cmt_frame #np_cmt_body .chid_titleTab span{font-size:14px;font-weight:normal;width:75px;height:31px;text-align:center;float:left;cursor:pointer;}
+#np_cmt_frame #np_cmt_body .chid_titleTab span a{color:#808080;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+#np_cmt_frame #np_cmt_body .chid_titleTab span.on{background:url(http://mat1.gtimg.com/www/niuping2013/btn.png) no-repeat;}
+#np_cmt_frame #np_cmt_body .chid_titleTab span.on a{color:#ffffff;}
+#np_cmt_frame #np_cmt_body .showNum{height:0px;line-height:30px;background:#379be9;cursor:pointer;text-align:center;color:#fff;margin:25px 0px 0px 0px;display:none;}
+#np_cmt_frame #np_cmt_body #cmt_all{}
+#np_cmt_frame #np_cmt_body #cmt_all li.post{position:relative;zoom:1;_float:left;padding:10px 0px 2px 42px;border-bottom:1px solid #e6e6e6;}
+#np_cmt_frame #np_cmt_body #cmt_all li.post .post-content .avatar img{border-radius:5px;width:40px;height:40px;}
+#np_cmt_frame #np_cmt_body #cmt_all li.post .children .post-content .avatar img{width:35px;height:35px;border-radius:4px;}
+#np_cmt_frame #np_cmt_body #cmt_all .children{}
+#np_cmt_frame #np_cmt_body #cmt_all .children li.post{border:none;border-top:1px dotted #e6e6e6;overflow:hidden;}
+#np_cmt_frame #np_cmt_body #cmt_all .children .post{padding-left:0px;}
+#np_cmt_frame #np_cmt_body #cmt_all .children .children .children .children{margin-left:-37px;}
+#np_cmt_frame #np_cmt_body #cmt_all .children .children .children .children .pop_reply{padding-left:49px;}
+#np_cmt_frame #np_cmt_body #cmt_all .children .children .children .children .children{margin-left:-37px;}
+#np_cmt_frame #np_cmt_body #cmt_all .children .children .children .children .children li.post{padding-left:37px;}
+#np_cmt_frame #np_cmt_body #cmt_all .children .post-body{padding-left:40px;}
+#np_cmt_frame #np_cmt_body #cmt_all .post-body{padding-left:10px;}
+#np_cmt_frame #np_cmt_body #cmt_all .post-header .uptime,#np_cmt_frame #np_cmt_body #cmt_all .post-header .uptime0{color:#999;margin-left:5px;font-size:12px;}
+#np_cmt_frame #np_cmt_body #cmt_all .post-header .replywho{padding-left:19px;color:#455e85;font-size:12px;background:url(http://mat1.gtimg.com/www/niuping2013/plbg.png) 0px -71px no-repeat;}
+#np_cmt_frame #np_cmt_body #cmt_all .post-footer{overflow:hidden;height:30px;line-height:30px;width:100%;}
+#np_cmt_frame #np_cmt_body #cmt_all .post-footer .newcoment{float:right;padding-left:10px;background:url(http://mat1.gtimg.com/www/niuping2013/bluepoint.png) 0px no-repeat;font-size:12px;color:#b2b2b2;cursor:pointer;display:none;}
+#np_cmt_frame #np_cmt_body #cmt_all .post-footer span{color:#808080;cursor:pointer;font-size:12px;}
+#np_cmt_frame #np_cmt_body #cmt_all .post-content{line-height:24px;}
+#np_cmt_frame #np_cmt_body #cmt_all .post-list .indicator{display:none;}
+#np_cmt_frame #np_cmt_body #cmt_all .post-list .blueflag .indicator{background:#2e9fff;width:5px;height:40px;position:absolute;left:0px;top:20px;border-radius:3px;display:block;}
+#np_cmt_frame #np_cmt_body #cmt_all .post-list .children .blueflag .indicator{height:35px;}
+#np_cmt_frame #np_cmt_body #cmt_all .post-list .blueflag .avatar{left:10px;}
+#np_cmt_frame #np_cmt_body #cmt_all .post-list .blueflag .post-body{padding-left:20px;}
+#np_cmt_frame #np_cmt_body #cmt_all .post-list .Occupy .children .post-footer{height:30px;}
+#np_cmt_frame #np_cmt_body #cmt_all .post-list .Occupy .post-footer{height:10px;}
+#np_cmt_frame #np_cmt_body #cmt_all .pop_reply{margin-top:10px;padding-left:12px;}
+#np_cmt_frame .cmt_popbox{width:664px;height:80%;max-height:780px;position:fixed;_position:absolute;left:50%;top:100%;margin-left:-340px;background:rgba(0,0,0,0.6);z-index:90001;border-radius:7px;border:1px solid #a9a9a9;overflow:hidden;padding:8px;display:none;}
+#np_cmt_frame .cmt_popbox .head{background:url(http://mat1.gtimg.com/www/niuping2013/pop_bg.png) repeat-x;height:120px;color:#fff;position:relative;}
+#np_cmt_frame .cmt_popbox .head .info{height:80px;padding:20px 0px 0px 20px;}
+#np_cmt_frame .cmt_popbox .head .info .name{float:left;margin-left:15px;padding-top:15px;}
+#np_cmt_frame .cmt_popbox .head .info .name strong{display:block;font-size:16px;margin-bottom:10px;}
+#np_cmt_frame .cmt_popbox .head .info img{border-radius:5px;}
+#np_cmt_frame .cmt_popbox .head .info .userPic{float:left;}
+#np_cmt_frame .cmt_popbox .head .info .userPic img{width:80px;height:80px;}
+#np_cmt_frame .cmt_popbox .head .info .upandnum{line-height:30px;font-size:14px;}
+#np_cmt_frame .cmt_popbox .head .info .upandnum .area{background:url("../img/pop1.png") no-repeat;padding-left:20px;padding-right:12px;}
+#np_cmt_frame .cmt_popbox .head .info .upandnum .plus{background:url("../img/uphand.jpg") no-repeat;padding-left:20px;padding-right:12px;}
+#np_cmt_frame .cmt_popbox .head .info .upandnum .num{background:url("../img/replyico.png") no-repeat;padding-left:20px;}
+#np_cmt_frame .cmt_popbox .head .info .upandnum .num i{font-style:normal;margin-right:3px;}
+#np_cmt_frame .cmt_popbox .popContent{height:100%;background:#fff;max-height:660px;}
+#np_cmt_frame .cmt_popbox .popInner{padding:10px;overflow:hidden;padding-left:20px;}
+#np_cmt_frame .cmt_popbox .close{width:19px;height:19px;position:absolute;top:20px;right:20px;cursor:pointer;background:url(http://mat1.gtimg.com/www/niuping2013/closex.png) no-repeat;z-index:999;}
+#np_cmt_frame .cmt_popbox #scrollbar{width:10px;height:50px;background:#a8d3f6;position:absolute;cursor:pointer;top:0px;left:-5px;z-index:5;border-radius:7px;}
+#np_cmt_frame .cmt_popbox #scrollbar_parent{width:1px;height:600px;background:#b5daf7 url(http://mat1.gtimg.com/www/niuping2013/scrollTopbg.png) top no-repeat;display:none;position:relative;float:right;margin-right:5px;}
+#np_cmt_frame .cmt_popbox #scrollbar_parent .bottom{width:1px;position:absolute;bottom:1px;height:67px;background:url(http://mat1.gtimg.com/www/niuping2013/scrollBottombg.png) no-repeat;}
+#np_cmt_frame .cmt_popbox #div2{width:625px;height:600px;position:relative;overflow:hidden;float:left;}
+#np_cmt_frame .cmt_popbox #div3{height:auto;position:absolute;width:100%;}
+#np_cmt_frame .cmt_my{padding-top:10px; overflow:hidden;}
+#np_cmt_frame .cmt_my .post .post-body .message-article{color:#808080;}
+#np_cmt_frame .cmt_my .post .post-body .message-article span strong{color:#379be9;}
+#np_cmt_frame .cmt_my .children .avatar img{width:35px;height:35px;border-radius:4px;}
+#np_cmt_frame .cmt_my .my-btn{background:#2e9fff;text-align:center;margin-bottom:18px;padding:10px;color:#fff;border-radius:4px;cursor:pointer;}
+#np_cmt_frame .cmt_my .my-nav{margin-bottom:18px;}
+#np_cmt_frame .cmt_my .my-nav li{float:left;width:75px;height:31px;line-height:24px;text-align:center;cursor:pointer;}
+#np_cmt_frame .cmt_my .my-nav li.active{background:url(http://mat1.gtimg.com/www/niuping2013/btn.png) no-repeat;color:#fff;}
+#np_cmt_frame .cmt_my .post{position:relative;zoom:1;_float:left;width:100;}
+#np_cmt_frame .cmt_my .post .post-time{position:absolute;left:0px;top:0px;width:80px;padding-right:9px;background:url("../img//dot.png") no-repeat right top;color:#808080;text-align:center;font-size:12px;}
+#np_cmt_frame .cmt_my .post .post-body{padding:15px 0px 0px 10px;}
+#np_cmt_frame .cmt_my .post .post-body.target{padding-left:12px;}
+#np_cmt_frame .cmt_my .post .post-body .message-article a{padding:0 4px;color:#1a649d;line-height:18px;}
+#np_cmt_frame .cmt_my .post .post-body .article-title{height:24px;margin-top:10px;}
+#np_cmt_frame .cmt_my .post .post-body .article-title a{color:#808080;font-size:12px;}
+#np_cmt_frame .cmt_my .post .post-body .article-title .userlist a{font-weight:bold;}
+#np_cmt_frame .cmt_my .post .post-body .message-content{margin-top:5px;line-height:24px;color:#222;}
+#np_cmt_frame .cmt_my .post .post-footer .menu li{float:left;padding-right:18px;}
+#np_cmt_frame .cmt_my .post .my-userPic{position:absolute;left:-52px;top:16px;}
+#np_cmt_frame .cmt_my .my-notification .post .post-body .message-content{padding-left:30px;}
+#np_cmt_frame .cmt_my .my-notification .post .post-footer{padding-left:30px;padding-top:10px;}
+#np_cmt_frame .cmt_my .my-notification .post .message-article{font-size:12px;color:#999999;padding-left:2px;}
+#np_cmt_frame .cmt_my .my-notification .post .message-article .rename{color:#379be9;padding-right:5px;}
+#np_cmt_frame .cmt_my .my-notification .post .post-body .article-title{padding-left:30px;line-height:22px;}
+#np_cmt_frame .cmt_my .my-notification .post .line{border-bottom:1px solid #e6e6e6;margin-left:15px;font-size:1px;height:1px;}
+#np_cmt_frame .cmt_my .my-notification .post .line{border-bottom:1px solid #e6e6e6;margin-left:15px;font-size:1px;height:1px;}
+#np_cmt_frame .cmt_my .my-notification .textarea{padding-left:46px;}
+#np_cmt_frame .cmt_my .my-notification .post-list .post{padding-left:80px;width:559px;padding-bottom:15px;background:url(http://mat1.gtimg.com/www/niuping2013/solider.png) 80px 0px repeat-y;}
+#np_cmt_frame .cmt_my .my-notification .post-list .temporary{background:none;padding-left:40px;padding-bottom:8px;line-height:24px;}
+#np_cmt_frame .cmt_my .my-notification .post-list .temporary .post-body{padding-left:7px;padding-bottom:0px;}
+#np_cmt_frame .cmt_my .my-notification .post-list .temporary .avatar{display:none;}
+#np_cmt_frame .cmt_my .my-notification .post-list .temporary .post-footer{display:none;}
+#np_cmt_frame .cmt_my .my-notification .post-list .temporary .uptime{color:#999;font-size:12px;margin-left:10px;}
+#np_cmt_frame .cmt_my .my-notification .post .post-body{padding:0 0px 16px 18px;}
+#np_cmt_frame .cmt_my .my-notification .pop_reply{overflow:hidden;}
+#np_cmt_frame .cmt_my .my-notification .post .indicator{height:13px;}
+#np_cmt_frame .cmt_my .my-message{padding-top:5px;}
+#np_cmt_frame .cmt_my .my-message .post-list .post{padding-left:42px;padding-bottom:15px;}
+#np_cmt_frame .cmt_my .my-message .post-list .post li.post{border:none;}
+#np_cmt_frame .cmt_my .my-message .post-list .post li.post .post-body{padding-left:0px;line-height:24px;}
+#np_cmt_frame .cmt_my .my-message .post-list .post .post{padding-left:37px;padding-bottom:0px;}
+#np_cmt_frame .cmt_my .my-message .post-list .post .post .post-content{padding-left:0px;}
+#np_cmt_frame .cmt_my .my-message .post-list .children .children{margin-left:-37px;}
+#np_cmt_frame .cmt_my .my-message .pop_reply{padding:10px 0px 0px 10px;overflow:hidden;}
+#np_cmt_frame .cmt_my .my-message .post{border-bottom:1px solid #e6e6e6;}
+#np_cmt_frame .cmt_my .indicator{width:5px;height:48px;background:#2e9fff;border-radius:3px;top:0;left:0;position:absolute;display:none;}
+#np_cmt_frame .cmt_my .time,#np_cmt_frame .cmt_my .uptime0,#np_cmt_frame .cmt_my .uptime{color:#999;font-size:12px;display:inline-block;padding-left:8px;}
+#np_cmt_frame .block{border:2px solid;border-radius:25px;-moz-border-radius:25px;}
+#np_cmt_frame .blue{background:#379be9;}
+#np_cmt_frame .white{background:#ffffff;}
+#np_cmt_frame .blueflag .indicator{background:#2e9fff;width:5px;height:40px;position:absolute;left:0px;top:15px;border-radius:3px;display:block;}
+#np_cmt_frame .blueflag .avatar{left:10px;}
+#np_cmt_frame .blueflag .post-body{padding-left:20px;}
+#np_cmt_frame .blueflag .indicator{height:35px;}
+#np_cmt_frame .hiddenCon{display:none;}
+#np_cmt_frame .userInfo{display:none;}
+#np_cmt_frame .userInfo img{vertical-align:middle;margin-right:3px;}
+#np_cmt_frame .pop_reply .tips a{color:#fff;}
+#np_cmt_frame .plus a,#np_cmt_frame .plus span{font-size:12px;color:#808080;cursor:pointer;background:url(http://mat1.gtimg.com/www/niuping2013/plbg.png) no-repeat;padding:2px 0px 3px 15px;background-position:0px 0px}
+#np_cmt_frame .plus a:hover, #np_cmt_frame .plus span:hover{text-decoration:none;background-position:0px -23px;}
+#np_cmt_frame .plus em{font-style:normal;font-size:12px;color:#808080;}
+#np_cmt_frame .plus i{font-style:normal;}
+#np_cmt_frame .plus .hasup,#np_cmt_frame .plus .hasup:hover{color:#ccc;background-position:0px -47px;}
+#np_cmt_frame .publisher,#np_cmt_frame .popClick{color:#379be9;font-weight:600;padding-right:2px;font-size:12px;cursor:pointer;}
+#np_cmt_frame .reply{margin-left:10px;}
+#np_cmt_frame .reply a,#np_cmt_frame .reply span{padding:2px 0px 3px 15px;background-position:0px -69px;color:#808080;}
+#np_cmt_frame .reply a:visited{color:#808080;}
+#np_cmt_frame .reply a:hover{background-position:0px -93px;text-decoration:none;}
+#np_cmt_frame .post{word-break:normal;word-wrap:break-word;}
+#np_cmt_frame .over{overflow:hidden;}
+#np_cmt_frame .post .children .textarea{margin-left:12px;}
+#np_cmt_frame .post .children .textarea textarea{width:100%;border:1px solid #ccc;height:90px;resize:none;padding:5px;overflow:auto;font-size:16px;line-height:24px;margin-left:-12px;}
+#np_cmt_frame .commtSub{padding:5px 0px 10px 0px;padding-bottom:8p;height:30px;line-height:26px;overflow:hidden;}
+#np_cmt_frame .commtSub a.submit{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;float:right;width:80px;height:30px;line-height:30px;text-align:center;text-decoration:none;background:#3090E0;color:#fff;font-size:14px;}
+#np_cmt_frame .commtSub a.submit:visited,#np_cmt_frame .commtSub a.submit:active{color:#ffffff;}
+#np_cmt_frame .commtSub .submitOn{float:right;width:80px;height:30px;line-height:30px;text-align:center;text-decoration:none;background:#3090e0 url(http://mat1.gtimg.com/www/niuping2013/load.gif) center no-repeat;color:#fff;font-size:14px;}
+#np_cmt_frame .commtSub .loginFlag{float:left;}
+#np_cmt_frame .commtSub .loginFlag span{float:left;}
+#np_cmt_frame .commtSub .myPic img{border-radius:3px;}
+#np_cmt_frame .commtSub .replyTop{float:left;cursor:pointer;}
+#np_cmt_frame .commtSub .replyBtn{float:right;}
+#np_cmt_frame .commtSub .replyBtn .cancel{font-size:14px;font-weight:600;color:#ccc;float:right;text-decoration:none;height:30px;line-height:30px;width:80px;text-align:center;}
+#np_cmt_frame .commtSub .submitBtn{float:right;overflow:hidden;}
+#np_cmt_frame .tipInfo{color:#999;padding:50px;text-align:center;height:18px;}
+#np_cmt_frame .loading{background:url("../img/loading.gif") center no-repeat;width:100%;height:100%;display:none;}
+#np_cmt_frame .loadMore{height:30px;line-height:30px;text-align:center;color:#fff;cursor:pointer;display:none;}
+#np_cmt_frame .loadMore span{background:#768187;display:none;}
+#np_cmt_frame .loadMore i{font-style:normal;}
+#np_cmt_frame .undis{display:none;}
+#np_cmt_frame .dis{display:block;}
+#np_cmt_frame .wait{font-size:12px;color:#999;padding-left:15px;}
+#np_cmt_frame a.bigTitle{padding-bottom:16px;font-family:'simhei';font-size:26px;color:#000;font-weight:normal;}
+#np_cmt_frame a.bigTitle:hover{color:#cc0000;text-decoration:none;}

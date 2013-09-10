@@ -1,0 +1,434 @@
+<div id="uyan_frame">
+  <div id="uyan_cmt_box" style="width: 100%; font-family: 'Microsoft YaHei',arial,tahoma,宋体,sans-serif; position: relative; float: left;">
+    <div id="uyan_top" style="height: 33px; overflow: hidden; font-size: 12px; font-weight: bold;">
+      <div id="uyan_cmt_tit" style="float: left; padding-right: 13px; padding-top: 0px; font-size: 16px; color: #424242; font-weight: 600; line-height: 30px;">发表评论
+        <div style="clear: both;"></div>
+      </div>
+      <div id="uyan_star" style="height: 22px; width: 120px; float:left; margin-top:7px; overflow: hidden;">
+        <div style="float: left;"><a id="uyan_vs_1" onclick="UYAN.voteStar(1);" onmouseover="UYAN.cagStar(1);" onmouseout="UYAN.cagStar(0);" style="background: url('http://v2.uyan.cc/code/images/star_un.png') no-repeat scroll 0 0 transparent; cursor: pointer; float: left; height: 16px; padding-right: 5px; width: 16px;"></a><a id="uyan_vs_2" onclick="UYAN.voteStar(2);" onmouseover="UYAN.cagStar(2);" onmouseout="UYAN.cagStar(0);" style="background: url('http://v2.uyan.cc/code/images/star_un.png') no-repeat scroll 0 0 transparent; cursor: pointer; float: left; height: 16px; padding-right: 5px; width: 16px;"></a><a id="uyan_vs_3" onclick="UYAN.voteStar(3);" onmouseover="UYAN.cagStar(3);" onmouseout="UYAN.cagStar(0);" style="background: url('http://v2.uyan.cc/code/images/star_un.png') no-repeat scroll 0 0 transparent; cursor: pointer; float: left; height: 16px; padding-right: 5px; width: 16px;"></a><a id="uyan_vs_4" onclick="UYAN.voteStar(4);" onmouseover="UYAN.cagStar(4);" onmouseout="UYAN.cagStar(0);" style="background: url('http://v2.uyan.cc/code/images/star_un.png') no-repeat scroll 0 0 transparent; cursor: pointer; float: left; height: 16px; padding-right: 5px; width: 16px;"></a><a id="uyan_vs_5" onclick="UYAN.voteStar(5);" onmouseover="UYAN.cagStar(5);" onmouseout="UYAN.cagStar(0);" style="background: url('http://v2.uyan.cc/code/images/star_un.png') no-repeat scroll 0 0 transparent; cursor: pointer; float: left; height: 16px; padding-right: 5px; width: 16px;"></a>
+          <div style="clear: both;"></div>
+        </div>
+      </div>
+      <div id="uyan_cmty_btn" style="height: 23px; overflow: hidden; background: url('http://v2.uyan.cc/code/images/linkbg.png') repeat-x; border: 1px solid #D7D7D7; border-radius: 3px; float: right; line-height: 23px; margin-left: 10px; padding: 0 8px; margin-top: 3px;"><a onclick="UYAN.cmty();" style="cursor: pointer; color: #424242; text-decoration: none; font-size: 12px; font-weight: bold;">社区</a></div>
+      <div id="uyan_like" style="height: 23px; overflow: hidden; background-image: url(http://v2.uyan.cc/code/images/linkbg.png); border: 1px solid rgb(215, 215, 215); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; float: right; line-height: 23px; padding: 0px 8px; margin-top: 3px; background-position: initial initial; background-repeat: repeat no-repeat;"><span id="uyan_vun" style="font-size: 11px; font-weight: bold; color: rgb(66, 66, 66);">0</span><a id="uyan_vu" onclick="UYAN.voteUD('uu');" style="cursor: pointer; font-size: 12px; font-weight: bold; color: rgb(66, 66, 66); text-decoration: none;">&nbsp;喜欢</a></div>
+      <div style="clear: both;"></div>
+    </div>
+    <div id="uyan_usp" style="margin-bottom: 10px;">
+      <div style="font-size: 13px; height: 26px; overflow: hidden;"><a id="uyan_uname_txt_t" style="color: #2B8CE6; cursor: pointer; display: block; float: left; font-weight: bold; margin: 6px 0 0 0; text-decoration: none; font-size: 16px; line-height: 17px;" href="http://s.uyan.cc/?u=http%3A%2F%2Fqzone.qq.com%2F" target="_blank">boatgm</a>
+        <div style="background: url('http://v2.uyan.cc/code/images/medalIcon.png') no-repeat scroll 0 2px transparent; float: left; height: 20px; margin: 6px 0 0 10px; padding-left: 15px; line-height: 18px;">
+          <div id="uyan_utname_edit" style="display: none;">
+            <div style="color: #333333; float: left; padding-right: 4px;">头衔:</div>
+            <input id="uyan_utname" type="text" value="" style="color: #777777; float: left; height: 12px; padding: 1px 3px; width: 100px;">
+            <a onclick="UYAN.setUtname();" style="background-color: #8BAD50; border: 1px solid #799E3C; border-radius: 3px 3px 3px 3px; color: #FFFFFF; cursor: pointer; float: left; margin-left: 3px; padding: 0 10px; text-align: center; text-decoration: none;">确定</a><a onclick="UYAN.changeUtname();" style="color: #AAAAAA; cursor: pointer; float: left; margin-left: 6px;">取消</a></div>
+          <div id="uyan_utname_txt">
+            <div id="uyan_utname_show" style="color: #444444; float: left; padding-right: 5px;"></div>
+            <a onclick="UYAN.changeUtname();" style="color: #2B8CE6; cursor: pointer; float: left; text-decoration: none;">编辑头衔</a></div>
+        </div>
+        <div style="background: url('http://v2.uyan.cc/code/images/emailIcon.png') no-repeat scroll 0 0 transparent; float: left; height: 20px; margin: 6px 0 0 10px; padding-left: 19px; line-height: 18px;">
+          <div id="uyan_femail_edit" style="display: none;">
+            <div style="color: #333333; float: left; padding-right: 4px;">邮箱:</div>
+            <input id="uyan_femail" type="text" value="" style="color: #777777; float: left; height: 12px; padding: 1px 3px; width: 100px;">
+            <a onclick="UYAN.setFemail();" style="background-color: #8BAD50; border: 1px solid #799E3C; border-radius: 3px 3px 3px 3px; color: #FFFFFF; cursor: pointer; float: left; margin-left: 3px; padding: 0 10px; text-align: center; text-decoration: none;">确定</a><a onclick="UYAN.changeFemail();" style="color: #AAAAAA; cursor: pointer; float: left; margin-left: 6px;">取消</a></div>
+          <div id="uyan_femail_txt">
+            <div id="uyan_femail_show" style="color: #444444; float: left; padding-right: 5px;"></div>
+            <a onclick="UYAN.changeFemail();" style="color: #2B8CE6; cursor: pointer; float: left; text-decoration: none;">跟踪回复</a></div>
+        </div>
+        <div id="uyan_uacn" style="float: left; height: 20px; margin: 6px 0 0 10px; padding-left: 0px; line-height: 18px; color: #2B8CE6;">7条评论</div>
+        <div id="uyan_uvon" style="float: left; height: 20px; margin: 6px 0 0 10px; padding-left: 2px; line-height: 18px; color: #2B8CE6;">1次被喜欢</div>
+        <div style="clear: both;"></div>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+    <div id="uyan_loginot" style="padding: 0 0 3px 60px;">
+      <div style="clear: both;"></div>
+    </div>
+    <div style="height: 58px; overflow: hidden; padding: 0 0 30px 0;">
+      <div style="float: left; border-radius: 6px 6px 6px 6px; width: 50px; height: 60px; margin-right: 10px;"><img id="uyan_uface" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.22); border-radius: 4px; width: 50px; height: 50px;" src="http://qzapp.qlogo.cn/qzapp/216508/FE29503A6165FFD692D2E1699B8CA316/50"></div>
+      <div style="padding: 0 0 0 60px; overflow: visible;">
+        <div onclick="UYAN.hidIntro(this.firstChild);" style="height: 40px; background: url('http://v2.uyan.cc/code/images/textareabg.png') repeat-x scroll 0 0 #FFFFFF; border-top: 1px solid #b8b8b8; border-left: 1px solid #b8b8b8; border-right: 1px solid #b8b8b8; background-color: #ffffff; background-repeat: repeat-x; border-radius: 3px 3px 0 0; box-shadow: 0 0; padding: 7px; position: relative; overflow: hidden; cursor: text;">
+          <textarea id="uyan_comment" onkeyup="UYAN.checkTxt(this, 140);" onkeydown="UYAN.checkTxt(this, 140);" onfocus="UYAN.hidIntro(this);" onblur="UYAN.shoIntro(this);" style="background: none repeat scroll 0 0 #FFFFFF; padding: 0; box-shadow: 0 0; color: #BDBBBB; border: 0; z-index: 90; overflow: hidden; float: left; font-size: 13px; font-family: 'Microsoft YaHei',arial,tahoma,宋体,sans-serif; resize: none; height: 40px; display: block; outline: none; word-wrap: break-word; margin: 0;">请输入你的评论</textarea>
+          <pre style="width: 100%; font-size: 13px; left: 0; line-height: 18px; position: absolute; top: 0; visibility: hidden; word-wrap: break-word; white-space: pre-wrap;" id="uyan_cmt_cnt"></pre>
+        </div>
+        <div style="opacity: 1; visibility: visible; border-top: 1px dotted #C6CDD6; border-bottom: 1px solid #b8b8b8; border-left: 1px solid #b8b8b8; border-right: 1px solid #b8b8b8; bottom: 0; height: 28px; left: 0; right: 0; padding: 0 10px; background-color: #FFFFFF;">
+          <div id="uyan_smile" title="表情" onclick="UYAN.shoSmile(this);" onmouseover="UYAN.mouseOO(this, 'on');" onmouseout="UYAN.mouseOO(this, 'out');" style="cursor: pointer; width: 18px; height: 16px; float: left; overflow: hidden; background-image: url(http://v2.uyan.cc/code/images/emotion2.png); margin-top: 6px; margin-right: 6px; background-position: initial initial; background-repeat: no-repeat no-repeat;"></div>
+          <div style="font-size: 14px; float: right; line-height: 28px; font-family: Georgia,Constantia; color: #cecece;"><span id="uyan_tts">140</span></div>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </div>
+    <div id="uyan_ssmile" style="margin-left: 60px; position: absolute; z-index: 9999; display: none;">
+      <div style="border: 1px solid #989999; border-radius: 5px; width: 322px; height: 160px; background: #fff; font-size: 12px; padding: 6px;">
+        <ul style="margin: 5px 0 0 0; padding: 0; height: 24px;">
+          <li id="uyan_ssmile_df" onclick="UYAN.shoSmile(this, 'df');" style="float: left; list-style: none; line-height: 22px; background: url('http://v2.uyan.cc/code/images/smileb.gif') no-repeat scroll 0 center transparent; color: #ffffff; width: 68px; height: 24px; overflow: hidden; text-align: center; margin: 0 5px; display: inline; cursor: pointer; padding: 0;">默认表情</li>
+          <li id="uyan_ssmile_al" onclick="UYAN.shoSmile(this, 'al');" style="float: left; list-style: none; line-height: 22px; background: none repeat scroll 0 center transparent; width: 68px; height: 24px; overflow: hidden; text-align: center; margin: 0 5px; display: inline; cursor: pointer; padding: 0;">阿狸</li>
+        </ul>
+        <ul id="uyan_ssmile_list" style="margin: 0; padding: 0; width: 310px; border-top: 1px solid #d3e4f0; border-left: 1px solid #d3e4f0; margin: 5px 0 0 5px;">
+        </ul>
+      </div>
+    </div>
+    <div id="uyan_stat_info" style="position: relative; overflow: hidden; top: 5px; margin-bottom: 5px; margin-top: 0px; line-height: 15px;"><a id="uyan_cmt_btn" onclick="UYAN.addCmt(this);" onmouseover="UYAN.cagBtn('on', this);" onmouseout="UYAN.cagBtn('out', this);" style="cursor: pointer; font-family: 'Microsoft YaHei',arial,tahoma,宋体,sans-serif; padding: 0px; border-radius: 3px 3px 3px 3px; color: #666666; display: inline-block; font-weight: 600; text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6); float: right; background: url('http://v2.uyan.cc/code/images/buttonLarge.png') repeat-x scroll 0px 0px transparent; text-align: center; width: 70px; border: 1px solid #B8B8B8; font-size: 12px; line-height: 22px; height: 22px;">发&nbsp;&nbsp;布</a><a style="color: #424242; padding: 6px 10px 0 1px; text-decoration: none; float: right; font-size: 12px; cursor: pointer;" onclick="UYAN.logout();">(退出)</a><a id="uyan_uname_txt" style="color: #424242; padding: 6px 1px 0 2px; text-decoration: none; float: right; font-size: 12px;" href="http://s.uyan.cc/?u=http%3A%2F%2Fqzone.qq.com%2F" target="_blank">boatgm</a>
+      <div id="uyan_info_sync" style="float: right; padding: 6px 15px 0 3px;">
+        <div style="color: #424242; float: right; font-size: 12px; padding-left: 5px;">
+          <label id="uyan_sns_name" for="uyan_sync" style="cursor: pointer; font-size: 12px; width: auto; margin: 0;">同步到QQ空间</label>
+        </div>
+        <input id="uyan_sync" class="uyan_st_sync" type="checkbox" checked="checked" style="float: right; vertical-align: top; margin: 0;">
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+    <div id="uyan_sort" style="color: #424242; font-size: 12px; margin: 0px; padding: 0px;">
+      <div style="height: 28px; overflow: hidden; float: left;">
+        <div style="float: left; padding: 4px 8px 5px; text-shadow: 0px 1px 0px #FFFFFF; border-bottom: 2px solid #2B8CE6;"><a id="uyan_sort_name" onclick="UYAN.cmtSort();" style="line-height: 17px; background: url('http://v2.uyan.cc/code/images/sorttype.png') no-repeat scroll right 7px transparent; color: #787878; cursor: pointer; display: block; float: left; font-size: 12px; padding-right: 15px; font-weight:600;">按时间排序</a></div>
+        <div style="float: left; font-size:11px; color: #999999; padding: 4px 1px;">|</div>
+        <div style="text-shadow: 0 1px 0 #FFFFFF; float:left; padding:4px 8px 5px;"><a id="uyan_sort_tsina" onclick="UYAN.cmtSort(0, 'tsina');" style="line-height: 17px; color: #787878; cursor: pointer; display: block; float: left; font-size: 12px;">新浪微博</a></div>
+        <div style="float: left; font-size: 11px; color: #999999; padding: 4px 1px;">|</div>
+        <div style="text-shadow: 0 1px 0 #FFFFFF; float: left; padding: 4px 8px 5px;"><a id="uyan_sort_tqq" onclick="UYAN.cmtSort(0, 'tqq');" style="line-height: 17px; color: #787878; cursor: pointer; display: block; float: left; font-size: 12px;">腾讯微博</a></div>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+    <div id="uyan_sort_box" style="background-color: #FFFFFF; border-color: #d3d2d2; border-width: 1px 1px 2px; border-style: solid; left: 15px; position: absolute; width: 115px; z-index: 90000; display: none;">
+      <div style="color: #9797C4; font-size: 12px; font-weight: normal; padding-bottom: 2px; padding-left: 21px; padding-top: 4px; height: 16px;">排序方式:</div>
+      <a id="uyan_sort_time" onclick="UYAN.cmtSort(0);" style="color: rgb(28, 28, 28); cursor: pointer; display: block; font-size: 12px; padding-bottom: 2px; padding-left: 21px; padding-top: 2px; height: 16px; background-image: url(http://v2.uyan.cc/code/images/currentSort.png); background-attachment: scroll; background-color: transparent; font-weight: bold; background-position: 8px 8px; background-repeat: no-repeat no-repeat;">按时间排序</a><a id="uyan_sort_hot" onclick="UYAN.cmtSort(1);" style="color: #1C1C1C; cursor: pointer; display: block; font-size: 12px; padding-bottom: 2px; padding-left: 21px; padding-top: 2px; height: 16px;">按热度排序</a></div>
+    <div id="uyan_cmt_list">
+      <div id="uyan_cmt_list_warn" style="margin-top: 10px; padding-top: 10px; font-size: 12px; color: #303030; text-align: center;">还没有评论内容</div>
+    </div>
+    <div class="ujian-uyan"></div>
+    <div style="float: right; font-size: 12px; padding: 20px 8px 10px 0;"> <a style="color: #aaaaaa; text-decoration: none;" target="_blank" title="社会化评论是什么？" href="http://www.uyan.cc">友言[?]</a> </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div id="uyan_rpy" style="display: none; padding-left: 60px; padding-top: 10px;">
+    <div style="height: 58px; overflow: hidden; padding: 0 0 30px 0;">
+      <div style="float: left; border-radius: 6px 6px 6px 6px; width: 38px; height: 60px; margin-right: 10px;"><img id="uyan_uface_r" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.22); border-radius: 4px; width: 38px; height: 38px;" src="http://qzapp.qlogo.cn/qzapp/216508/FE29503A6165FFD692D2E1699B8CA316/50"></div>
+      <div style="padding: 0 0 0 48px; overflow: visible;">
+        <div onclick="UYAN.hidIntro(this.firstChild, uyan_smile_region);" style="height: 40px; background: url('http://v2.uyan.cc/code/images/textareabg.png') repeat-x scroll 0 0 #FFFFFF; border-top: 1px solid #b8b8b8; border-left: 1px solid #b8b8b8; border-right: 1px solid #b8b8b8; background-color: #ffffff; background-repeat: repeat-x; border-radius: 3px 3px 0 0; box-shadow: 0 0; padding: 7px; position: relative; overflow: hidden; cursor: text;">
+          <textarea id="uyan_comment" onkeyup="UYAN.checkTxt(this, 140, uyan_tts_region);" onkeydown="UYAN.checkTxt(this, 140, uyan_tts_region);" onfocus="UYAN.hidIntro(this, uyan_smile_region);" onblur="UYAN.shoIntro(this, uyan_smile_region);" style="background: none repeat scroll 0 0 #FFFFFF; padding: 0; box-shadow: 0 0; color: #BDBBBB; border: 0; z-index: 90; overflow: hidden; float: left; font-size: 13px; font-family: 'Microsoft YaHei',arial,tahoma,宋体,sans-serif; resize: none; height: 40px; display: block; outline: none; word-wrap: break-word; margin: 0;">请输入你的评论</textarea>
+          <pre style="width: 100%; font-size: 13px; left: 0; line-height: 18px; position: absolute; top: 0; visibility: hidden; word-wrap: break-word; white-space: pre-wrap;" id="uyan_cmt_cnt"></pre>
+        </div>
+        <div style="opacity: 1; visibility: visible; border-top: 1px dotted #C6CDD6; border-bottom: 1px solid #b8b8b8; border-left: 1px solid #b8b8b8; border-right: 1px solid #b8b8b8; bottom: 0; height: 28px; left: 0; right: 0; padding: 0 10px; background-color: #FFFFFF;">
+          <div id="uyan_smile" title="表情" onclick="UYAN.shoSmile(this, '', uyan_smile_region);" onmouseover="UYAN.mouseOO(this, 'on');" onmouseout="UYAN.mouseOO(this, 'out');" style="cursor: pointer; width: 18px; height: 16px; float: left; overflow: hidden; background: url('http://v2.uyan.cc/code/images/emotion2.png') no-repeat; margin-top: 6px; margin-right: 6px;"></div>
+          <div style="font-size: 14px; float: right; line-height: 28px; font-family: Georgia,Constantia; color: #cecece;"><span id="uyan_tts">140</span></div>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </div>
+    <div id="uyan_ssmile" style="margin-left: 48px; position: absolute; z-index: 9999; display: none;">
+      <div style="border: 1px solid #989999; border-radius: 5px; width: 322px; height: 160px; background: #fff; font-size: 12px; padding: 6px;">
+        <ul style="margin: 5px 0 0 0; padding: 0; height: 24px;">
+          <li id="uyan_ssmile_df" onclick="UYAN.shoSmile(this, 'df', uyan_smile_region);" style="float: left; list-style: none; line-height: 22px; background: url('http://v2.uyan.cc/code/images/smileb.gif') no-repeat scroll 0 center transparent; color: #fff; width: 68px; height: 24px; overflow: hidden; text-align: center; margin: 0 5px; display: inline; cursor: pointer; padding: 0;">默认表情</li>
+          <li id="uyan_ssmile_al" onclick="UYAN.shoSmile(this, 'al', uyan_smile_region);" style="float: left; list-style: none; line-height: 22px; background: none repeat scroll 0 center transparent; width: 68px; height: 24px; overflow: hidden; text-align: center; margin: 0 5px; display: inline; cursor: pointer; padding: 0;">阿狸</li>
+        </ul>
+        <ul id="uyan_ssmile_list" style="margin: 0; padding: 0; width: 310px; border-top: 1px solid #d3e4f0; border-left: 1px solid #d3e4f0; margin: 5px 0 0 5px;">
+        </ul>
+      </div>
+    </div>
+    <div id="uyan_stat_info_r" style="position: relative; overflow: hidden; top: 5px; margin-bottom: 5px; margin-top: 0px; line-height: 15px;"><a id="uyan_cmt_btn" onclick="UYAN.addCmt(this, uyan_comment_region);" onmouseover="UYAN.cagBtn('on', this);" onmouseout="UYAN.cagBtn('out', this);" style="cursor: pointer; font-family: 'Microsoft YaHei',arial,tahoma,宋体,sans-serif; padding: 0px; border-radius: 3px 3px 3px 3px; color: #666666; display: inline-block; font-weight: 600; text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6); float: right; background: url('http://v2.uyan.cc/code/images/buttonLarge.png') repeat-x scroll 0px 0px transparent; text-align: center; width: 70px; border: 1px solid #B8B8B8; font-size: 12px; line-height: 22px; height: 22px;">发&nbsp;&nbsp;布</a><a style="color: #424242; padding: 6px 10px 0 1px; text-decoration: none; float: right; font-size: 12px; cursor: pointer;" onclick="UYAN.logout();">(退出)</a><a id="uyan_uname_txt_r" style="color: #424242; padding: 6px 1px 0 2px; text-decoration: none; float: right; font-size: 12px;" href="http://s.uyan.cc/?u=http%3A%2F%2Fqzone.qq.com%2F" target="_blank">boatgm</a>
+      <div id="uyan_info_sync" style="float: right; padding: 6px 15px 0 3px;">
+        <div style="color: #424242; float: right; font-size: 12px; padding-left: 5px;">
+          <label id="uyan_sns_name_r" for="uyan_sync" style="cursor: pointer; font-size: 12px; width: auto; margin: 0;">同步到QQ空间</label>
+        </div>
+        <input id="uyan_sync" class="uyan_st_sync" type="checkbox" checked="checked" style="float: right; vertical-align: top; margin: 0;">
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+  </div>
+  <div style="clear: both;"></div>
+  <div id="uyan_cmty" style="display: none;">
+    <div style="width: 520px;">
+      <div style="border-bottom: 1px solid #b6b5b5; background: #eeeeee; color: #666; font-size: 16px; height: 22px; padding: 10px 0;"><span id="uyan_sdm_name" style="float: left; padding-left: 25px; text-shadow: 0 1px 0 #fff;">dev.qq.com</span></div>
+      <div style="color: #666;">
+        <div style="background: url('http://v2.uyan.cc/code/images/commentWeb.png') no-repeat 20px 13px; border-right: 1px solid #EEEEEE; float: left; height: 49px; padding-left: 70px; padding-top: 6px; width: 102px;"><span id="uyan_dacn" style="font-size: 18px;">4</span><br>
+          <span style="font-size: 12px;">评论数</span></div>
+        <div style="background: url('http://v2.uyan.cc/code/images/likeWeb.png') no-repeat 24px 10px; border-right: 1px solid #EEEEEE; float: left; height: 49px; padding-left: 70px; padding-top: 6px; width: 102px;"><span id="uyan_dvun" style="font-size: 18px;">2</span><br>
+          <span style="font-size: 12px;">喜欢数</span></div>
+        <div style="background: url('http://v2.uyan.cc/code/images/humanWeb.png') no-repeat 27px 13px; border-right: 1px solid #EEEEEE; float: left; height: 49px; padding-left: 70px; padding-top: 6px; width: 102px;"><span id="uyan_daun" style="font-size: 18px;">1</span><br>
+          <span style="font-size: 12px;">用户数</span></div>
+        <div style="clear: both;"></div>
+      </div>
+      <div id="uyan_cmty_info_tmp" style="border-top: 1px solid #CCCCCC; padding: 10px 20px; font-size: 15px; color: #555555;">数据正在加载中...</div>
+      <div style="background-color: #F0F0F0; border-top: 1px solid #CCCCCC; height: 20px; padding-top: 6px;"><a target="_blank" href="http://www.uyan.cc" style="color: #6B6B6B; cursor: pointer; display: block; float: right; font-family: Arial, Helvetica, sans-serif; font-size: 11px; margin-right: 15px; text-decoration: none;">友言</a>
+        <div style="clear: both;"></div>
+      </div>
+    </div>
+  </div>
+  <div id="uyan_login" style="display: none;">
+    <div style="border-bottom: 1px solid #b6b5b5; background: #eeeeee; color: #666; font-size: 16px; height: 22px; padding: 10px 0;"><span style="padding-left: 25px; text-shadow: 0 1px 0 #fff; font-weight: 600;">社会化帐号登录</span></div>
+    <div style="width: 429px; padding: 22px;">
+      <h2 style="margin: 0; font-size: 14px; font-weight: normal; color: #666; padding-left: 25px; padding-bottom: 5px; background: none repeat scroll 0 center transparent;">点击按钮，使用社交帐号评论</h2>
+      <div id="uyan_loginom" style="padding-bottom: 20px;"><span style="height: 16px; float: left; display: block; line-height: 16px; overflow: hidden; width: 60px; margin: 15px 22px 0 25px; display: inline;"><a title="用新浪微博账号登陆" onclick="UYAN.loginTSina();" style="cursor: pointer; font-size: 14px; color: #666; text-decoration: none;"><img title="用新浪微博账号登陆" border="0" style="display: block; float: left; width: 16px; height: 16px;" src="http://v2.uyan.cc/code/images/tsina.png">&nbsp;&nbsp;新浪微博</a></span><span style="height: 16px; float: left; display: block; line-height: 16px; overflow: hidden; width: 60px; margin: 15px 22px 0 25px; display: inline;"><a title="用QQ账号登陆" onclick="UYAN.loginQq();" style="cursor: pointer; font-size: 14px; color: #666; text-decoration: none;"><img title="用QQ账号登陆" border="0" style="display: block; float: left; width: 16px; height: 16px;" src="http://v2.uyan.cc/code/images/qq.png">&nbsp;&nbsp;QQ</a></span><span style="height: 16px; float: left; display: block; line-height: 16px; overflow: hidden; width: 60px; margin: 15px 22px 0 25px; display: inline;"><a title="用腾讯微博账号登陆" onclick="UYAN.loginTQq();" style="cursor: pointer; font-size: 14px; color: #666; text-decoration: none;"><img title="用腾讯微博账号登陆" border="0" style="display: block; float: left; width: 16px; height: 16px;" src="http://v2.uyan.cc/code/images/tqq.png">&nbsp;&nbsp;腾讯微博</a></span><span style="height: 16px; float: left; display: block; line-height: 16px; overflow: hidden; width: 60px; margin: 15px 22px 0 25px; display: inline;"><a title="用人人网账号登陆" onclick="UYAN.loginRenren();" style="cursor: pointer; font-size: 14px; color: #666; text-decoration: none;"><img title="用人人网账号登陆" border="0" style="display: block; float: left; width: 16px; height: 16px;" src="http://v2.uyan.cc/code/images/renren.png">&nbsp;&nbsp;人人网</a></span><span style="height: 16px; float: left; display: block; line-height: 16px; overflow: hidden; width: 60px; margin: 15px 22px 0 25px; display: inline;"><a title="用网易微博账号登陆" onclick="UYAN.loginT163();" style="cursor: pointer; font-size: 14px; color: #666; text-decoration: none;"><img title="用网易微博账号登陆" border="0" style="display: block; float: left; width: 16px; height: 16px;" src="http://v2.uyan.cc/code/images/t163.png">&nbsp;&nbsp;网易微博</a></span><span style="height: 16px; float: left; display: block; line-height: 16px; overflow: hidden; width: 60px; margin: 15px 22px 0 25px; display: inline;"><a title="用搜狐微博账号登陆" onclick="UYAN.loginTSohu();" style="cursor: pointer; font-size: 14px; color: #666; text-decoration: none;"><img title="用搜狐微博账号登陆" border="0" style="display: block; float: left; width: 16px; height: 16px;" src="http://v2.uyan.cc/code/images/tsohu.png">&nbsp;&nbsp;搜狐微博</a></span><span style="height: 16px; float: left; display: block; line-height: 16px; overflow: hidden; width: 60px; margin: 15px 22px 0 25px; display: inline;"><a title="用开心网账号登陆" onclick="UYAN.loginKaixin001();" style="cursor: pointer; font-size: 14px; color: #666; text-decoration: none;"><img title="用开心网账号登陆" border="0" style="display: block; float: left; width: 16px; height: 16px;" src="http://v2.uyan.cc/code/images/kaixin001.png">&nbsp;&nbsp;开心网</a></span>
+        <div style="clear: both;"></div>
+      </div>
+      <div id="uyan_vis_login">
+        <h2 style="padding-top: 10px; border-top: 1px solid #ccc; margin: 0; font-size: 14px; font-weight: normal; color: #666; padding-left: 25px; margin-top: 15px; background: none repeat scroll 0 center transparent;">作为游客留言</h2>
+        <span style="height: 30px; display: block; padding-left: 54px; overflow: hidden; margin-top: 15px;">
+        <p style="text-indent: 0; display: block; float: left; width: 58px; line-height: 30px; text-align: left; margin: 0; font-size: 14px; color: #666;">Email <span style="color: #ff0000;">*</span></p>
+        <input onkeyup="UYAN.syncEN();" onkeydown="UYAN.syncEN();" id="uyan_email_tmp" type="text" style="margin: auto; border: 1px solid #c1c1c1; color: #687793; float: left; height: 24px; line-height: 24px; padding: 2px 8px; width: 230px; border-radius: 5px;">
+        </span><span style="height: 30px; display: block; padding-left: 54px; overflow: hidden; margin-top: 18px;">
+        <p style="text-indent: 0; display: block; float: left; width: 58px; line-height: 30px; text-align: left; margin: 0; font-size: 14px; color: #666;">昵&nbsp;&nbsp;称</p>
+        <input onfocus="UYAN.nnbg('h');" onblur="UYAN.nnbg('s');" id="uyan_uname_tmp" type="text" style="margin: auto; background: #f2f2f2; border: 1px solid #c1c1c1; color: #687793; float: left; height: 24px; line-height: 24px; padding: 2px 8px; width: 230px; border-radius: 5px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15) inset;">
+        </span><span style="height: 30px; display: block; padding-left: 54px; overflow: hidden; margin-top: 15px; width: 306px;">
+        <div id="uyan_login_warn_tmp" style="color: #ff0000; float: left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; padding-right: 15px; padding-top: 8px; text-align: right; width: 150px;"></div>
+        <input onclick="UYAN.loginEmail();" type="submit" style="margin: auto; background: url('http://v2.uyan.cc/code/images/btn.jpg') no-repeat; width: 86px; height: 26px; border: none; font-size: 14px; font-weight: bold; color: #666; float: right; cursor: pointer;" value="登录">
+        </span></div>
+    </div>
+  </div>
+  <div style="background-color: #FFFFFF; border-color: #D3D2D2; border-style: solid; border-width: 1px 1px 2px; height: 130px; position: absolute; top: 23px; width: 135px; z-index: 99999; display: none;">
+    <div style="color: #9797C4; font-size: 12px; font-weight: normal; padding: 4px 0 4px 10px; line-height: 18px;">顶并分享到:</div>
+    <div style="padding: 3px 0;">
+      <input id="sinaShareBox" style="float: left; margin: 2px 5px 0 10px; padding: 0;" type="checkbox">
+      <div style="background: url('http://v2.uyan.cc/code/images/tsina.png') no-repeat scroll 0 0 transparent; color: #494949; float: left; height: 18px; line-height: 18px; font-size: 12px; font-weight: normal; padding-left: 18px;">新浪微博</div>
+      <div style="clear: both;"></div>
+    </div>
+    <div style="padding: 3px 0;">
+      <input id="sinaShareBox" style="float: left; margin: 2px 5px 0 10px; padding: 0;" type="checkbox">
+      <div style="background: url('http://v2.uyan.cc/code/images/tsina.png') no-repeat scroll 0 0 transparent; color: #494949; float: left; height: 18px; line-height: 18px; font-size: 12px; font-weight: normal; padding-left: 18px;">新浪微博</div>
+      <div style="clear: both;"></div>
+    </div>
+    <div style="padding: 3px 0;">
+      <input id="sinaShareBox" style="float: left; margin: 2px 5px 0 10px; padding: 0;" type="checkbox">
+      <div style="background: url('http://v2.uyan.cc/code/images/tsina.png') no-repeat scroll 0 0 transparent; color: #494949; float: left; height: 18px; line-height: 18px; font-size: 12px; font-weight: normal; padding-left: 18px;">新浪微博</div>
+      <div style="clear: both;"></div>
+    </div>
+    <div style="padding: 5px 0 0 10px;"><a style="border: 1px solid #D0CFCF; background: url('http://v2.uyan.cc/code/images/buttonLarge.png') repeat-x; border-radius: 3px 3px 3px 3px; color: #666; font-weight: bold; cursor: pointer; font-weight: normal; float: left; font-size: 12px; height: 20px; line-height: 22px; overflow: hidden; padding: 0 18px;">顶</a><a style="background-color: #FFFFFF; border: 1px solid #FFFFFF; color: #737373; height: 20px; line-height: 22px; overflow: hidden; cursor: pointer; display: block; float: left; font-size: 12px; font-weight: normal; padding: 0 18px;">取消</a>
+      <div style="clear: both; height: 1px; overflow: hidden;"></div>
+    </div>
+  </div>
+</div>
+
+<!----------------------------------------------------------------------------------------------->
+
+<div id="mainBody" style="padding-bottom: 0px; width: 600px;"> 
+  
+  <!----评论框---->
+  
+  <div id="top_reply">
+    <div id="globalNav" class="globalNav">
+      <div class="commentTotleNum"> <a href="http://coral.qq.com/1003448978" target="_blank"><strong id="commentTotleNum"><span>130</span>条评论</strong></a> </div>
+      <h1>网友评论</h1>
+      <div id="loginBtn" style="display:none"></div>
+    </div>
+    <div id="commentArea" class="">
+      <div class="blueLight">
+        <div class="textarea">
+          <textarea tabindex="1" autocomplete="off" name="content" accesskey="u" id="top_content">文明上网，理性发言</textarea>
+        </div>
+        <div class="commtSub" id="p_login_btn"> <!-- 用户登录模块 -->
+          
+          <div class="loginFlag" id="loginFlag" style="display: none;"> </div>
+          <span class="tips"></span>
+          <div class="submitBtn"> <a href="javascript:void(0)" class="submit" id="top_post_btn_login">登录</a> <a href="javascript:void(0)" class="submit" id="top_post_btn" style="display: none;">发表评论</a> <a href="javascript:void(0)" class="submitOn" id="top_post_btn_load" style="display:none"></a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!----评论显示列表---->
+  
+  <div id="content"> 
+    
+    <!----实时显示---->
+    
+    <div class="main_titleTab">
+      <h2> <span class="tab1 on" id="myAllComment"><a href="javascript:void(0)">全部评论</a></span> <span class="tab2" id="myCowComment"><a href="javascript:void(0)">我的牛评<em class="popNum" id="popMsg"></em></a></span> </h2>
+    </div>
+    <div id="tab1_allComments" class="dis"> <!--页卡一 全部评论--> 
+      
+      <!--推荐评论-->
+      
+      <div id="Recommend"> </div>
+      <div id="showNum" class="showNum"> <span></span> </div>
+      <div id="allComments">
+        <div class="tipInfo waitting" style="display: none;"> </div>
+        <ul class="post-list">
+          <li class="post   " id="comment_5780674782257728488">
+            <div class="post-content">
+              <div class="indicator"></div>
+              <div class="avatar popClick" post_uid="14361117"><span><img src="http://q2.qlogo.cn/g?b=qq&amp;k=NIy5G3QNtPtQ2IxUlS5eJQ&amp;s=40&amp;t=1373953624"></span></div>
+              <div class="post-body">
+                <div class="post-header"><span post_uid="14361117" class="publisher popClick">倖〢┮諨★嬷_</span><span class="replywho" style="display:none">回复了 </span><span date="1378220267" class="uptime">57分钟前</span></div>
+                <div class="post-message-container">
+                  <div>歇斯底里女人的最后一搏</div>
+                </div>
+                <div class="post-footer"><em class="newcoment" id="em_5780674782257728488"></em><span class="upvote"><a href="javascript:void(0)"><i>顶</i>(<em>0</em>)</a></span><span class="reply"><a href="javascript:void(0)">回复</a></span></div>
+              </div>
+            </div>
+            <ul class="children">
+            </ul>
+          </li>
+          <li class="post   " id="comment_5780670331480394496">
+            <div class="post-content">
+              <div class="indicator"></div>
+              <div class="avatar popClick" post_uid="13248042"><span><img src="http://q4.qlogo.cn/g?b=qq&amp;k=IHfBkjKm1Ny29LoB9lCPUQ&amp;s=40&amp;t=0"></span></div>
+              <div class="post-body">
+                <div class="post-header"><span post_uid="13248042" class="publisher popClick">良友</span><span class="replywho" style="display:none">回复了 </span><span date="1378219206" class="uptime">1小时前</span></div>
+                <div class="post-message-container">
+                  <div>刘晓庆，虽是一身光环，其污点也多，没错他是比常人年轻漂亮有不老神童之美称，但意志难改规律，人始终要老死，由于私心过重一味追求虚荣最起码的女人的母性都没有，其内心充满恐惧和寂寞狐独，结果赤条条的来赤条条的去，留下的名利和笑谈连普通的村姑都不如！！！</div>
+                </div>
+                <div class="post-footer"><em class="newcoment" id="em_5780670331480394496"></em><span class="upvote"><a href="javascript:void(0)"><i>顶</i>(<em>1</em>)</a></span><span class="reply"><a href="javascript:void(0)">回复</a></span></div>
+              </div>
+            </div>
+            <ul class="children">
+            </ul>
+          </li>
+          <li class="post   " id="comment_5780669990219206894">
+            <div class="post-content">
+              <div class="indicator"></div>
+              <div class="avatar popClick" post_uid="12705103"><span><img src="http://q3.qlogo.cn/g?b=qq&amp;k=6n6HStgOwaJtuK0vjPWvWg&amp;s=40&amp;t=1374092471"></span></div>
+              <div class="post-body">
+                <div class="post-header"><span post_uid="12705103" class="publisher popClick">优乄优</span><span class="replywho" style="display:none">回复了 </span><span date="1378219125" class="uptime">1小时前</span></div>
+                <div class="post-message-container">
+                  <div>要强的女人</div>
+                </div>
+                <div class="post-footer"><em class="newcoment" id="em_5780669990219206894"></em><span class="upvote"><a href="javascript:void(0)"><i>顶</i>(<em>2</em>)</a></span><span class="reply"><a href="javascript:void(0)">回复</a></span></div>
+              </div>
+            </div>
+            <ul class="children">
+            </ul>
+          </li>
+          <li class="post   " id="comment_5780667032375024866">
+            <div class="post-content">
+              <div class="indicator"></div>
+              <div class="avatar popClick" post_uid="15899835"><span><img src="http://q1.qlogo.cn/g?b=qq&amp;k=AhlZ5iahiaBE3pO065yJicopw&amp;s=40&amp;t=1374567340"></span></div>
+              <div class="post-body">
+                <div class="post-header"><span post_uid="15899835" class="publisher popClick">飘渺</span><span class="replywho" style="display:none">回复了 </span><span date="1378218420" class="uptime">1小时前</span></div>
+                <div class="post-message-container">
+                  <div>什么东西</div>
+                </div>
+                <div class="post-footer"><em class="newcoment" id="em_5780667032375024866"></em><span class="upvote"><a href="javascript:void(0)"><i>顶</i>(<em>0</em>)</a></span><span class="reply"><a href="javascript:void(0)">回复</a></span></div>
+              </div>
+            </div>
+            <ul class="children">
+            </ul>
+          </li>
+          <li class="post   " id="comment_5780666585778185355">
+            <div class="post-content">
+              <div class="indicator"></div>
+              <div class="avatar popClick" post_uid="14168399"><span><img src="http://q3.qlogo.cn/g?b=qq&amp;k=uBgNP7IcOpNFe8OdUIUSnw&amp;s=40&amp;t=1370422466"></span></div>
+              <div class="post-body">
+                <div class="post-header"><span post_uid="14168399" class="publisher popClick">-格格巫的阿兹猫-</span><span class="replywho" style="display:none">回复了 </span><span date="1378218313" class="uptime">1小时前</span></div>
+                <div class="post-message-container">
+                  <div>老妖精一只</div>
+                </div>
+                <div class="post-footer"><em class="newcoment" id="em_5780666585778185355"></em><span class="upvote"><a href="javascript:void(0)"><i>顶</i>(<em>0</em>)</a></span><span class="reply"><a href="javascript:void(0)">回复</a></span></div>
+              </div>
+            </div>
+            <ul class="children">
+            </ul>
+          </li>
+          <li class="post   " id="comment_5780661803860627643">
+            <div class="post-content">
+              <div class="indicator"></div>
+              <div class="avatar popClick" post_uid="12860902"><span><img src="http://q2.qlogo.cn/g?b=qq&amp;k=GO2RajLO6ukeia3Gz0lccfQ&amp;s=40&amp;t=1370536448"></span></div>
+              <div class="post-body">
+                <div class="post-header"><span post_uid="12860902" class="publisher popClick"> 呓语 </span><span class="replywho" style="display:none">回复了 </span><span date="1378217173" class="uptime">1小时前</span></div>
+                <div class="post-message-container">
+                  <div>小编写的咬牙切齿的，刘晓庆跟他有杀父之仇吗，还是……</div>
+                </div>
+                <div class="post-footer"><em class="newcoment" id="em_5780661803860627643"></em><span class="upvote"><a href="javascript:void(0)"><i>顶</i>(<em>5</em>)</a></span><span class="reply"><a href="javascript:void(0)">回复</a></span></div>
+              </div>
+            </div>
+            <ul class="children">
+            </ul>
+          </li>
+          <li class="post   " id="comment_5780661355975965267">
+            <div class="post-content">
+              <div class="indicator"></div>
+              <div class="avatar popClick" post_uid="15554195"><span><img src="http://q2.qlogo.cn/g?b=qq&amp;k=1EbFqKxT2MMFyeV7acnQTQ&amp;s=40&amp;t=1370415235"></span></div>
+              <div class="post-body">
+                <div class="post-header"><span post_uid="15554195" class="publisher popClick">女人花</span><span class="replywho" style="display:none">回复了 </span><span date="1378217066" class="uptime">1小时前</span></div>
+                <div class="post-message-container">
+                  <div>等她老病了走不动了，我们集体喊她出来装嫩拼嫩！看这个老妖逞强能熬几年？！</div>
+                </div>
+                <div class="post-footer"><em class="newcoment" id="em_5780661355975965267"></em><span class="upvote"><a href="javascript:void(0)"><i>顶</i>(<em>4</em>)</a></span><span class="reply"><a href="javascript:void(0)">回复</a></span></div>
+              </div>
+            </div>
+            <ul class="children">
+            </ul>
+          </li>
+          <li class="post   " id="comment_5780651614932646336">
+            <div class="post-content">
+              <div class="indicator"></div>
+              <div class="avatar popClick" post_uid="12634813"><span><img src="http://q3.qlogo.cn/g?b=qq&amp;k=Qpbt7rrbAUFWTWoC3etzVA&amp;s=40&amp;t=1373342638"></span></div>
+              <div class="post-body">
+                <div class="post-header"><span post_uid="12634813" class="publisher popClick">朵儿</span><span class="replywho" style="display:none">回复了 </span><span date="1378214744" class="uptime">2小时前</span></div>
+                <div class="post-message-container">
+                  <div>空闲时间可以赚点开快花花+QQ 10668514</div>
+                </div>
+                <div class="post-footer"><em class="newcoment" id="em_5780651614932646336"></em><span class="upvote"><a href="javascript:void(0)"><i>顶</i>(<em>2</em>)</a></span><span class="reply"><a href="javascript:void(0)">回复</a></span></div>
+              </div>
+            </div>
+            <ul class="children">
+            </ul>
+          </li>
+          <li class="post   " id="comment_5780649952373455168">
+            <div class="post-content">
+              <div class="indicator"></div>
+              <div class="avatar popClick" post_uid="15895788"><span><img src="http://q2.qlogo.cn/g?b=qq&amp;k=QYbYF3nicfxNjib4KOgXejwQ&amp;s=40&amp;t=1371068190"></span></div>
+              <div class="post-body">
+                <div class="post-header"><span post_uid="15895788" class="publisher popClick">5566[三哥]</span><span class="replywho" style="display:none">回复了 </span><span date="1378214347" class="uptime">2小时前</span></div>
+                <div class="post-message-container">
+                  <div>女人活出这个态度来应该是寥寥无几，也属于人中龙凤了。。。</div>
+                </div>
+                <div class="post-footer"><em class="newcoment" id="em_5780649952373455168"></em><span class="upvote"><a href="javascript:void(0)"><i>顶</i>(<em>20</em>)</a></span><span class="reply"><a href="javascript:void(0)">回复</a></span></div>
+              </div>
+            </div>
+            <ul class="children">
+              <li class="post   " id="comment_5780680501526761646">
+                <div class="post-content">
+                  <div class="indicator"></div>
+                  <div class="avatar popClick" post_uid="11728249"><span><img src="http://q3.qlogo.cn/g?b=qq&amp;k=T6GIQdTyFZmXzC1iaRmGGKQ&amp;s=40&amp;t=528"></span></div>
+                  <div class="post-body">
+                    <div class="post-header"><span post_uid="11728249" class="publisher popClick">朝花夕拾</span><span class="replywho">5566[三哥]</span><span date="1378221631" class="uptime">34分钟前</span></div>
+                    <div class="post-message-container">
+                      <div>是啊!</div>
+                    </div>
+                    <div class="post-footer"><em class="newcoment" id="em_5780680501526761646"></em><span class="upvote"><a href="javascript:void(0)"><i>顶</i>(<em>2</em>)</a></span><span class="reply"><a href="javascript:void(0)">回复</a></span></div>
+                  </div>
+                </div>
+                <ul class="children">
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- 全部评论 -->
+      
+      <div id="loadMore" class="loadMore" style="display: block;"> <span class="loadfonts" style="display: block;">加载更多</span><em style="display: none; background-color: rgb(204, 204, 204); background-position: initial initial; background-repeat: initial initial;"></em> </div>
+      
+      <!--------更新数据数据源后的渲染 应该和 上面全部评论一致--------->
+      
+      <div id="newComments"> </div>
+    </div>
+    <div id="tab2_myComments" class="undis my-comments" style="display: none;"> <!--页卡二 我的牛评-->
+      
+      <div class="chid_titleTab">
+        <h2> <span class="tab1 on" id="mytips"><a href="javascript:void(0)">提醒</a></span> <span class="tab2" id="mycon"><a href="javascript:void(0)">我的评论</a></span> </h2>
+      </div>
+      <div id="tab3_tips" class="dis">
+        <div id="my-message" class="my-message">
+          <div class="tipInfo waitting"> </div>
+          <ul id="my-message-list" class="post-list">
+          </ul>
+          <div class="loadMore" id="loadMsgMore" style="display: none;"> <span>加载更多</span><em style="display:none; background:#ccc;"></em></div>
+        </div>
+      </div>
+      <div id="tab4_mycon" class="undis">
+        <div id="my-notification" class="my-notification ">
+          <div class="tipInfo waitting"> </div>
+          <ul id="my-notification-list" class="post-list">
+          </ul>
+          <div class="loadMore" id="loadCmtMore"> <span>加载更多</span><em style="display:none; background:#ccc;"></em></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="hiddenCon" class="hiddenCon"> </div>
+  <div class="pop_reply" id="public_reply" style="display:none">
+    <div class="textarea">
+      <textarea tabindex="1" autocomplete="off" name="content" accesskey="u" id="pop_content"></textarea>
+    </div>
+    <div class="commtSub" id="p_login_btn">
+      <div class="replyTop"> <span class="pop_user_login">登录</span><span class="pop_user_info" style="display: none;"></span><span class="tips"></span> </div>
+      <div class="replyBtn"> <a href="javascript:void(0)" class="submit" id="pop_post_btn">回复</a> </div>
+    </div>
+  </div>
+</div>
