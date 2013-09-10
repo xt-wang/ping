@@ -1,7 +1,8 @@
 var config = {
 	avatar_default : 'http://t0.qlogo.cn/mbloghead/01676c4b10bbdb6f2618/50',
 	avatar_plus :'img/plus.jpg',
-	api_user :'',
+	api_user : '',
+	api_list : '',
 	api_notice : '',
 }
 	/*code by 2013.6.17  15:32*/
@@ -1126,15 +1127,15 @@ var config = {
 					$('#cmt_popbox .userPic').find('img').attr('src', 'http://mat1.gtimg.com/news/dc/images/user.png');
 					$('#scrollbar_parent').hide();
 					$('#scrollbar').css('top', '0px');
-					$('#popbodyinner').css('top', '0px');
+					$('#div3').css('top', '0px');
 					var meanwhile = function() {
 						$('#popContent').height(o.$cmt_popbox.height() - 120);
 						$('#popContent .popInner').height(o.$cmt_popbox.height() - 140);
-						$('#popbody').height($('#popContent .popInner').height());
+						$('#div2').height($('#popContent .popInner').height());
 						$('#scrollbar_parent').height($('#popContent .popInner').height());
-						$('#scrollbar').css('height', $('#scrollbar_parent').height() * $('#popbody').height() / $('#popbodyinner').height());
+						$('#scrollbar').css('height', $('#scrollbar_parent').height() * $('#div2').height() / $('#div3').height());
 						$('#scrollbar').css('top', '0px');
-						$('#popbodyinner').css('top', '0px');
+						$('#div3').css('top', '0px');
 					}
 					if ($.browser.msie && ($.browser.version == '6.0' || $.browser.version == '7.0') && !$.support.style) { //  ie6 兼容
 						o.$cmt_popbox.css('top', $win.scrollTop() + $win.height() * 0.1);
@@ -1204,8 +1205,8 @@ var config = {
 							*****/
 				popScroll: function() {
 					var oDiv = $('#scrollbar');
-					var oDiv2 = $('#popbody');
-					var oDiv3 = $('#popbodyinner');
+					var oDiv2 = $('#div2');
+					var oDiv3 = $('#div3');
 					var oParent = $('#scrollbar_parent');
 					oParent.bind('mousewheel', function() {
 						onMouseWheel();
@@ -1731,12 +1732,12 @@ var config = {
 									$('#loadPopInfo>span').css('display', 'block');
 								}
 								// 计算滚动条高度及位置
-								if ($('#popbodyinner').height() < $('#popbody').height()) {
+								if ($('#div3').height() < $('#div2').height()) {
 									$('#scrollbar_parent').hide();
 								} else {
-									$('#scrollbar').css('height', $('#scrollbar_parent').height() * $('#popbody').height() / $('#popbodyinner').height());
+									$('#scrollbar').css('height', $('#scrollbar_parent').height() * $('#div2').height() / $('#div3').height());
 									//$('#scrollbar').css('top','0px');
-									//$('#popbodyinner').css('top','0px');
+									//$('#div3').css('top','0px');
 									$('#scrollbar_parent').show();
 								}
 							}
