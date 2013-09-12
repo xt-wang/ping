@@ -1,0 +1,38 @@
+#np-thread #np-reset ul.np-comments-tabs li.np-tab a.np-current {border:0px;color:#848568;text-shadow:none;background:#dddfc2}
+#np-thread #np-reset .np-highlight {font-family:Arial, Helvetica, sans-serif;font-size:14px;font-weight:bold;color:#848568 !important;}
+#np-thread #np-reset ul.np-comments-tabs li.np-tab a.np-current:hover {color:#696a52;background:#d4d6ba}
+#np-thread #np-reset a.np-highlight:hover {color:#696a52 !important;}
+#np-thread {padding-left:30px;}
+#np-thread #np-reset li.np-post,#np-thread #np-reset #np-hot-posts {overflow:visible}
+#np-thread #np-reset .np-post-self {padding:10px 0 10px 10px;}
+#np-thread #np-reset li.np-post,#np-thread #np-reset .np-post-self {border:0 !important;}
+#np-reset .np-avatar, #np-thread #np-reset ul.np-children .np-avatar {position:absolute;top:26px;left:-14px;padding:5px;width:36px;height:36px;box-shadow:-1px 0 1px rgba(0,0,0,.15) inset;border-radius:46px; background:#E5E6D0;}
+#np-thread #np-reset ul.np-children .np-avatar {left:-23px;}
+#np-thread .np-avatar a {display:inline-block;padding:1px; width:32px;height:32px;border:1px solid #b9baa6;border-radius:50%; background-color:#fff !important}
+#np-thread .np-avatar a:hover {border-color:#de5a4e}
+#np-thread .np-avatar > img {margin:2px 0 0 2px}
+#np-thread #np-reset .np-replybox {box-shadow:none;}
+#np-thread #np-reset ul.np-children .np-replybox.np-inline-replybox a.np-avatar,
+#np-reset .np-replybox.np-inline-replybox a.np-avatar {left: 0;top: 0; padding: 0;width: 32px !important;height: 32px !important; background: none;box-shadow: none; } 
+#np-reset .np-replybox.np-inline-replybox a.np-avatar img {width: 32px !important;height: 32px !important; border-radius:50%;} 
+#np-reset .np-replybox a.np-avatar,
+#np-reset .np-replybox .np-avatar img { padding:0;width:50px !important;height:50px !important; border-radius:5px; }
+#np-reset .np-avatar img {width:32px !important;height:32px !important;border-radius:32px;box-shadow:0 1px 3px rgba(0, 0, 0, 0.22);							-webkit-transition:.4s all ease-in-out;-moz-transition:.4s all ease-in-out;-o-transition:.4s all ease-in-out;-ms-transition:.4s all ease-in-out;transition:.4s all ease-in-out;}
+.np-post-self:hover .np-avatar img {-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-o-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}
+#np-thread #np-reset .np-comment-body {background: #F0F0E3;padding:15px 15px 12px 32px;border-radius:5px; box-shadow:0 1px 2px rgba(0,0,0,.15), 0 1px 0 rgba(255,255,255,.75) inset;}
+#np-thread #np-reset .np-comment-body p{color:#787968}
+#np-thread #np-reset .np-comments a.np-user-name {font-weight:bold;color:#696A52 !important;}
+#np-thread #np-reset .np-comments a.np-user-name:hover {color:#D32 !important;}
+#np-thread #np-reset #np-hot-posts {border:0}
+#np-reset #np-hot-posts .np-gradient-bg {background:none;}
+#np-reset #np-bubble #np-ctx .np-ctx-entry {padding:0;}
+#np-reset #np-bubble .np-avatar, #np-reset #np-bubble #np-ctx-bubble .np-avatar a {position:static;padding:0;border:0; background:none;box-shadow:none;}
+#np-reset #np-bubble .np-avatar img, #np-reset #np-bubble #np-ctx-bubble .np-avatar a {width:45px !important;height:45px !important;}
+#np-reset #np-bubble .np-user-name{padding-left:13px;}
+#np-reset .np-comment-body #np-ctx {border-left:1px solid #b9baa6;background-color:#e8e8dc !important}
+#np-reset #np-ctx {margin-right:-15px}
+#np-reset #np-ctx .np-ctx-entry {position:relative;padding:10px 30px 10px 10px;}
+#np-reset #np-ctx .np-ctx-entry .np-avatar {top:6px;left:5px;background:none;box-shadow:none;}
+#np-reset #np-ctx .np-ctx-entry .np-ctx-body {margin-left:46px;}
+#np-reset #np-ctx .np-ctx-entry .np-ctx-content {color:#787968}
+#np-reset #np-ctx .np-ctx-entry .np-ctx-head a {color:#696A52;font-weight:bold}
